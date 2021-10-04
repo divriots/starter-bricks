@@ -2,29 +2,64 @@ import * as React from 'react';
 import { useTheme } from '@mui/material/styles';
 
 const styles = {
-  colorWrapper: {},
-  box: {},
-  labelWrapper: {},
-  colorName: {},
-  colorValue: {},
+  itemWrapper: {
+    display: 'flex',
+    flexDirection: 'row',
+    alignItems: 'center',
+  } as React.CSSProperties,
+
+  box: {
+    width: '4rem',
+    height: '4rem',
+    borderRadius: '0.2rem',
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+  } as React.CSSProperties,
+
+  labelWrapper: {
+    display: 'flex',
+    flexDirection: 'column',
+    fontSize: '0.875rem',
+  } as React.CSSProperties,
 };
 
 export const PaletteShowcase = () => {
   const theme = useTheme();
 
-  const renderColor = (name, value) => (
-    <div style={styles.colorWrapper}>
-      <div style={styles.box} />
-      <div style={styles.labelWrapper}>
-        <div style={styles.colorName}>{`palette.${name}`}</div>
-        <div style={styles.colorValue}>{value}</div>
+  const renderItem = (name: string, value: string | number) => {
+    const isColor = typeof value === 'string';
+
+    const boxBackground: React.CSSProperties = isColor
+      ? {
+          backgroundColor: value,
+          boxShadow: `0 25px 50px -12px ${theme.palette.text.disabled}`,
+        }
+      : {};
+
+    const boxText = isColor ? '' : <h2>{value}</h2>;
+
+    return (
+      <div key={name} style={styles.itemWrapper}>
+        <div
+          style={{
+            ...styles.box,
+            ...boxBackground,
+          }}
+        >
+          {boxText}
+        </div>
+        <div style={styles.labelWrapper}>
+          <div>{`palette.${name}`}</div>
+          <div style={{ color: theme.palette.text.secondary }}>{value}</div>
+        </div>
       </div>
-    </div>
-  );
+    );
+  };
 
   const renderNumeric = (name, value) => (
-    <div>
-      <div style={styles.colorName}>{`palette.${name}`}</div>
+    <div style={styles.labelWrapper}>
+      <div>{`palette.${name}`}</div>
       <h4>{value}</h4>
     </div>
   );
@@ -32,12 +67,10 @@ export const PaletteShowcase = () => {
   const renderValue = (name, value) => {
     if (name === 'mode') return renderNumeric(name, value);
     switch (typeof value) {
-      case 'string':
-        return renderColor(name, value);
       case 'object':
         return renderGroup(name, value);
       default:
-        return renderNumeric(name, value);
+        return renderItem(name, value);
     }
   };
 
@@ -49,10 +82,11 @@ export const PaletteShowcase = () => {
   return (
     <>
       {Object.entries(theme.palette).map(([name, value]) => (
-        <>
+        <div key={name}>
           <h2> {name}</h2>
+
           {renderValue(name, value)}
-        </>
+        </div>
       ))}
     </>
   );
