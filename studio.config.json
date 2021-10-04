@@ -1,0 +1,27 @@
+{
+ "packages": {
+  "dir": "",
+  "menu": [
+   "introduction",
+   [
+    "tokens",
+    [
+     "colors",
+     "typography",
+     "theme"
+    ]
+   ],
+   [
+    "components",
+    []
+   ],
+   [
+    "dockit",
+    [
+     "layout",
+     "showcase"
+    ]
+   ]
+  ]
+ }
+}
