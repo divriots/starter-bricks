@@ -1,20 +1,19 @@
+import './fonts.css';
+
 export const typography = {
-  fonts: {
-    normal: '-apple-system, BlinkMacSystemFont, Helvetica, Arial, sans-serif',
-    mono: 'SFMono-Regular, Consolas, Menlo, Courier, monospace',
-    serif: 'Times New Roman',
-  },
-  fontSizes: ['12px', '14px', '16px', '20px', '24px', '32px', '40px', '48px'],
-  fontWeights: {
-    light: 300,
-    normal: 400,
-    semibold: 500,
-    bold: 600,
-  },
-  lineHeights: {
-    condensedUltra: 1,
-    condensed: 1.25,
-    default: 1.5,
-  },
-  letterSpacings: { tight: '-0.03rem', normal: '0.02rem', loose: '0.2rem' },
+  fontFamily:
+    '"IBM Plex Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol"',
+  fontFamilyCode:
+    '"IBM Plex Mono",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol"',
+  fontFamilyTagline:
+    '"PlusJakartaSans-ExtraBold",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol"',
+  fontFamilySystem:
+    '-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol"',
+  fontWeightExtraBold: 800,
+  htmlFontSize: 16,
+  fontSize: 14,
+  fontWeightLight: 300,
+  fontWeightRegular: 400,
+  fontWeightMedium: 500,
+  fontWeightBold: 700,
 };
