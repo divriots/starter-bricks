@@ -35,7 +35,6 @@ const styles = {
   } as React.CSSProperties,
 
   label: {
-    margin: 0,
     fontFamily: 'monospace',
   },
 };
