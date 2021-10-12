@@ -8,5 +8,5 @@ export const StoryLayout = {
       </div>
     ),
   ],
-  parameters: { layout: "centered" }
+  parameters: { layout: 'centered' },
 };

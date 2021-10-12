@@ -1,27 +1,11 @@
 {
- "packages": {
-  "dir": "",
-  "menu": [
-   "introduction",
-   [
-    "tokens",
-    [
-     "colors",
-     "typography",
-     "theme"
+  "packages": {
+    "dir": "",
+    "menu": [
+      "introduction",
+      ["tokens", ["colors", "typography", "theme"]],
+      ["components", ["autocomplete", "button"]],
+      ["dockit", ["layout", "showcase"]]
     ]
-   ],
-   [
-    "components",
-    []
-   ],
-   [
-    "dockit",
-    [
-     "layout",
-     "showcase"
-    ]
-   ]
-  ]
- }
+  }
 }
