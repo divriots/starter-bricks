@@ -1,1 +1,1 @@
-export { default as Autocomplete } from '@mui/material/Autocomplete';
+export { Autocomplete } from '@mui/material';

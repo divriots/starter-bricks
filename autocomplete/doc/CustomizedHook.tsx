@@ -1,11 +1,8 @@
 import * as React from 'react';
-import {
-  useAutocomplete,
-  AutocompleteGetTagProps,
-} from '@mui/core/AutocompleteUnstyled';
+import { useAutocomplete, AutocompleteGetTagProps } from '@mui/core';
 import CheckIcon from '@mui/icons-material/Check';
 import CloseIcon from '@mui/icons-material/Close';
-import { styled } from '@mui/material/styles';
+import { styled } from '@mui/material';
 
 const Root = styled('div')(
   ({ theme }) => `

@@ -1,7 +1,7 @@
 import * as React from 'react';
-import Chip from '@mui/material/Chip';
-import TextField from '@mui/material/TextField';
-import Autocomplete from '@mui/material/Autocomplete';
+import { Chip } from '@mui/material';
+import { TextField } from '@mui/material';
+import { Autocomplete } from '@mui/material';
 
 export default function FixedTags() {
   const fixedOptions = [top100Films[6]];

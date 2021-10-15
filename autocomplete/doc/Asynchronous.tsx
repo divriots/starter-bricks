@@ -1,7 +1,7 @@
 import * as React from 'react';
-import TextField from '@mui/material/TextField';
-import Autocomplete from '@mui/material/Autocomplete';
-import CircularProgress from '@mui/material/CircularProgress';
+import { TextField } from '@mui/material';
+import { Autocomplete } from '@mui/material';
+import { CircularProgress } from '@mui/material';
 
 interface Film {
   title: string;

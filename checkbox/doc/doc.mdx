@@ -1,0 +1,187 @@
+import { Checkbox } from '~/checkbox';
+import Checkboxes from './Checkboxes';
+import CheckboxLabels from './CheckboxLabels';
+import SizeCheckboxes from './SizeCheckboxes';
+import ColorCheckboxes from './ColorCheckboxes';
+import IconCheckboxes from './IconCheckboxes';
+import ControlledCheckbox from './ControlledCheckbox';
+import IndeterminateCheckbox from './IndeterminateCheckbox';
+import CheckboxesGroup from './CheckboxesGroup';
+import FormControlLabelPosition from './FormControlLabelPosition';
+import CustomizedCheckbox from './CustomizedCheckbox';
+import { mdx } from '@mdx-js/react';
+import { Playground as BklPlayground } from '@divriots/dockit-react/playground';
+import { MdxLayout } from '~/layout';
+export default MdxLayout;
+
+# Checkbox
+
+<p className="description">
+  Checkboxes allow the user to select one or more items from a set.
+</p>
+
+Checkboxes can be used to turn an option on or off.
+
+If you have multiple options appearing in a list,
+you can preserve space by using checkboxes instead of on/off switches.
+If you have a single option, avoid using a checkbox and use an on/off switch instead.
+
+## Basic checkboxes
+
+<Checkboxes />
+```tsx
+<Checkbox {...label} defaultChecked />
+<Checkbox {...label} />
+<Checkbox {...label} disabled />
+<Checkbox {...label} disabled checked />
+```
+
+## Label
+
+You can provide a label to the `Checkbox` thanks to the `FormControlLabel` component.
+
+<CheckboxLabels />
+```tsx
+<FormGroup>
+  <FormControlLabel control={<Checkbox defaultChecked />} label="Label" />
+  <FormControlLabel disabled control={<Checkbox />} label="Disabled" />
+</FormGroup>
+```
+
+## Size
+
+Use the `size` prop or customize the font size of the svg icons to change the size of the checkboxes.
+
+<SizeCheckboxes />
+```tsx
+<Checkbox {...label} defaultChecked size="small" />
+<Checkbox {...label} defaultChecked />
+<Checkbox
+  {...label}
+  defaultChecked
+  sx={{ '& .MuiSvgIcon-root': { fontSize: 28 } }}
+/>
+```
+
+## Color
+
+<ColorCheckboxes />
+```tsx
+<Checkbox {...label} defaultChecked />
+<Checkbox {...label} defaultChecked color="secondary" />
+<Checkbox {...label} defaultChecked color="success" />
+<Checkbox {...label} defaultChecked color="default" />
+<Checkbox
+  {...label}
+  defaultChecked
+  sx={{
+    color: pink[800],
+    '&.Mui-checked': {
+      color: pink[600],
+    },
+  }}
+/>
+```
+
+## Icon
+
+<IconCheckboxes />
+```tsx
+<Checkbox {...label} icon={<FavoriteBorder />} checkedIcon={<Favorite />} />
+<Checkbox
+  {...label}
+  icon={<BookmarkBorderIcon />}
+  checkedIcon={<BookmarkIcon />}
+/>
+```
+
+## Controlled
+
+You can control the checkbox with the `checked` and `onChange` props:
+
+<ControlledCheckbox />
+```tsx
+<Checkbox
+  checked={checked}
+  onChange={handleChange}
+  inputProps={{ 'aria-label': 'controlled' }}
+/>
+```
+
+## Indeterminate
+
+A checkbox input can only have two states in a form: checked or unchecked.
+It either submits its value or doesn't.
+Visually, there are **three** states a checkbox can be in: checked, unchecked, or indeterminate.
+
+<IndeterminateCheckbox />
+```tsx
+<FormControlLabel
+  label="Parent"
+  control={
+    <Checkbox
+      checked={checked[0] && checked[1]}
+      indeterminate={checked[0] !== checked[1]}
+      onChange={handleChange1}
+    />
+  }
+/>
+{children}
+```
+
+> ⚠️ When indeterminate is set, the value of the `checked` prop only impacts the form submitted values.
+> It has no accessibility or UX implications.
+
+## FormGroup
+
+`FormGroup` is a helpful wrapper used to group selection control components.
+
+<CheckboxesGroup />
+```tsx
+<CheckboxesGroup />
+```
+
+## Label placement
+
+You can change the placement of the label:
+
+<FormControlLabelPosition />
+```tsx
+<FormControlLabelPosition />
+```
+
+## Customization
+
+Here is an example of customizing the component.
+You can learn more about this in the [overrides documentation page](/customization/how-to-customize/).
+
+<CustomizedCheckbox />
+```tsx
+<BpCheckbox />
+<BpCheckbox defaultChecked />
+<BpCheckbox disabled />
+```
+
+🎨 If you are looking for inspiration, you can check [MUI Treasury's customization examples](https://mui-treasury.com/styles/checkbox).
+
+## When to use
+
+- [Checkboxes vs. Radio Buttons](https://www.nngroup.com/articles/checkboxes-vs-radio-buttons/)
+- [Checkboxes vs. Switches](https://uxplanet.org/checkbox-vs-toggle-switch-7fc6e83f10b8)
+
+## Accessibility
+
+(WAI-ARIA: https://www.w3.org/TR/wai-aria-practices/#checkbox)
+
+- All form controls should have labels, and this includes radio buttons, checkboxes, and switches. In most cases, this is done by using the `<label>` element ([FormControlLabel](/api/form-control-label/)).
+- When a label can't be used, it's necessary to add an attribute directly to the input component.
+  In this case, you can apply the additional attribute (e.g. `aria-label`, `aria-labelledby`, `title`) via the `inputProps` prop.
+
+```jsx
+<Checkbox
+  value="checkedA"
+  inputProps={{
+    'aria-label': 'Checkbox A',
+  }}
+/>
+```

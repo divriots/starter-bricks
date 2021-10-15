@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 import { useTheme } from '@mui/material/styles';
 import { Caption } from '@divriots/dockit-react/caption';
 

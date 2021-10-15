@@ -1,9 +1,9 @@
 import * as React from 'react';
-import { styled } from '@mui/material/styles';
-import Button from '@mui/material/Button';
-import IconButton from '@mui/material/IconButton';
+import { styled } from '@mui/material';
+import { Button } from '@mui/material';
+import { IconButton } from '@mui/material';
 import PhotoCamera from '@mui/icons-material/PhotoCamera';
-import Stack from '@mui/material/Stack';
+import { Stack } from '@mui/material';
 
 const Input = styled('input')({
   display: 'none',

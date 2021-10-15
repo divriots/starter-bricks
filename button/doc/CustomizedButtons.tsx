@@ -1,7 +1,7 @@
 import * as React from 'react';
-import { styled } from '@mui/material/styles';
-import Button, { ButtonProps } from '@mui/material/Button';
-import Stack from '@mui/material/Stack';
+import { styled } from '@mui/material';
+import { Button, ButtonProps } from '@mui/material';
+import { Stack } from '@mui/material';
 import { purple } from '@mui/material/colors';
 
 const BootstrapButton = styled(Button)({

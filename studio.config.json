@@ -4,7 +4,21 @@
     "menu": [
       "introduction",
       ["tokens", ["colors", "typography", "theme"]],
-      ["components", ["autocomplete", "button"]],
+      [
+        "inputs",
+        [
+          "autocomplete",
+          "button",
+          "button-group",
+          "checkbox",
+          "floating-action-button",
+          "radio-button",
+          "rating",
+          "rating",
+          "select",
+          "slider"
+        ]
+      ],
       ["dockit", ["layout", "showcase"]]
     ]
   }

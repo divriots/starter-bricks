@@ -1,7 +1,7 @@
 import * as React from 'react';
-import TextField from '@mui/material/TextField';
-import Stack from '@mui/material/Stack';
-import Autocomplete from '@mui/material/Autocomplete';
+import { TextField } from '@mui/material';
+import { Stack } from '@mui/material';
+import { Autocomplete } from '@mui/material';
 
 export default function FreeSolo() {
   return (

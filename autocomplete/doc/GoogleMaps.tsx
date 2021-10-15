@@ -1,10 +1,10 @@
 import * as React from 'react';
-import Box from '@mui/material/Box';
-import TextField from '@mui/material/TextField';
-import Autocomplete from '@mui/material/Autocomplete';
+import { Box } from '@mui/material';
+import { TextField } from '@mui/material';
+import { Autocomplete } from '@mui/material';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
-import Grid from '@mui/material/Grid';
-import Typography from '@mui/material/Typography';
+import { Grid } from '@mui/material';
+import { Typography } from '@mui/material';
 import parse from 'autosuggest-highlight/parse';
 import throttle from 'lodash/throttle';
 
