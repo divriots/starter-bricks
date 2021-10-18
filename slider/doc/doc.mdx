@@ -1,0 +1,347 @@
+import { Slider } from '~/slider';
+import ContinuousSlider from './ContinuousSlider';
+import SliderSizes from './SliderSizes';
+import DiscreteSlider from './DiscreteSlider';
+import DiscreteSliderSteps from './DiscreteSliderSteps';
+import DiscreteSliderMarks from './DiscreteSliderMarks';
+import DiscreteSliderValues from './DiscreteSliderValues';
+import DiscreteSliderLabel from './DiscreteSliderLabel';
+import RangeSlider from './RangeSlider';
+import MinimumDistanceSlider from './MinimumDistanceSlider';
+import InputSlider from './InputSlider';
+import ColorSlider from './ColorSlider';
+import CustomizedSlider from './CustomizedSlider';
+import MusicPlayerSlider from './MusicPlayerSlider';
+import VerticalSlider from './VerticalSlider';
+import VerticalAccessibleSlider from './VerticalAccessibleSlider';
+import TrackFalseSlider from './TrackFalseSlider';
+import TrackInvertedSlider from './TrackInvertedSlider';
+import NonLinearSlider from './NonLinearSlider';
+import UnstyledSlider from './UnstyledSlider';
+import { mdx } from '@mdx-js/react';
+import { Playground as BklPlayground } from '@divriots/dockit-react/playground';
+import { MdxLayout } from '~/layout';
+export default MdxLayout;
+
+# Slider
+
+<p className="description">
+  Sliders allow users to make selections from a range of values.
+</p>
+
+Sliders reflect a range of values along a bar, from which users may select a single value. They are ideal for adjusting settings such as volume, brightness, or applying image filters.
+
+## Continuous sliders
+
+Continuous sliders allow users to select a value along a subjective range.
+
+<ContinuousSlider />
+```tsx
+<Stack spacing={2} direction="row" sx={{ mb: 1 }} alignItems="center">
+  <VolumeDown />
+  <Slider aria-label="Volume" value={value} onChange={handleChange} />
+  <VolumeUp />
+</Stack>
+<Slider disabled defaultValue={30} aria-label="Disabled slider" />
+```
+
+## Sizes
+
+For smaller slider, use the prop `size="small"`.
+
+<SliderSizes />
+```tsx
+<Slider
+  size="small"
+  defaultValue={70}
+  aria-label="Small"
+  valueLabelDisplay="auto"
+/>
+<Slider defaultValue={50} aria-label="Default" valueLabelDisplay="auto" />
+```
+
+## Discrete sliders
+
+Discrete sliders can be adjusted to a specific value by referencing its value indicator.
+You can generate a mark for each step with `marks={true}`.
+
+<DiscreteSlider />
+```tsx
+<Slider
+  aria-label="Temperature"
+  defaultValue={30}
+  getAriaValueText={valuetext}
+  valueLabelDisplay="auto"
+  step={10}
+  marks
+  min={10}
+  max={110}
+/>
+<Slider defaultValue={30} step={10} marks min={10} max={110} disabled />
+```
+
+### Small steps
+
+You can change the default step increment.
+
+<DiscreteSliderSteps />
+```tsx
+<Slider
+  aria-label="Small steps"
+  defaultValue={0.00000005}
+  getAriaValueText={valuetext}
+  step={0.00000001}
+  marks
+  min={-0.00000005}
+  max={0.0000001}
+  valueLabelDisplay="auto"
+/>
+```
+
+### Custom marks
+
+You can have custom marks by providing a rich array to the `marks` prop.
+
+<DiscreteSliderMarks />
+```tsx
+<Slider
+  aria-label="Custom marks"
+  defaultValue={20}
+  getAriaValueText={valuetext}
+  step={10}
+  valueLabelDisplay="auto"
+  marks={marks}
+/>
+```
+
+### Restricted values
+
+You can restrict the selectable values to those provided with the `marks` prop with `step={null}`.
+
+<DiscreteSliderValues />
+```tsx
+<Slider
+  aria-label="Restricted values"
+  defaultValue={20}
+  valueLabelFormat={valueLabelFormat}
+  getAriaValueText={valuetext}
+  step={null}
+  valueLabelDisplay="auto"
+  marks={marks}
+/>
+```
+
+### Label always visible
+
+You can force the thumb label to be always visible with `valueLabelDisplay="on"`.
+
+<DiscreteSliderLabel />
+```tsx
+<Slider
+  aria-label="Always visible"
+  defaultValue={80}
+  getAriaValueText={valuetext}
+  step={10}
+  marks={marks}
+  valueLabelDisplay="on"
+/>
+```
+
+## Range slider
+
+The slider can be used to set the start and end of a range by supplying an array of values to the `value` prop.
+
+<RangeSlider />
+```tsx
+<Slider
+  getAriaLabel={() => 'Temperature range'}
+  value={value}
+  onChange={handleChange}
+  valueLabelDisplay="auto"
+  getAriaValueText={valuetext}
+/>
+```
+
+### Minimum distance
+
+You can enforce a minimum distance between values in the `onChange` event handler.
+By default, when you move the pointer over a thumb while dragging another thumb, the active thumb will swap to the hovered thumb. You can disable this behavior with the `disableSwap` prop.
+If you want the range to shift when reaching minimum distance, you can utilize the `activeThumb` parameter in `onChange`.
+
+<MinimumDistanceSlider />
+```tsx
+<Slider
+  getAriaLabel={() => 'Minimum distance'}
+  value={value1}
+  onChange={handleChange1}
+  valueLabelDisplay="auto"
+  getAriaValueText={valuetext}
+  disableSwap
+/>
+<Slider
+  getAriaLabel={() => 'Minimum distance shift'}
+  value={value2}
+  onChange={handleChange2}
+  valueLabelDisplay="auto"
+  getAriaValueText={valuetext}
+  disableSwap
+/>
+```
+
+## Slider with input field
+
+In this example, an input allows a discrete value to be set.
+
+<InputSlider />
+```tsx
+<InputSlider />
+```
+
+## Color
+
+<ColorSlider />
+```tsx
+<Slider
+  aria-label="Temperature"
+  defaultValue={30}
+  getAriaValueText={valuetext}
+  color="secondary"
+/>
+```
+
+## Customization
+
+Here are some examples of customizing the component.
+You can learn more about this in the overrides documentation page.
+
+<CustomizedSlider />
+```tsx
+<CustomizedSlider />
+```
+
+### Music player
+
+<MusicPlayerSlider />
+```tsx
+<MusicPlayerSlider />
+```
+
+## Vertical sliders
+
+<VerticalSlider />
+```tsx
+<VerticalSlider />
+```
+
+**WARNING**: Chrome, Safari and newer Edge versions i.e. any browser based on WebKit exposes `<Slider orientation="vertical" />` as horizontal (chromium issue #1158217).
+By applying `-webkit-appearance: slider-vertical;` the slider is exposed as vertical.
+
+However, by applying `-webkit-appearance: slider-vertical;` keyboard navigation for horizontal keys (<kbd className="key">Arrow Left</kbd>, <kbd className="key">Arrow Right</kbd>) is reversed (chromium issue #1162640).
+Usually, up and right should increase and left and down should decrease the value.
+If you apply `-webkit-appearance` you could prevent keyboard navigation for horizontal arrow keys for a truly vertical slider.
+This might be less confusing to users compared to a change in direction.
+
+<VerticalAccessibleSlider />
+```tsx
+<Slider
+  sx={{
+    '& input[type="range"]': {
+      WebkitAppearance: 'slider-vertical',
+    },
+  }}
+  orientation="vertical"
+  defaultValue={30}
+  aria-label="Temperature"
+  onKeyDown={preventHorizontalKeyboardNavigation}
+/>
+```
+
+## Track
+
+The track shows the range available for user selection.
+
+### Removed track
+
+The track can be turned off with `track={false}`.
+
+<TrackFalseSlider />
+```tsx
+<TrackFalseSlider />
+```
+
+### Inverted track
+
+The track can be inverted with `track="inverted"`.
+
+<TrackInvertedSlider />
+```tsx
+<TrackInvertedSlider />
+```
+
+## Non-linear scale
+
+You can use the `scale` prop to represent the `value` on a different scale.
+
+In the following demo, the value _x_ represents the value _2^x_.
+Increasing _x_ by one increases the represented value by factor _2_.
+
+<NonLinearSlider />
+```tsx
+<Typography id="non-linear-slider" gutterBottom>
+  Storage: {valueLabelFormat(calculateValue(value))}
+</Typography>
+<Slider
+  value={value}
+  min={5}
+  step={1}
+  max={30}
+  scale={calculateValue}
+  getAriaValueText={valueLabelFormat}
+  valueLabelFormat={valueLabelFormat}
+  onChange={handleChange}
+  valueLabelDisplay="auto"
+  aria-labelledby="non-linear-slider"
+/>
+```
+
+## Unstyled
+
+- 📦 5.6 kB gzipped
+
+The slider also comes with an unstyled version.
+It's ideal for doing heavy customizations and minimizing bundle size.
+
+```js
+import SliderUnstyled from '@mui/core/SliderUnstyled';
+```
+
+<UnstyledSlider />
+```tsx
+<StyledSlider defaultValue={10} />
+```
+
+## Accessibility
+
+(WAI-ARIA: https://www.w3.org/TR/wai-aria-practices/#slider)
+
+The component handles most of the work necessary to make it accessible.
+However, you need to make sure that:
+
+- Each thumb has a user-friendly label (`aria-label`, `aria-labelledby` or `getAriaLabel` prop).
+- Each thumb has a user-friendly text for its current value.
+  This is not required if the value matches the semantics of the label.
+  You can change the name with the `getAriaValueText` or `aria-valuetext` prop.
+
+## Limitations
+
+### IE 11
+
+The slider's value label is not centered in IE 11.
+The alignement is not handled to make customizations easier with the lastest browsers.
+You can solve the issue with:
+
+```css
+.MuiSlider-valueLabel {
+  left: calc(-50% - 4px);
+}
+```

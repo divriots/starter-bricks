@@ -2,9 +2,9 @@ import * as React from 'react';
 import { useTheme, styled } from '@mui/material';
 import { Popper } from '@mui/material';
 import { ClickAwayListener } from '@mui/material';
-import SettingsIcon from '@mui/icons-material/Settings';
-import CloseIcon from '@mui/icons-material/Close';
-import DoneIcon from '@mui/icons-material/Done';
+import { Settings as SettingsIcon } from '@mui/icons-material';
+import { Close as CloseIcon } from '@mui/icons-material';
+import { Done as DoneIcon } from '@mui/icons-material';
 import {
   Autocomplete,
   AutocompleteCloseReason,

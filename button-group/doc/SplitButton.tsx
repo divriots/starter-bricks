@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { Button } from '@mui/material';
 import { ButtonGroup } from '@mui/material';
-import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
+import { ArrowDropDown as ArrowDropDownIcon } from '@mui/icons-material';
 import { ClickAwayListener } from '@mui/material';
 import { Grow } from '@mui/material';
 import { Paper } from '@mui/material';

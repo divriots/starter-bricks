@@ -2,7 +2,7 @@ import * as React from 'react';
 import { styled } from '@mui/material';
 import { Button } from '@mui/material';
 import { IconButton } from '@mui/material';
-import PhotoCamera from '@mui/icons-material/PhotoCamera';
+import { PhotoCamera } from '@mui/icons-material';
 import { Stack } from '@mui/material';
 
 const Input = styled('input')({

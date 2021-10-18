@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { Stack } from '@mui/material';
 import { IconButton } from '@mui/material';
-import Fingerprint from '@mui/icons-material/Fingerprint';
+import { Fingerprint } from '@mui/icons-material';
 
 export default function IconButtonColors() {
   return (

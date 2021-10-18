@@ -1,0 +1,179 @@
+import { Alert } from '~/alert';
+import BasicAlerts from './BasicAlerts';
+import DescriptionAlerts from './DescriptionAlerts';
+import ActionAlerts from './ActionAlerts';
+import TransitionAlerts from './TransitionAlerts';
+import IconAlerts from './IconAlerts';
+import OutlinedAlerts from './OutlinedAlerts';
+import FilledAlerts from './FilledAlerts';
+import ColorAlerts from './ColorAlerts';
+import { mdx } from '@mdx-js/react';
+import { Playground as BklPlayground } from '@divriots/dockit-react/playground';
+import { MdxLayout } from '~/layout';
+export default MdxLayout;
+
+# Alert
+
+<p className="description">
+  An alert displays a short, important message in a way that attracts the user's
+  attention without interrupting the user's task.
+</p>
+
+**Note:** This component is not documented in the Material Design guidelines, but MUI supports it.
+
+## Basic alerts
+
+The alert offers four severity levels that set a distinctive icon and color.
+
+<BasicAlerts />
+```tsx
+<Alert severity="error">This is an error alert — check it out!</Alert>
+<Alert severity="warning">This is a warning alert — check it out!</Alert>
+<Alert severity="info">This is an info alert — check it out!</Alert>
+<Alert severity="success">This is a success alert — check it out!</Alert>
+```
+
+## Description
+
+You can use the `AlertTitle` component to display a formatted title above the content.
+
+<DescriptionAlerts />
+```tsx
+<Alert severity="error">
+  <AlertTitle>Error</AlertTitle>
+  This is an error alert — <strong>check it out!</strong>
+</Alert>
+<Alert severity="warning">
+  <AlertTitle>Warning</AlertTitle>
+  This is a warning alert — <strong>check it out!</strong>
+</Alert>
+<Alert severity="info">
+  <AlertTitle>Info</AlertTitle>
+  This is an info alert — <strong>check it out!</strong>
+</Alert>
+<Alert severity="success">
+  <AlertTitle>Success</AlertTitle>
+  This is a success alert — <strong>check it out!</strong>
+</Alert>
+```
+
+## Actions
+
+An alert can have an action, such as a close or undo button.
+It is rendered after the message, at the end of the alert.
+
+If an `onClose` callback is provided and no `action` prop is set, a close icon is displayed. The `action` prop can be used to provide an alternative action, for example using a Button or IconButton.
+
+<ActionAlerts />
+```tsx
+<Alert onClose={() => {}}>This is a success alert — check it out!</Alert>
+<Alert
+  action={
+    <Button color="inherit" size="small">
+      UNDO
+    </Button>
+  }
+>
+  This is a success alert — check it out!
+</Alert>
+```
+
+### Transition
+
+You can use a transition component such as `Collapse` to transition the appearance of the alert.
+
+<TransitionAlerts />
+```tsx
+<TransitionAlerts />
+```
+
+## Icons
+
+The `icon` prop allows you to add an icon to the beginning of the alert component.
+This will override the default icon for the specified severity.
+
+You can change the default severity to icon mapping with the `iconMapping` prop. This can be defined globally using theme customization.
+
+Setting the icon prop to `false` will remove the icon altogether.
+
+<IconAlerts />
+```tsx
+<Alert icon={<CheckIcon fontSize="inherit" />} severity="success">
+  This is a success alert — check it out!
+</Alert>
+<Alert
+  iconMapping={{
+    success: <CheckCircleOutlineIcon fontSize="inherit" />,
+  }}
+>
+  This is a success alert — check it out!
+</Alert>
+<Alert icon={false} severity="success">
+  This is a success alert — check it out!
+</Alert>
+```
+
+## Variants
+
+Two additional variants are available – outlined, and filled:
+
+### Outlined
+
+<OutlinedAlerts />
+```tsx
+<Alert variant="outlined" severity="error">
+  This is an error alert — check it out!
+</Alert>
+<Alert variant="outlined" severity="warning">
+  This is a warning alert — check it out!
+</Alert>
+<Alert variant="outlined" severity="info">
+  This is an info alert — check it out!
+</Alert>
+<Alert variant="outlined" severity="success">
+  This is a success alert — check it out!
+</Alert>
+```
+
+### Filled
+
+<FilledAlerts />
+```tsx
+<Alert variant="filled" severity="error">
+  This is an error alert — check it out!
+</Alert>
+<Alert variant="filled" severity="warning">
+  This is a warning alert — check it out!
+</Alert>
+<Alert variant="filled" severity="info">
+  This is an info alert — check it out!
+</Alert>
+<Alert variant="filled" severity="success">
+  This is a success alert — check it out!
+</Alert>
+```
+
+## Toast
+
+You can use the Snackbar to display a toast with the Alert.
+
+## Color
+
+The `color` prop will override the default color for the specified severity.
+
+<ColorAlerts />
+```tsx
+<Alert severity="success" color="info">
+  This is a success alert — check it out!
+</Alert>
+```
+
+## Accessibility
+
+(WAI-ARIA: https://www.w3.org/TR/wai-aria-practices/#alert)
+
+When the component is dynamically displayed, the content is automatically announced by most screen readers. At this time, screen readers do not inform users of alerts that are present when the page loads.
+
+Using color to add meaning only provides a visual indication, which will not be conveyed to users of assistive technologies such as screen readers. Ensure that information denoted by the color is either obvious from the content itself (for example the visible text), or is included through alternative means, such as additional hidden text.
+
+Actions must have a tab index of 0 so that they can be reached by keyboard-only users.

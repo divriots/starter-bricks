@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { Button } from '@mui/material';
-import DeleteIcon from '@mui/icons-material/Delete';
-import SendIcon from '@mui/icons-material/Send';
+import { Delete as DeleteIcon } from '@mui/icons-material';
+import { Send as SendIcon } from '@mui/icons-material';
 import { Stack } from '@mui/material';
 
 export default function IconLabelButtons() {

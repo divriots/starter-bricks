@@ -1,9 +1,9 @@
 import * as React from 'react';
 import { Checkbox } from '@mui/material';
-import FavoriteBorder from '@mui/icons-material/FavoriteBorder';
-import Favorite from '@mui/icons-material/Favorite';
-import BookmarkBorderIcon from '@mui/icons-material/BookmarkBorder';
-import BookmarkIcon from '@mui/icons-material/Bookmark';
+import { FavoriteBorder } from '@mui/icons-material';
+import { Favorite } from '@mui/icons-material';
+import { BookmarkBorder as BookmarkBorderIcon } from '@mui/icons-material';
+import { Bookmark as BookmarkIcon } from '@mui/icons-material';
 
 const label = { inputProps: { 'aria-label': 'Checkbox demo' } };
 

@@ -3,8 +3,8 @@ import LoadingButton from '@mui/lab/LoadingButton';
 import { Box } from '@mui/material';
 import { FormControlLabel } from '@mui/material';
 import { Switch } from '@mui/material';
-import SaveIcon from '@mui/icons-material/Save';
-import SendIcon from '@mui/icons-material/Send';
+import { Save as SaveIcon } from '@mui/icons-material';
+import { Send as SendIcon } from '@mui/icons-material';
 
 export default function LoadingButtonsTransition() {
   const [loading, setLoading] = React.useState(false);

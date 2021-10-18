@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { Rating } from '@mui/material';
 import { Box } from '@mui/material';
-import StarIcon from '@mui/icons-material/Star';
+import { Star as StarIcon } from '@mui/icons-material';
 
 const labels: { [index: string]: string } = {
   0.5: 'Useless',

@@ -1,10 +1,10 @@
 import * as React from 'react';
 import { Rating, IconContainerProps } from '@mui/material';
-import SentimentVeryDissatisfiedIcon from '@mui/icons-material/SentimentVeryDissatisfied';
-import SentimentDissatisfiedIcon from '@mui/icons-material/SentimentDissatisfied';
-import SentimentSatisfiedIcon from '@mui/icons-material/SentimentSatisfied';
-import SentimentSatisfiedAltIcon from '@mui/icons-material/SentimentSatisfiedAltOutlined';
-import SentimentVerySatisfiedIcon from '@mui/icons-material/SentimentVerySatisfied';
+import { SentimentVeryDissatisfied as SentimentVeryDissatisfiedIcon } from '@mui/icons-material';
+import { SentimentDissatisfied as SentimentDissatisfiedIcon } from '@mui/icons-material';
+import { SentimentSatisfied as SentimentSatisfiedIcon } from '@mui/icons-material';
+import { SentimentSatisfiedAltOutlined as SentimentSatisfiedAltIcon } from '@mui/icons-material';
+import { SentimentVerySatisfied as SentimentVerySatisfiedIcon } from '@mui/icons-material';
 
 const customIcons: {
   [index: string]: {

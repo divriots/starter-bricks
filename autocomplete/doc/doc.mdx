@@ -36,8 +36,8 @@ export default MdxLayout;
 
 The widget is useful for setting the value of a single-line textbox in one of two types of scenarios:
 
-1. The value for the textbox must be chosen from a predefined set of allowed values, e.g., a location field must contain a valid location name: [combo box](#combo-box).
-2. The textbox may contain any arbitrary value, but it is advantageous to suggest possible values to the user, e.g., a search field may suggest similar or previous searches to save the user time: [free solo](#free-solo).
+1. The value for the textbox must be chosen from a predefined set of allowed values, e.g., a location field must contain a valid location name: combo box.
+2. The textbox may contain any arbitrary value, but it is advantageous to suggest possible values to the user, e.g., a search field may suggest similar or previous searches to save the user time: free solo.
 
 It's meant to be an improved version of the "react-select" and "downshift" packages.
 
@@ -128,7 +128,7 @@ The prop is designed to cover the primary use case of a **search input** with su
 
 ### Creatable
 
-If you intend to use this mode for a [combo box](#combo-box) like experience (an enhanced version of a select element) we recommend setting:
+If you intend to use this mode for a combo box like experience (an enhanced version of a select element) we recommend setting:
 
 - `selectOnFocus` to helps the user clear the selected value.
 - `clearOnBlur` to helps the user to enter a new value.
@@ -197,7 +197,7 @@ The `useAutocomplete` hook is also reexported from @mui/material for convenience
 import useAutocomplete from '@mui/material/useAutocomplete';
 ```
 
-- 📦 [4.5 kB gzipped](/size-snapshot).
+- 📦 4.5 kB gzipped.
 
 <UseAutocomplete />
     
@@ -223,14 +223,14 @@ import useAutocomplete from '@mui/material/useAutocomplete';
 <CustomizedHook />
 ```
 
-Head to the [customization](#customization) section for an example with the `Autocomplete` component instead of the hook.
+Head to the customization section for an example with the `Autocomplete` component instead of the hook.
 
 ## Asynchronous requests
 
 The component supports two different asynchronous use-cases:
 
-- [Load on open](#load-on-open): it waits for the component to be interacted with to load the options.
-- [Search as you type](#search-as-you-type): a new request is made for each keystroke.
+- Load on open: it waits for the component to be interacted with to load the options.
+- Search as you type: a new request is made for each keystroke.
 
 ### Load on open
 
@@ -262,7 +262,7 @@ A customized UI for Google Maps Places Autocomplete.
 <GoogleMaps />
 ```
 
-For this demo, we need to load the [Google Maps JavaScript](https://developers.google.com/maps/documentation/javascript/tutorial) API.
+For this demo, we need to load the Google Maps JavaScript API.
 
 > ⚠️ Before you can start using the Google Maps JavaScript API, you must sign up and create a billing account.
 
@@ -341,11 +341,11 @@ This demo reproduces the GitHub's label picker:
 <GitHubLabel />
 ```
 
-Head to the [Customized hook](#customized-hook) section for a customization example with the `useAutocomplete` hook instead of the component.
+Head to the Customized hook section for a customization example with the `useAutocomplete` hook instead of the component.
 
 ## Highlights
 
-The following demo relies on [autosuggest-highlight](https://github.com/moroshko/autosuggest-highlight), a small (1 kB) utility for highlighting text in autosuggest and autocomplete components.
+The following demo relies on autosuggest-highlight, a small (1 kB) utility for highlighting text in autosuggest and autocomplete components.
 
 <Highlights />
 ```tsx
@@ -403,7 +403,7 @@ const filterOptions = createFilterOptions({
 
 ### Advanced
 
-For richer filtering mechanisms, like fuzzy matching, it's recommended to look at [match-sorter](https://github.com/kentcdodds/match-sorter). For instance:
+For richer filtering mechanisms, like fuzzy matching, it's recommended to look at match-sorter. For instance:
 
 ```jsx
 import { matchSorter } from 'match-sorter';
@@ -416,7 +416,7 @@ const filterOptions = (options, { inputValue }) =>
 
 ## Virtualization
 
-Search within 10,000 randomly generated options. The list is virtualized thanks to [react-window](https://github.com/bvaughn/react-window).
+Search within 10,000 randomly generated options. The list is virtualized thanks to react-window.
 
 <Virtualize />
 ```tsx
@@ -458,7 +458,7 @@ Browsers have heuristics to help the user fill in form inputs.
 However, this can harm the UX of the component.
 
 By default, the component disables the input **autocomplete** feature (remembering what the user has typed for a given field in a previous session) with the `autoComplete="off"` attribute.
-Google Chrome does not currently support this attribute setting ([Issue 587466](https://bugs.chromium.org/p/chromium/issues/detail?id=587466)).
+Google Chrome does not currently support this attribute setting (Issue 587466).
 A possible workaround is to remove the `id` to have the component generate a random one.
 
 In addition to remembering past entered values, the browser might also propose **autofill** suggestions (saved login, address, or payment details).
@@ -477,7 +477,7 @@ In the event you want the avoid autofill, you can try the following:
   />
   ```
 
-Read [the guide on MDN](https://developer.mozilla.org/en-US/docs/Web/Security/Securing_your_site/Turning_off_form_autocompletion) for more details.
+Read the guide on MDN for more details.
 
 ### iOS VoiceOver
 

@@ -3,7 +3,7 @@
     "dir": "",
     "menu": [
       "introduction",
-      ["tokens", ["colors", "typography", "theme"]],
+      ["tokens", ["colors", "fonts", "theme"]],
       [
         "inputs",
         [
@@ -16,9 +16,28 @@
           "rating",
           "rating",
           "select",
-          "slider"
+          "slider",
+          "switch",
+          "text-field",
+          "text-field",
+          "transfer-list",
+          "toggle-button"
         ]
       ],
+      [
+        "data-display",
+        [
+          "avatar",
+          "badge",
+          "chip",
+          "divider",
+          "list",
+          "table",
+          "tooltip",
+          "typography"
+        ]
+      ],
+      ["feedback", ["alert", "backdrop"]],
       ["dockit", ["layout", "showcase"]]
     ]
   }

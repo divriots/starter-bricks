@@ -1,10 +1,10 @@
 import * as React from 'react';
 import { Box } from '@mui/material';
 import { Fab } from '@mui/material';
-import AddIcon from '@mui/icons-material/Add';
-import EditIcon from '@mui/icons-material/Edit';
-import FavoriteIcon from '@mui/icons-material/Favorite';
-import NavigationIcon from '@mui/icons-material/Navigation';
+import { Add as AddIcon } from '@mui/icons-material';
+import { Edit as EditIcon } from '@mui/icons-material';
+import { Favorite as FavoriteIcon } from '@mui/icons-material';
+import { Navigation as NavigationIcon } from '@mui/icons-material';
 
 export default function FloatingActionButtons() {
   return (

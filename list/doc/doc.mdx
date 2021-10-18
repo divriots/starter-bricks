@@ -1,0 +1,191 @@
+import { List } from '~/list';
+import BasicList from './BasicList';
+import NestedList from './NestedList';
+import FolderList from './FolderList';
+import InteractiveList from './InteractiveList';
+import SelectedListItem from './SelectedListItem';
+import AlignItemsList from './AlignItemsList';
+import CheckboxList from './CheckboxList';
+import CheckboxListSecondary from './CheckboxListSecondary';
+import SwitchListSecondary from './SwitchListSecondary';
+import PinnedSubheaderList from './PinnedSubheaderList';
+import InsetList from './InsetList';
+import GutterlessList from './GutterlessList';
+import VirtualizedList from './VirtualizedList';
+import CustomizedList from './CustomizedList';
+import { mdx } from '@mdx-js/react';
+import { Playground as BklPlayground } from '@divriots/dockit-react/playground';
+import { MdxLayout } from '~/layout';
+export default MdxLayout;
+
+# Lists
+
+<p className="description">
+  Lists are continuous, vertical indexes of text or images.
+</p>
+
+Lists are a continuous group of text or images. They are composed of items containing primary and supplemental actions, which are represented by icons and text.
+
+## Basic List
+
+<BasicList />
+```tsx
+<BasicList />
+```
+
+The last item of the previous demo shows how you can render a link:
+
+```jsx
+<ListItemButton component="a" href="#simple-list">
+  <ListItemText primary="Spam" />
+</ListItemButton>
+```
+
+You can find a demo with React Router following this section of the documentation.
+
+## Nested List
+
+<NestedList />
+```tsx
+<NestedList />
+```
+
+## Folder List
+
+<FolderList />
+```tsx
+<FolderList />
+```
+
+## Interactive
+
+Below is an interactive demo that lets you explore the visual results of the different settings:
+
+<InteractiveList />
+```tsx
+<InteractiveList />
+```
+
+## Selected ListItem
+
+<SelectedListItem />
+```tsx
+<SelectedListItem />
+```
+
+## Align list items
+
+When displaying three lines or more, the avatar is not aligned at the top.
+You should set the `alignItems="flex-start"` prop to align the avatar at the top, following the Material Design guidelines:
+
+<AlignItemsList />
+```tsx
+<AlignItemsList />
+```
+
+## List Controls
+
+### Checkbox
+
+A checkbox can either be a primary action or a secondary action.
+
+The checkbox is the primary action and the state indicator for the list item. The comment button is a secondary action and a separate target.
+
+<CheckboxList />
+```tsx
+<CheckboxList />
+```
+
+The checkbox is the secondary action for the list item and a separate target.
+
+<CheckboxListSecondary />
+```tsx
+<CheckboxListSecondary />
+```
+
+### Switch
+
+The switch is the secondary action and a separate target.
+
+<SwitchListSecondary />
+```tsx
+<SwitchListSecondary />
+```
+
+## Sticky subheader
+
+Upon scrolling, subheaders remain pinned to the top of the screen until pushed off screen by the next subheader.
+This feature relies on CSS sticky positioning.
+(⚠️ no IE 11 support)
+
+<PinnedSubheaderList />
+```tsx
+<PinnedSubheaderList />
+```
+
+## Inset List Item
+
+The `inset` prop enables a list item that does not have a leading icon or avatar to align correctly with items that do.
+
+<InsetList />
+```tsx
+<InsetList />
+```
+
+## Gutterless list
+
+When rendering a list within a component that defines its own gutters, `ListItem` gutters can be disabled with `disableGutters`.
+
+<GutterlessList />
+```tsx
+<List sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper' }}>
+  {[1, 2, 3].map((value) => (
+    <ListItem
+      key={value}
+      disableGutters
+      secondaryAction={
+        <IconButton>
+          <CommentIcon />
+        </IconButton>
+      }
+    >
+      <ListItemText primary={`Line item ${value}`} />
+    </ListItem>
+  ))}
+</List>
+```
+
+## Virtualized List
+
+In the following example, we demonstrate how to use react-window with the `List` component.
+It renders 200 rows and can easily handle more.
+Virtualization helps with performance issues.
+
+<VirtualizedList />
+```tsx
+<FixedSizeList
+  height={400}
+  width={360}
+  itemSize={46}
+  itemCount={200}
+  overscanCount={5}
+>
+  {renderRow}
+</FixedSizeList>
+```
+
+The use of react-window when possible is encouraged.
+If this library doesn't cover your use case, you should consider using react-virtualized, then alternatives like react-virtuoso.
+
+## Customization
+
+Here are some examples of customizing the component.
+You can learn more about this in the
+overrides documentation page.
+
+<CustomizedList />
+```tsx
+<CustomizedList />
+```
+
+🎨 If you are looking for inspiration, you can check MUI Treasury's customization examples.

@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { useAutocomplete, AutocompleteGetTagProps } from '@mui/core';
-import CheckIcon from '@mui/icons-material/Check';
-import CloseIcon from '@mui/icons-material/Close';
+import { Check as CheckIcon } from '@mui/icons-material';
+import { Close as CloseIcon } from '@mui/icons-material';
 import { styled } from '@mui/material';
 
 const Root = styled('div')(
