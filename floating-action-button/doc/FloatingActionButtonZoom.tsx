@@ -4,9 +4,11 @@ import { useTheme } from '@mui/material';
 import { AppBar } from '@mui/material';
 import { Tabs } from '@mui/material';
 import { Tab } from '@mui/material';
-import { Typography } from '@mui/material';
+import { Typography } from '~/typography';
+
 import { Zoom } from '@mui/material';
-import { Fab } from '@mui/material';
+import { Fab } from '~/floating-action-button';
+
 import { Add as AddIcon } from '@mui/icons-material';
 import { Edit as EditIcon } from '@mui/icons-material';
 import { KeyboardArrowUp as UpIcon } from '@mui/icons-material';

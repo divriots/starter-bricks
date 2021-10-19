@@ -4,7 +4,7 @@ import { FormControl } from '@mui/material';
 import { FormGroup } from '@mui/material';
 import { FormControlLabel } from '@mui/material';
 import { FormHelperText } from '@mui/material';
-import { Switch } from '@mui/material';
+import { Switch } from '~/switch';
 
 export default function SwitchesGroup() {
   const [state, setState] = React.useState({

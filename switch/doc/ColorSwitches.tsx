@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { alpha, styled } from '@mui/material';
 import { pink } from '@mui/material/colors';
-import { Switch } from '@mui/material';
+import { Switch } from '~/switch';
 
 const GreenSwitch = styled(Switch)(({ theme }) => ({
   '& .MuiSwitch-switchBase.Mui-checked': {

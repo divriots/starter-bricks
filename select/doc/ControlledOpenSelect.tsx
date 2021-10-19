@@ -2,8 +2,9 @@ import * as React from 'react';
 import { InputLabel } from '@mui/material';
 import { MenuItem } from '@mui/material';
 import { FormControl } from '@mui/material';
-import { Select, SelectChangeEvent } from '@mui/material';
-import { Button } from '@mui/material';
+import { Select } from '~/select';
+import { SelectChangeEvent } from '@mui/material';
+import { Button } from '~/button';
 
 export default function ControlledOpenSelect() {
   const [age, setAge] = React.useState<string | number>('');

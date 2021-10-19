@@ -4,7 +4,8 @@ import { FormatAlignCenter as FormatAlignCenterIcon } from '@mui/icons-material'
 import { FormatAlignRight as FormatAlignRightIcon } from '@mui/icons-material';
 import { FormatAlignJustify as FormatAlignJustifyIcon } from '@mui/icons-material';
 import { Box } from '@mui/material';
-import { ToggleButton } from '@mui/material';
+import { ToggleButton } from '~/toggle-button';
+
 import { ToggleButtonGroup } from '@mui/material';
 
 export default function ToggleButtonSizes() {

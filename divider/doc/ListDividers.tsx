@@ -1,8 +1,9 @@
 import * as React from 'react';
-import { List } from '@mui/material';
+import { List } from '~/list';
+
 import { ListItem } from '@mui/material';
 import { ListItemText } from '@mui/material';
-import { Divider } from '@mui/material';
+import { Divider } from '~/divider';
 
 const style = {
   width: '100%',

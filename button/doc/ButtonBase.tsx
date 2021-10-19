@@ -2,7 +2,7 @@ import * as React from 'react';
 import { styled } from '@mui/material';
 import { Box } from '@mui/material';
 import { ButtonBase } from '@mui/material';
-import { Typography } from '@mui/material';
+import { Typography } from '~/typography';
 
 const images = [
   {

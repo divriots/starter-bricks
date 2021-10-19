@@ -1,5 +1,6 @@
 import * as React from 'react';
-import { Rating } from '@mui/material';
+import { Rating } from '~/rating';
+
 import { Box } from '@mui/material';
 import { Star as StarIcon } from '@mui/icons-material';
 

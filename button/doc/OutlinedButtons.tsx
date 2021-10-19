@@ -1,5 +1,6 @@
 import * as React from 'react';
-import { Button } from '@mui/material';
+import { Button } from '~/button';
+
 import { Stack } from '@mui/material';
 
 export default function OutlinedButtons() {

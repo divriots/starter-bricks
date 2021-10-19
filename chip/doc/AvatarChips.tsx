@@ -1,6 +1,8 @@
 import * as React from 'react';
-import { Avatar } from '@mui/material';
-import { Chip } from '@mui/material';
+import { Avatar } from '~/avatar';
+
+import { Chip } from '~/chip';
+
 import { Stack } from '@mui/material';
 
 export default function AvatarChips() {

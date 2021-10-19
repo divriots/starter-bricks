@@ -1,5 +1,6 @@
 import * as React from 'react';
-import { Table } from '@mui/material';
+import { Table } from '~/table';
+
 import { TableBody } from '@mui/material';
 import { TableCell } from '@mui/material';
 import { TableContainer } from '@mui/material';

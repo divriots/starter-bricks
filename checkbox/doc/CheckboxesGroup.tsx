@@ -5,7 +5,7 @@ import { FormControl } from '@mui/material';
 import { FormGroup } from '@mui/material';
 import { FormControlLabel } from '@mui/material';
 import { FormHelperText } from '@mui/material';
-import { Checkbox } from '@mui/material';
+import { Checkbox } from '~/checkbox';
 
 export default function CheckboxesGroup() {
   const [state, setState] = React.useState({

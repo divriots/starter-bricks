@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { ListSubheader } from '@mui/material';
-import { List } from '@mui/material';
+import { List } from '~/list';
+
 import { ListItemButton } from '@mui/material';
 import { ListItemIcon } from '@mui/material';
 import { ListItemText } from '@mui/material';

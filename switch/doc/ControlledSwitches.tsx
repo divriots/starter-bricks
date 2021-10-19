@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Switch } from '@mui/material';
+import { Switch } from '~/switch';
 
 export default function ControlledSwitches() {
   const [checked, setChecked] = React.useState(true);

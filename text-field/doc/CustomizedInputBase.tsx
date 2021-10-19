@@ -1,7 +1,8 @@
 import * as React from 'react';
 import { Paper } from '@mui/material';
 import { InputBase } from '@mui/material';
-import { Divider } from '@mui/material';
+import { Divider } from '~/divider';
+
 import { IconButton } from '@mui/material';
 import { Menu as MenuIcon } from '@mui/icons-material';
 import { Search as SearchIcon } from '@mui/icons-material';

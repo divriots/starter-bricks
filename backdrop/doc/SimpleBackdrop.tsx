@@ -1,7 +1,9 @@
 import * as React from 'react';
-import { Backdrop } from '@mui/material';
-import { CircularProgress } from '@mui/material';
-import { Button } from '@mui/material';
+import { Backdrop } from '~/backdrop';
+
+import { CircularProgress } from '~/progress';
+
+import { Button } from '~/button';
 
 export default function SimpleBackdrop() {
   const [open, setOpen] = React.useState(false);

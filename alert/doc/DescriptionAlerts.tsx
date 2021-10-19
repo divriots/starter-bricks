@@ -1,5 +1,6 @@
 import * as React from 'react';
-import { Alert } from '@mui/material';
+import { Alert } from '~/alert';
+
 import { AlertTitle } from '@mui/material';
 import { Stack } from '@mui/material';
 

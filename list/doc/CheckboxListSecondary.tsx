@@ -1,11 +1,13 @@
 import * as React from 'react';
-import { List } from '@mui/material';
+import { List } from '~/list';
+
 import { ListItem } from '@mui/material';
 import { ListItemButton } from '@mui/material';
 import { ListItemText } from '@mui/material';
 import { ListItemAvatar } from '@mui/material';
-import { Checkbox } from '@mui/material';
-import { Avatar } from '@mui/material';
+import { Checkbox } from '~/checkbox';
+
+import { Avatar } from '~/avatar';
 
 export default function CheckboxListSecondary() {
   const [checked, setChecked] = React.useState([1]);

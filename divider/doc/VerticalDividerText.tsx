@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { styled } from '@mui/material';
 import { Grid as MuiGrid } from '@mui/material';
-import { Divider } from '@mui/material';
+import { Divider } from '~/divider';
 
 const Grid = styled(MuiGrid)(({ theme }) => ({
   width: '100%',

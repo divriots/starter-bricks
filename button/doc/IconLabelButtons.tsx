@@ -1,5 +1,6 @@
 import * as React from 'react';
-import { Button } from '@mui/material';
+import { Button } from '~/button';
+
 import { Delete as DeleteIcon } from '@mui/icons-material';
 import { Send as SendIcon } from '@mui/icons-material';
 import { Stack } from '@mui/material';

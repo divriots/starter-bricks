@@ -1,5 +1,6 @@
 import * as React from 'react';
-import { ToggleButton } from '@mui/material';
+import { ToggleButton } from '~/toggle-button';
+
 import { ToggleButtonGroup } from '@mui/material';
 
 export default function ColorToggleButton() {

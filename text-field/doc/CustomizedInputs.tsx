@@ -3,7 +3,8 @@ import { alpha, styled } from '@mui/material';
 import { InputBase } from '@mui/material';
 import { Box } from '@mui/material';
 import { InputLabel } from '@mui/material';
-import { TextField, TextFieldProps } from '@mui/material';
+import { TextField } from '~/text-field';
+import { TextFieldProps } from '@mui/material';
 import { FormControl } from '@mui/material';
 import { OutlinedInputProps } from '@mui/material';
 

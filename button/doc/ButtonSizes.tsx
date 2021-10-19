@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { Box } from '@mui/material';
-import { Button } from '@mui/material';
+import { Button } from '~/button';
 
 export default function ButtonSizes() {
   return (

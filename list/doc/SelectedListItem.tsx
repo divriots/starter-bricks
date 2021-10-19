@@ -1,10 +1,12 @@
 import * as React from 'react';
 import { Box } from '@mui/material';
-import { List } from '@mui/material';
+import { List } from '~/list';
+
 import { ListItemButton } from '@mui/material';
 import { ListItemIcon } from '@mui/material';
 import { ListItemText } from '@mui/material';
-import { Divider } from '@mui/material';
+import { Divider } from '~/divider';
+
 import { Inbox as InboxIcon } from '@mui/icons-material';
 import { Drafts as DraftsIcon } from '@mui/icons-material';
 

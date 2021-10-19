@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { Box } from '@mui/material';
-import { Slider } from '@mui/material';
+import { Slider } from '~/slider';
 
 const marks = [
   {

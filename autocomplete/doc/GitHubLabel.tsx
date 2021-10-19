@@ -5,11 +5,8 @@ import { ClickAwayListener } from '@mui/material';
 import { Settings as SettingsIcon } from '@mui/icons-material';
 import { Close as CloseIcon } from '@mui/icons-material';
 import { Done as DoneIcon } from '@mui/icons-material';
-import {
-  Autocomplete,
-  AutocompleteCloseReason,
-  autocompleteClasses,
-} from '@mui/material';
+import { Autocomplete } from '~/autocomplete';
+import { AutocompleteCloseReason, autocompleteClasses } from '@mui/material';
 import { ButtonBase } from '@mui/material';
 import { InputBase } from '@mui/material';
 import { Box } from '@mui/material';

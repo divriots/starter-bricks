@@ -1,6 +1,7 @@
 import * as React from 'react';
-import { Button } from '@mui/material';
-import { Tooltip } from '@mui/material';
+import { Button } from '~/button';
+
+import { Tooltip } from '~/tooltip';
 
 export default function DelayTooltips() {
   return (

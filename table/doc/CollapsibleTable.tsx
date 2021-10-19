@@ -2,13 +2,15 @@ import * as React from 'react';
 import { Box } from '@mui/material';
 import { Collapse } from '@mui/material';
 import { IconButton } from '@mui/material';
-import { Table } from '@mui/material';
+import { Table } from '~/table';
+
 import { TableBody } from '@mui/material';
 import { TableCell } from '@mui/material';
 import { TableContainer } from '@mui/material';
 import { TableHead } from '@mui/material';
 import { TableRow } from '@mui/material';
-import { Typography } from '@mui/material';
+import { Typography } from '~/typography';
+
 import { Paper } from '@mui/material';
 import { KeyboardArrowDown as KeyboardArrowDownIcon } from '@mui/icons-material';
 import { KeyboardArrowUp as KeyboardArrowUpIcon } from '@mui/icons-material';

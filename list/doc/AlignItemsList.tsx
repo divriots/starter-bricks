@@ -1,11 +1,14 @@
 import * as React from 'react';
-import { List } from '@mui/material';
+import { List } from '~/list';
+
 import { ListItem } from '@mui/material';
-import { Divider } from '@mui/material';
+import { Divider } from '~/divider';
+
 import { ListItemText } from '@mui/material';
 import { ListItemAvatar } from '@mui/material';
-import { Avatar } from '@mui/material';
-import { Typography } from '@mui/material';
+import { Avatar } from '~/avatar';
+
+import { Typography } from '~/typography';
 
 export default function AlignItemsList() {
   return (

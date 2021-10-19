@@ -1,5 +1,6 @@
 import * as React from 'react';
-import { Switch } from '@mui/material';
+import { Switch } from '~/switch';
+
 import { FormGroup } from '@mui/material';
 import { FormControlLabel } from '@mui/material';
 import { FormControl } from '@mui/material';

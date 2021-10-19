@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { FormGroup } from '@mui/material';
 import { FormControlLabel } from '@mui/material';
-import { Switch } from '@mui/material';
+import { Switch } from '~/switch';
 
 export default function SwitchLabels() {
   return (

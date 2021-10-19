@@ -1,7 +1,9 @@
 import * as React from 'react';
 import { Grid } from '@mui/material';
-import { Button } from '@mui/material';
-import { Tooltip } from '@mui/material';
+import { Button } from '~/button';
+
+import { Tooltip } from '~/tooltip';
+
 import { ClickAwayListener } from '@mui/material';
 
 export default function TriggersTooltips() {

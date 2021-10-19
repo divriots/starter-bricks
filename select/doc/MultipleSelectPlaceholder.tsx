@@ -3,7 +3,8 @@ import { Theme, useTheme } from '@mui/material';
 import { OutlinedInput } from '@mui/material';
 import { MenuItem } from '@mui/material';
 import { FormControl } from '@mui/material';
-import { Select, SelectChangeEvent } from '@mui/material';
+import { Select } from '~/select';
+import { SelectChangeEvent } from '@mui/material';
 
 const ITEM_HEIGHT = 48;
 const ITEM_PADDING_TOP = 8;

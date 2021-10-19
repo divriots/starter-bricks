@@ -1,7 +1,8 @@
 import * as React from 'react';
 import { useTheme } from '@mui/material';
 import { Box } from '@mui/material';
-import { Table } from '@mui/material';
+import { Table } from '~/table';
+
 import { TableBody } from '@mui/material';
 import { TableCell } from '@mui/material';
 import { TableContainer } from '@mui/material';

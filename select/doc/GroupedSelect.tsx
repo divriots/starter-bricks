@@ -3,7 +3,7 @@ import { InputLabel } from '@mui/material';
 import { MenuItem } from '@mui/material';
 import { ListSubheader } from '@mui/material';
 import { FormControl } from '@mui/material';
-import { Select } from '@mui/material';
+import { Select } from '~/select';
 
 export default function GroupedSelect() {
   return (

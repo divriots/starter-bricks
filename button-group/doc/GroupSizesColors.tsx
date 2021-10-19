@@ -1,7 +1,8 @@
 import * as React from 'react';
-import { Button } from '@mui/material';
+import { Button } from '~/button';
+
 import { Box } from '@mui/material';
-import { ButtonGroup } from '@mui/material';
+import { ButtonGroup } from '~/button-group';
 
 const buttons = [
   <Button key="one">One</Button>,

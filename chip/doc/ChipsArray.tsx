@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { styled } from '@mui/material';
-import { Chip } from '@mui/material';
+import { Chip } from '~/chip';
+
 import { Paper } from '@mui/material';
 import { TagFaces as TagFacesIcon } from '@mui/icons-material';
 

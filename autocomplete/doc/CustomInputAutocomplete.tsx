@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Autocomplete } from '@mui/material';
+import { Autocomplete } from '~/autocomplete';
 
 const options = ['Option 1', 'Option 2'];
 

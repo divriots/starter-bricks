@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { pink } from '@mui/material/colors';
-import { Checkbox } from '@mui/material';
+import { Checkbox } from '~/checkbox';
 
 const label = { inputProps: { 'aria-label': 'Checkbox demo' } };
 

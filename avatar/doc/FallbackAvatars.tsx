@@ -1,5 +1,6 @@
 import * as React from 'react';
-import { Avatar } from '@mui/material';
+import { Avatar } from '~/avatar';
+
 import { Stack } from '@mui/material';
 import { deepOrange } from '@mui/material/colors';
 

@@ -1,6 +1,8 @@
 import * as React from 'react';
-import { Alert } from '@mui/material';
-import { Button } from '@mui/material';
+import { Alert } from '~/alert';
+
+import { Button } from '~/button';
+
 import { Stack } from '@mui/material';
 
 export default function ActionAlerts() {

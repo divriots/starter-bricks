@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Alert } from '@mui/material';
+import { Alert } from '~/alert';
 
 export default function ColorAlerts() {
   return (

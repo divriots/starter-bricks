@@ -1,5 +1,6 @@
 import * as React from 'react';
-import { Alert } from '@mui/material';
+import { Alert } from '~/alert';
+
 import { Check as CheckIcon } from '@mui/icons-material';
 import { CheckCircleOutline as CheckCircleOutlineIcon } from '@mui/icons-material';
 import { Stack } from '@mui/material';

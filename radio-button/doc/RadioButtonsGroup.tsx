@@ -1,5 +1,6 @@
 import * as React from 'react';
-import { Radio } from '@mui/material';
+import { Radio } from '~/radio-button';
+
 import { RadioGroup } from '@mui/material';
 import { FormControlLabel } from '@mui/material';
 import { FormControl } from '@mui/material';

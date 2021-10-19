@@ -1,8 +1,10 @@
 import * as React from 'react';
 import { styled, useTheme } from '@mui/material';
 import { Box } from '@mui/material';
-import { Typography } from '@mui/material';
-import { Slider } from '@mui/material';
+import { Typography } from '~/typography';
+
+import { Slider } from '~/slider';
+
 import { IconButton } from '@mui/material';
 import { Stack } from '@mui/material';
 import { PauseRounded } from '@mui/icons-material';

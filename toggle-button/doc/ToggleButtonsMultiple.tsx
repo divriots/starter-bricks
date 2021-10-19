@@ -4,7 +4,8 @@ import { FormatItalic as FormatItalicIcon } from '@mui/icons-material';
 import { FormatUnderlined as FormatUnderlinedIcon } from '@mui/icons-material';
 import { FormatColorFill as FormatColorFillIcon } from '@mui/icons-material';
 import { ArrowDropDown as ArrowDropDownIcon } from '@mui/icons-material';
-import { ToggleButton } from '@mui/material';
+import { ToggleButton } from '~/toggle-button';
+
 import { ToggleButtonGroup } from '@mui/material';
 
 export default function ToggleButtonsMultiple() {

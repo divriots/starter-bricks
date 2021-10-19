@@ -3,7 +3,8 @@ import { InputLabel } from '@mui/material';
 import { MenuItem } from '@mui/material';
 import { FormHelperText } from '@mui/material';
 import { FormControl } from '@mui/material';
-import { Select, SelectChangeEvent } from '@mui/material';
+import { Select } from '~/select';
+import { SelectChangeEvent } from '@mui/material';
 
 export default function SelectLabels() {
   const [age, setAge] = React.useState('');

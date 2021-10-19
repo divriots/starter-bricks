@@ -1,9 +1,11 @@
 import * as React from 'react';
-import { List } from '@mui/material';
+import { List } from '~/list';
+
 import { ListItem } from '@mui/material';
 import { ListItemText } from '@mui/material';
 import { ListItemAvatar } from '@mui/material';
-import { Avatar } from '@mui/material';
+import { Avatar } from '~/avatar';
+
 import { Image as ImageIcon } from '@mui/icons-material';
 import { Work as WorkIcon } from '@mui/icons-material';
 import { BeachAccess as BeachAccessIcon } from '@mui/icons-material';

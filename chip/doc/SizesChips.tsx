@@ -1,5 +1,6 @@
 import * as React from 'react';
-import { Chip } from '@mui/material';
+import { Chip } from '~/chip';
+
 import { Stack } from '@mui/material';
 
 export default function SizesChips() {

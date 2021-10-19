@@ -1,8 +1,10 @@
 import * as React from 'react';
 import { styled } from '@mui/material';
-import { Button } from '@mui/material';
-import { Tooltip, TooltipProps, tooltipClasses } from '@mui/material';
-import { Typography } from '@mui/material';
+import { Button } from '~/button';
+
+import { Tooltip } from '~/tooltip';
+import { TooltipProps, tooltipClasses } from '@mui/material';
+import { Typography } from '~/typography';
 
 const LightTooltip = styled(({ className, ...props }: TooltipProps) => (
   <Tooltip {...props} classes={{ popper: className }} />

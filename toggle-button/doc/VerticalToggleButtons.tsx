@@ -2,7 +2,8 @@ import * as React from 'react';
 import { ViewList as ViewListIcon } from '@mui/icons-material';
 import { ViewModule as ViewModuleIcon } from '@mui/icons-material';
 import { ViewQuilt as ViewQuiltIcon } from '@mui/icons-material';
-import { ToggleButton } from '@mui/material';
+import { ToggleButton } from '~/toggle-button';
+
 import { ToggleButtonGroup } from '@mui/material';
 
 export default function VerticalToggleButtons() {

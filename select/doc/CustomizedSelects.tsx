@@ -3,7 +3,8 @@ import { styled } from '@mui/material';
 import { InputLabel } from '@mui/material';
 import { MenuItem } from '@mui/material';
 import { FormControl } from '@mui/material';
-import { Select } from '@mui/material';
+import { Select } from '~/select';
+
 import { NativeSelect } from '@mui/material';
 import { InputBase } from '@mui/material';
 

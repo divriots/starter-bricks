@@ -1,8 +1,11 @@
 import * as React from 'react';
-import { Slider, SliderThumb } from '@mui/material';
+import { Slider } from '~/slider';
+import { SliderThumb } from '@mui/material';
 import { styled } from '@mui/material';
-import { Typography } from '@mui/material';
-import { Tooltip } from '@mui/material';
+import { Typography } from '~/typography';
+
+import { Tooltip } from '~/tooltip';
+
 import { Box } from '@mui/material';
 
 interface Props {

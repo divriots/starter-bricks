@@ -1,5 +1,6 @@
 import * as React from 'react';
-import { Badge, BadgeProps } from '@mui/material';
+import { Badge } from '~/badge';
+import { BadgeProps } from '@mui/material';
 import { styled } from '@mui/material';
 import { IconButton } from '@mui/material';
 import { ShoppingCart as ShoppingCartIcon } from '@mui/icons-material';

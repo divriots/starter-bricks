@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { InputLabel } from '@mui/material';
 import { FormControl } from '@mui/material';
-import { Select } from '@mui/material';
+import { Select } from '~/select';
 
 const names = [
   'Oliver Hansen',

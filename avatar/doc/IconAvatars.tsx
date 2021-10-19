@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { green, pink } from '@mui/material/colors';
-import { Avatar } from '@mui/material';
+import { Avatar } from '~/avatar';
+
 import { Stack } from '@mui/material';
 import { Folder as FolderIcon } from '@mui/icons-material';
 import { Pageview as PageviewIcon } from '@mui/icons-material';

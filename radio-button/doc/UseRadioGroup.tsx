@@ -2,7 +2,7 @@ import * as React from 'react';
 import { styled } from '@mui/material';
 import { RadioGroup, useRadioGroup } from '@mui/material';
 import { FormControlLabel, FormControlLabelProps } from '@mui/material';
-import { Radio } from '@mui/material';
+import { Radio } from '~/radio-button';
 
 interface StyledFormControlLabelProps extends FormControlLabelProps {
   checked: boolean;

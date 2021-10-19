@@ -2,8 +2,10 @@ import * as React from 'react';
 import { styled } from '@mui/material';
 import { Box } from '@mui/material';
 import { Grid } from '@mui/material';
-import { Typography } from '@mui/material';
-import { Slider } from '@mui/material';
+import { Typography } from '~/typography';
+
+import { Slider } from '~/slider';
+
 import { Input as MuiInput } from '@mui/material';
 import { VolumeUp } from '@mui/icons-material';
 

@@ -1,5 +1,6 @@
 import * as React from 'react';
-import { List } from '@mui/material';
+import { List } from '~/list';
+
 import { ListItem } from '@mui/material';
 import { ListItemText } from '@mui/material';
 import { Comment as CommentIcon } from '@mui/icons-material';

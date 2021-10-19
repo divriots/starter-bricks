@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Button } from '@mui/material';
+import { Button } from '~/button';
 
 export default function DisableElevation() {
   return (

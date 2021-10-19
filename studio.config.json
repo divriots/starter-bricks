@@ -20,7 +20,6 @@
           "switch",
           "text-field",
           "text-field",
-          "transfer-list",
           "toggle-button"
         ]
       ],
@@ -37,7 +36,7 @@
           "typography"
         ]
       ],
-      ["feedback", ["alert", "backdrop"]],
+      ["feedback", ["alert", "backdrop", "dialog", "progress"]],
       ["dockit", ["layout", "showcase"]]
     ]
   }

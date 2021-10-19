@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { Box } from '@mui/material';
-import { TextField } from '@mui/material';
+import { TextField } from '~/text-field';
 
 export default function StateTextFields() {
   const [name, setName] = React.useState('Cat in the Hat');

@@ -2,7 +2,8 @@ import * as React from 'react';
 import LoadingButton from '@mui/lab/LoadingButton';
 import { Box } from '@mui/material';
 import { FormControlLabel } from '@mui/material';
-import { Switch } from '@mui/material';
+import { Switch } from '~/switch';
+
 import { Save as SaveIcon } from '@mui/icons-material';
 import { Send as SendIcon } from '@mui/icons-material';
 

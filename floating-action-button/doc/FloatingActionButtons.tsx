@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { Box } from '@mui/material';
-import { Fab } from '@mui/material';
+import { Fab } from '~/floating-action-button';
+
 import { Add as AddIcon } from '@mui/icons-material';
 import { Edit as EditIcon } from '@mui/icons-material';
 import { Favorite as FavoriteIcon } from '@mui/icons-material';
