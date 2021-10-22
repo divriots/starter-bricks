@@ -1,6 +1,5 @@
 import * as React from 'react';
 import { Chip } from '~/chip';
-
 import { Stack } from '@mui/material';
 import { Face as FaceIcon } from '@mui/icons-material';
 

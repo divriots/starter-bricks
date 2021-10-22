@@ -3,9 +3,7 @@ import { Slider } from '~/slider';
 import { SliderThumb } from '@mui/material';
 import { styled } from '@mui/material';
 import { Typography } from '~/typography';
-
 import { Tooltip } from '~/tooltip';
-
 import { Box } from '@mui/material';
 
 interface Props {

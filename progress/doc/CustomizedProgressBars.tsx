@@ -3,7 +3,8 @@ import { styled } from '@mui/material';
 import { Box } from '@mui/material';
 import { CircularProgress } from '~/progress';
 import { circularProgressClasses, CircularProgressProps } from '@mui/material';
-import { LinearProgress, linearProgressClasses } from '@mui/material';
+import { LinearProgress } from '~/progress';
+import { linearProgressClasses } from '@mui/material';
 
 const BorderLinearProgress = styled(LinearProgress)(({ theme }) => ({
   height: 10,

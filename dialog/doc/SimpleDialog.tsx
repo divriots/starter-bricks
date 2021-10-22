@@ -1,20 +1,15 @@
 import * as React from 'react';
 import { Button } from '~/button';
-
 import { Avatar } from '~/avatar';
-
 import { List } from '~/list';
-
 import { ListItem } from '@mui/material';
 import { ListItemAvatar } from '@mui/material';
 import { ListItemText } from '@mui/material';
 import { DialogTitle } from '@mui/material';
 import { Dialog } from '~/dialog';
-
 import { Person as PersonIcon } from '@mui/icons-material';
 import { Add as AddIcon } from '@mui/icons-material';
 import { Typography } from '~/typography';
-
 import { blue } from '@mui/material/colors';
 
 const emails = ['username@gmail.com', 'user02@gmail.com'];

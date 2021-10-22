@@ -2,7 +2,6 @@ import * as React from 'react';
 import { alpha } from '@mui/material';
 import { Box } from '@mui/material';
 import { Table } from '~/table';
-
 import { TableBody } from '@mui/material';
 import { TableCell } from '@mui/material';
 import { TableContainer } from '@mui/material';
@@ -12,16 +11,12 @@ import { TableRow } from '@mui/material';
 import { TableSortLabel } from '@mui/material';
 import { Toolbar } from '@mui/material';
 import { Typography } from '~/typography';
-
-import { Paper } from '@mui/material';
+import { Paper } from '~/paper';
 import { Checkbox } from '~/checkbox';
-
 import { IconButton } from '@mui/material';
 import { Tooltip } from '~/tooltip';
-
 import { FormControlLabel } from '@mui/material';
 import { Switch } from '~/switch';
-
 import { Delete as DeleteIcon } from '@mui/icons-material';
 import { FilterList as FilterListIcon } from '@mui/icons-material';
 import { visuallyHidden } from '@mui/utils';

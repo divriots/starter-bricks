@@ -1,8 +1,6 @@
 import * as React from 'react';
 import { Chip } from '~/chip';
-
 import { TextField } from '~/text-field';
-
 import { Autocomplete } from '~/autocomplete';
 
 export default function FixedTags() {

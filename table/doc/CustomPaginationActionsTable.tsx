@@ -2,14 +2,13 @@ import * as React from 'react';
 import { useTheme } from '@mui/material';
 import { Box } from '@mui/material';
 import { Table } from '~/table';
-
 import { TableBody } from '@mui/material';
 import { TableCell } from '@mui/material';
 import { TableContainer } from '@mui/material';
 import { TableFooter } from '@mui/material';
 import { TablePagination } from '@mui/material';
 import { TableRow } from '@mui/material';
-import { Paper } from '@mui/material';
+import { Paper } from '~/paper';
 import { IconButton } from '@mui/material';
 import { FirstPage as FirstPageIcon } from '@mui/icons-material';
 import { KeyboardArrowLeft } from '@mui/icons-material';

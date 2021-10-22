@@ -24,6 +24,7 @@ import Filter from './Filter';
 import Virtualize from './Virtualize';
 import { mdx } from '@mdx-js/react';
 import { Playground as BklPlayground } from '@divriots/dockit-react/playground';
+import { DemoFrame } from '~/demo-frame';
 import { MdxLayout } from '~/layout';
 export default MdxLayout;
 
@@ -201,8 +202,8 @@ import useAutocomplete from '@mui/material/useAutocomplete';
 
 <UseAutocomplete />
     
-    ```tsx
-    <div {...getRootProps()}>
+```tsx
+<div {...getRootProps()}>
   <Label {...getInputLabelProps()}>useAutocomplete</Label>
   <Input {...getInputProps()} />
 </div>
@@ -213,7 +214,7 @@ import useAutocomplete from '@mui/material/useAutocomplete';
     ))}
   </Listbox>
 ) : null}
-    ```
+```
 
 
 ### Customized hook

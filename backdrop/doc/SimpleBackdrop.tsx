@@ -1,8 +1,6 @@
 import * as React from 'react';
 import { Backdrop } from '~/backdrop';
-
 import { CircularProgress } from '~/progress';
-
 import { Button } from '~/button';
 
 export default function SimpleBackdrop() {

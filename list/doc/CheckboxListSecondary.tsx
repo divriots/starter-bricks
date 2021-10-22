@@ -1,12 +1,10 @@
 import * as React from 'react';
 import { List } from '~/list';
-
 import { ListItem } from '@mui/material';
 import { ListItemButton } from '@mui/material';
 import { ListItemText } from '@mui/material';
 import { ListItemAvatar } from '@mui/material';
 import { Checkbox } from '~/checkbox';
-
 import { Avatar } from '~/avatar';
 
 export default function CheckboxListSecondary() {

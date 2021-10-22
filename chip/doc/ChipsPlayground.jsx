@@ -6,11 +6,8 @@ import { FormLabel } from '@mui/material';
 import { FormControlLabel } from '@mui/material';
 import { RadioGroup } from '@mui/material';
 import { Radio } from '~/radio-button';
-
 import { Avatar } from '~/avatar';
-
 import { Chip } from '~/chip';
-
 import { Face as FaceIcon } from '@mui/icons-material';
 import { Done as DoneIcon } from '@mui/icons-material';
 

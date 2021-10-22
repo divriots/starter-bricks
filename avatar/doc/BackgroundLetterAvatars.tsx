@@ -1,6 +1,5 @@
 import * as React from 'react';
 import { Avatar } from '~/avatar';
-
 import { Stack } from '@mui/material';
 
 function stringToColor(string: string) {

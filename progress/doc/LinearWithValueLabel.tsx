@@ -1,7 +1,7 @@
 import * as React from 'react';
-import { LinearProgress, LinearProgressProps } from '@mui/material';
+import { LinearProgress } from '~/progress';
+import { LinearProgressProps } from '@mui/material';
 import { Typography } from '~/typography';
-
 import { Box } from '@mui/material';
 
 function LinearProgressWithLabel(

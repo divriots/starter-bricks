@@ -1,10 +1,7 @@
 import * as React from 'react';
 import { Chip } from '~/chip';
-
 import { Autocomplete } from '~/autocomplete';
-
 import { TextField } from '~/text-field';
-
 import { Stack } from '@mui/material';
 
 export default function Tags() {

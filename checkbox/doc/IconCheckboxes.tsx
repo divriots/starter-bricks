@@ -1,6 +1,5 @@
 import * as React from 'react';
 import { Checkbox } from '~/checkbox';
-
 import { FavoriteBorder } from '@mui/icons-material';
 import { Favorite } from '@mui/icons-material';
 import { BookmarkBorder as BookmarkBorderIcon } from '@mui/icons-material';

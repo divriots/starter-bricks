@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { Box } from '@mui/material';
-import { LinearProgress } from '@mui/material';
+import { LinearProgress } from '~/progress';
 
 export default function LinearDeterminate() {
   const [progress, setProgress] = React.useState(0);

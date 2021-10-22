@@ -1,6 +1,5 @@
 import * as React from 'react';
 import { Chip } from '~/chip';
-
 import { Stack } from '@mui/material';
 import { Done as DoneIcon } from '@mui/icons-material';
 import { Delete as DeleteIcon } from '@mui/icons-material';

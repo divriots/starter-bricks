@@ -1,11 +1,9 @@
 import * as React from 'react';
 import { Box } from '@mui/material';
 import { Alert } from '~/alert';
-
 import { IconButton } from '@mui/material';
 import { Collapse } from '@mui/material';
 import { Button } from '~/button';
-
 import { Close as CloseIcon } from '@mui/icons-material';
 
 export default function TransitionAlerts() {

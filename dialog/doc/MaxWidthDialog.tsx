@@ -1,7 +1,6 @@
 import * as React from 'react';
 import { Box } from '@mui/material';
 import { Button } from '~/button';
-
 import { Dialog } from '~/dialog';
 import { DialogProps } from '@mui/material';
 import { DialogActions } from '@mui/material';
@@ -11,7 +10,7 @@ import { DialogTitle } from '@mui/material';
 import { FormControl } from '@mui/material';
 import { FormControlLabel } from '@mui/material';
 import { InputLabel } from '@mui/material';
-import { MenuItem } from '@mui/material';
+import { MenuItem } from '~/menu';
 import { Select } from '~/select';
 import { SelectChangeEvent } from '@mui/material';
 import { Switch } from '~/switch';

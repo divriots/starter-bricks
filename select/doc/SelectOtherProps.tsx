@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { InputLabel } from '@mui/material';
-import { MenuItem } from '@mui/material';
+import { MenuItem } from '~/menu';
 import { FormHelperText } from '@mui/material';
 import { FormControl } from '@mui/material';
 import { Select } from '~/select';

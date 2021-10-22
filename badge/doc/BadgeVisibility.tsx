@@ -1,16 +1,12 @@
 import * as React from 'react';
 import { Box } from '@mui/material';
 import { Badge } from '~/badge';
-
 import { ButtonGroup } from '~/button-group';
-
 import { Button } from '~/button';
-
 import { Add as AddIcon } from '@mui/icons-material';
 import { Remove as RemoveIcon } from '@mui/icons-material';
 import { Mail as MailIcon } from '@mui/icons-material';
 import { Switch } from '~/switch';
-
 import { FormControlLabel } from '@mui/material';
 
 export default function BadgeVisibility() {

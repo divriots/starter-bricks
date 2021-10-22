@@ -1,11 +1,9 @@
 import * as React from 'react';
 import { Badge } from '~/badge';
-
 import { FormControl } from '@mui/material';
 import { FormControlLabel } from '@mui/material';
 import { FormLabel } from '@mui/material';
 import { Radio } from '~/radio-button';
-
 import { RadioGroup } from '@mui/material';
 import { Box } from '@mui/material';
 import { Mail as MailIcon } from '@mui/icons-material';

@@ -2,7 +2,6 @@ import * as React from 'react';
 import { Box } from '@mui/material';
 import { Stack } from '@mui/material';
 import { Slider } from '~/slider';
-
 import { VolumeDown } from '@mui/icons-material';
 import { VolumeUp } from '@mui/icons-material';
 

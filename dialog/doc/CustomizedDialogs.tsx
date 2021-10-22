@@ -1,9 +1,7 @@
 import * as React from 'react';
 import { Button } from '~/button';
-
 import { styled } from '@mui/material';
 import { Dialog } from '~/dialog';
-
 import { DialogTitle } from '@mui/material';
 import { DialogContent } from '@mui/material';
 import { DialogActions } from '@mui/material';

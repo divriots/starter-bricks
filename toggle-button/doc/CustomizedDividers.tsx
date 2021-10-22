@@ -10,10 +10,8 @@ import { FormatUnderlined as FormatUnderlinedIcon } from '@mui/icons-material';
 import { FormatColorFill as FormatColorFillIcon } from '@mui/icons-material';
 import { ArrowDropDown as ArrowDropDownIcon } from '@mui/icons-material';
 import { Divider } from '~/divider';
-
-import { Paper } from '@mui/material';
+import { Paper } from '~/paper';
 import { ToggleButton } from '~/toggle-button';
-
 import { ToggleButtonGroup } from '@mui/material';
 
 const StyledToggleButtonGroup = styled(ToggleButtonGroup)(({ theme }) => ({

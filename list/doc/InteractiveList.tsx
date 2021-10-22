@@ -2,21 +2,17 @@ import * as React from 'react';
 import { styled } from '@mui/material';
 import { Box } from '@mui/material';
 import { List } from '~/list';
-
 import { ListItem } from '@mui/material';
 import { ListItemAvatar } from '@mui/material';
 import { ListItemIcon } from '@mui/material';
 import { ListItemText } from '@mui/material';
 import { Avatar } from '~/avatar';
-
 import { IconButton } from '@mui/material';
 import { FormGroup } from '@mui/material';
 import { FormControlLabel } from '@mui/material';
 import { Checkbox } from '~/checkbox';
-
 import { Grid } from '@mui/material';
 import { Typography } from '~/typography';
-
 import { Folder as FolderIcon } from '@mui/icons-material';
 import { Delete as DeleteIcon } from '@mui/icons-material';
 

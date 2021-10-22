@@ -1,10 +1,7 @@
 import * as React from 'react';
 import { Checkbox } from '~/checkbox';
-
 import { TextField } from '~/text-field';
-
 import { Autocomplete } from '~/autocomplete';
-
 import { CheckBoxOutlineBlank as CheckBoxOutlineBlankIcon } from '@mui/icons-material';
 import { CheckBox as CheckBoxIcon } from '@mui/icons-material';
 

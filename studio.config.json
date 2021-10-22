@@ -36,8 +36,13 @@
           "typography"
         ]
       ],
-      ["feedback", ["alert", "backdrop", "dialog", "progress"]],
-      ["dockit", ["layout", "showcase"]]
+      ["feedback", ["alert", "backdrop", "dialog", "progress", "skeleton"]],
+      ["surfaces", ["accordion", "app-bar", "card", "paper"]],
+      [
+        "navigation",
+        ["bottom-navigation", "breadcrumbs", "drawer", "link", "menu"]
+      ],
+      ["dockit", ["layout", "showcase", "demo-frame"]]
     ]
   }
 }

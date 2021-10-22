@@ -1,7 +1,6 @@
 import * as React from 'react';
 import { Box } from '@mui/material';
 import { Checkbox } from '~/checkbox';
-
 import { FormControlLabel } from '@mui/material';
 
 export default function IndeterminateCheckbox() {

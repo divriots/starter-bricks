@@ -1,8 +1,6 @@
 import * as React from 'react';
 import { TextField } from '~/text-field';
-
 import { Autocomplete } from '~/autocomplete';
-
 import { Stack } from '@mui/material';
 
 export default function Playground() {

@@ -2,7 +2,6 @@ import * as React from 'react';
 import { CircularProgress } from '~/progress';
 import { CircularProgressProps } from '@mui/material';
 import { Typography } from '~/typography';
-
 import { Box } from '@mui/material';
 
 function CircularProgressWithLabel(

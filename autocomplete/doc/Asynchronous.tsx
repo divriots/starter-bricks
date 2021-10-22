@@ -1,8 +1,6 @@
 import * as React from 'react';
 import { TextField } from '~/text-field';
-
 import { Autocomplete } from '~/autocomplete';
-
 import { CircularProgress } from '~/progress';
 
 interface Film {

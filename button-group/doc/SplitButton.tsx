@@ -1,15 +1,13 @@
 import * as React from 'react';
 import { Button } from '~/button';
-
 import { ButtonGroup } from '~/button-group';
-
 import { ArrowDropDown as ArrowDropDownIcon } from '@mui/icons-material';
 import { ClickAwayListener } from '@mui/material';
 import { Grow } from '@mui/material';
-import { Paper } from '@mui/material';
+import { Paper } from '~/paper';
 import { Popper } from '@mui/material';
-import { MenuItem } from '@mui/material';
-import { MenuList } from '@mui/material';
+import { MenuItem } from '~/menu';
+import { MenuList } from '~/menu';
 
 const options = [
   'Create a merge commit',

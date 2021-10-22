@@ -1,6 +1,5 @@
 import * as React from 'react';
 import { TextField } from '~/text-field';
-
 import { Autocomplete } from '~/autocomplete';
 
 export default function ComboBox() {

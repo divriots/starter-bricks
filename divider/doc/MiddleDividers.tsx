@@ -1,13 +1,10 @@
 import * as React from 'react';
 import { Box } from '@mui/material';
 import { Chip } from '~/chip';
-
 import { Button } from '~/button';
-
 import { Grid } from '@mui/material';
 import { Stack } from '@mui/material';
 import { Divider } from '~/divider';
-
 import { Typography } from '~/typography';
 
 export default function MiddleDividers() {

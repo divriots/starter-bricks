@@ -2,9 +2,7 @@ import * as React from 'react';
 import { Box } from '@mui/material';
 import { Fade } from '@mui/material';
 import { Button } from '~/button';
-
 import { CircularProgress } from '~/progress';
-
 import { Typography } from '~/typography';
 
 export default function DelayingAppearance() {

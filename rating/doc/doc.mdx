@@ -8,6 +8,7 @@ import RadioGroupRating from './RadioGroupRating';
 import TextRating from './TextRating';
 import { mdx } from '@mdx-js/react';
 import { Playground as BklPlayground } from '@divriots/dockit-react/playground';
+import { DemoFrame } from '~/demo-frame';
 import { MdxLayout } from '~/layout';
 export default MdxLayout;
 
@@ -91,8 +92,8 @@ You can learn more about this in the overrides documentation page.
 
 <CustomizedRating />
     
-    ```tsx
-    <Typography component="legend">Custom icon and color</Typography>
+```tsx
+<Typography component="legend">Custom icon and color</Typography>
 <StyledRating
   name="customized-color"
   defaultValue={2}
@@ -103,7 +104,7 @@ You can learn more about this in the overrides documentation page.
 />
 <Typography component="legend">10 stars</Typography>
 <Rating name="customized-10" defaultValue={2} max={10} />
-    ```
+```
 
 
 ## Radio group

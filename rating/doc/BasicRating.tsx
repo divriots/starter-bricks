@@ -1,7 +1,6 @@
 import * as React from 'react';
 import { Box } from '@mui/material';
 import { Rating } from '~/rating';
-
 import { Typography } from '~/typography';
 
 export default function BasicRating() {

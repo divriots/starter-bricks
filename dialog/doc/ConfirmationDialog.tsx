@@ -1,19 +1,15 @@
 import * as React from 'react';
 import { Box } from '@mui/material';
 import { Button } from '~/button';
-
 import { List } from '~/list';
-
 import { ListItem } from '@mui/material';
 import { ListItemText } from '@mui/material';
 import { DialogTitle } from '@mui/material';
 import { DialogContent } from '@mui/material';
 import { DialogActions } from '@mui/material';
 import { Dialog } from '~/dialog';
-
 import { RadioGroup } from '@mui/material';
 import { Radio } from '~/radio-button';
-
 import { FormControlLabel } from '@mui/material';
 
 const options = [

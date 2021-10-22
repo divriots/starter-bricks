@@ -3,7 +3,7 @@ import clsx from 'clsx';
 import { withStyles, WithStyles } from '@mui/styles';
 import { Theme, createTheme } from '@mui/material';
 import { TableCell } from '@mui/material';
-import { Paper } from '@mui/material';
+import { Paper } from '~/paper';
 import {
   AutoSizer,
   Column,

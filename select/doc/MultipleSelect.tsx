@@ -2,7 +2,7 @@ import * as React from 'react';
 import { Theme, useTheme } from '@mui/material';
 import { OutlinedInput } from '@mui/material';
 import { InputLabel } from '@mui/material';
-import { MenuItem } from '@mui/material';
+import { MenuItem } from '~/menu';
 import { FormControl } from '@mui/material';
 import { Select } from '~/select';
 import { SelectChangeEvent } from '@mui/material';

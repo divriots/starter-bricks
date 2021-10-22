@@ -1,9 +1,7 @@
 import * as React from 'react';
 import { styled } from '@mui/material';
 import { Badge } from '~/badge';
-
 import { Avatar } from '~/avatar';
-
 import { Stack } from '@mui/material';
 
 const StyledBadge = styled(Badge)(({ theme }) => ({

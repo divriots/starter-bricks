@@ -1,12 +1,11 @@
 import * as React from 'react';
 import { Table } from '~/table';
-
 import { TableBody } from '@mui/material';
 import { TableCell } from '@mui/material';
 import { TableContainer } from '@mui/material';
 import { TableHead } from '@mui/material';
 import { TableRow } from '@mui/material';
-import { Paper } from '@mui/material';
+import { Paper } from '~/paper';
 
 const TAX_RATE = 0.07;
 

@@ -2,17 +2,14 @@ import * as React from 'react';
 import { Box } from '@mui/material';
 import { styled, ThemeProvider, createTheme } from '@mui/material';
 import { Divider } from '~/divider';
-
 import { List } from '~/list';
-
 import { ListItem } from '@mui/material';
 import { ListItemButton } from '@mui/material';
 import { ListItemIcon } from '@mui/material';
 import { ListItemText } from '@mui/material';
-import { Paper } from '@mui/material';
+import { Paper } from '~/paper';
 import { IconButton } from '@mui/material';
 import { Tooltip } from '~/tooltip';
-
 import { ArrowRight } from '@mui/icons-material';
 import { KeyboardArrowDown } from '@mui/icons-material';
 import { Home } from '@mui/icons-material';
@@ -46,7 +43,7 @@ const FireNav = styled(List)<{ component?: React.ElementType }>({
 export default function CustomizedList() {
   const [open, setOpen] = React.useState(true);
   return (
-    <Box sx={{ display: 'flex' }}>
+    <Box sx={{ display: 'flex', position: 'relative' }}>
       <ThemeProvider
         theme={createTheme({
           components: {

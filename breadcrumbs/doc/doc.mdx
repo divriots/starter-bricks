@@ -1,0 +1,133 @@
+import { Breadcrumbs } from '~/breadcrumbs';
+import BasicBreadcrumbs from './BasicBreadcrumbs';
+import ActiveLastBreadcrumb from './ActiveLastBreadcrumb';
+import CustomSeparator from './CustomSeparator';
+import IconBreadcrumbs from './IconBreadcrumbs';
+import CollapsedBreadcrumbs from './CollapsedBreadcrumbs';
+import CustomizedBreadcrumbs from './CustomizedBreadcrumbs';
+import RouterBreadcrumbs from './RouterBreadcrumbs';
+import { mdx } from '@mdx-js/react';
+import { Playground as BklPlayground } from '@divriots/dockit-react/playground';
+import { DemoFrame } from '~/demo-frame';
+import { MdxLayout } from '~/layout';
+export default MdxLayout;
+
+# Breadcrumbs
+
+<p className="description">
+  Breadcrumbs allow users to make selections from a range of values.
+</p>
+
+## Basic breadcrumbs
+
+<BasicBreadcrumbs />
+```tsx
+<Breadcrumbs aria-label="breadcrumb">
+  <Link underline="hover" color="inherit" href="/">
+    MUI
+  </Link>
+  <Link underline="hover" color="inherit" href="/getting-started/installation/">
+    Core
+  </Link>
+  <Typography color="text.primary">Breadcrumbs</Typography>
+</Breadcrumbs>
+```
+
+## Active last breadcrumb
+
+Keep the last breadcrumb interactive.
+
+<ActiveLastBreadcrumb />
+```tsx
+<ActiveLastBreadcrumb />
+```
+
+## Custom separator
+
+In the following examples, we are using two string separators and an SVG icon.
+
+<CustomSeparator />
+```tsx
+<Breadcrumbs separator="›" aria-label="breadcrumb">
+  {breadcrumbs}
+</Breadcrumbs>
+<Breadcrumbs separator="-" aria-label="breadcrumb">
+  {breadcrumbs}
+</Breadcrumbs>
+<Breadcrumbs
+  separator={<NavigateNextIcon fontSize="small" />}
+  aria-label="breadcrumb"
+>
+  {breadcrumbs}
+</Breadcrumbs>
+```
+
+## Breadcrumbs with icons
+
+<IconBreadcrumbs />
+```tsx
+<IconBreadcrumbs />
+```
+
+## Collapsed breadcrumbs
+
+<CollapsedBreadcrumbs />
+```tsx
+<Breadcrumbs maxItems={2} aria-label="breadcrumb">
+  <Link underline="hover" color="inherit" href="#">
+    Home
+  </Link>
+  <Link underline="hover" color="inherit" href="#">
+    Catalog
+  </Link>
+  <Link underline="hover" color="inherit" href="#">
+    Accessories
+  </Link>
+  <Link underline="hover" color="inherit" href="#">
+    New Collection
+  </Link>
+  <Typography color="text.primary">Belts</Typography>
+</Breadcrumbs>
+```
+
+## Customization
+
+Here is an example of customizing the component.
+You can learn more about this in the overrides documentation page.
+
+<CustomizedBreadcrumbs />
+```tsx
+<Breadcrumbs aria-label="breadcrumb">
+  <StyledBreadcrumb
+    component="a"
+    href="#"
+    label="Home"
+    icon={<HomeIcon fontSize="small" />}
+  />
+  <StyledBreadcrumb component="a" href="#" label="Catalog" />
+  <StyledBreadcrumb
+    label="Accessories"
+    deleteIcon={<ExpandMoreIcon />}
+    onDelete={handleClick}
+  />
+</Breadcrumbs>
+```
+
+## Integration with react-router
+
+<RouterBreadcrumbs />
+```tsx
+<RouterBreadcrumbs />
+```
+
+## Accessibility
+
+(WAI-ARIA: https://www.w3.org/TR/wai-aria-practices/#breadcrumb)
+
+Be sure to add a `aria-label` description on the `Breadcrumbs` component.
+
+The accessibility of this component relies on:
+
+- The set of links is structured using an ordered list (`<ol>` element).
+- To prevent screen reader announcement of the visual separators between links, they are hidden with `aria-hidden`.
+- A nav element labeled with `aria-label` identifies the structure as a breadcrumb trail and makes it a navigation landmark so that it is easy to locate.

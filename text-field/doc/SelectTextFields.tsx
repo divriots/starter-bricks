@@ -1,8 +1,7 @@
 import * as React from 'react';
 import { Box } from '@mui/material';
 import { TextField } from '~/text-field';
-
-import { MenuItem } from '@mui/material';
+import { MenuItem } from '~/menu';
 
 const currencies = [
   {

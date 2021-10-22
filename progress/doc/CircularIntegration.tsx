@@ -1,12 +1,9 @@
 import * as React from 'react';
 import { Box } from '@mui/material';
 import { CircularProgress } from '~/progress';
-
 import { green } from '@mui/material/colors';
 import { Button } from '~/button';
-
 import { Fab } from '~/floating-action-button';
-
 import { Check as CheckIcon } from '@mui/icons-material';
 import { Save as SaveIcon } from '@mui/icons-material';
 

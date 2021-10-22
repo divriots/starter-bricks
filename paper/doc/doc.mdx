@@ -1,0 +1,46 @@
+import { Paper } from '~/paper';
+import SimplePaper from './SimplePaper';
+import Variants from './Variants';
+import Elevation from './Elevation';
+import { mdx } from '@mdx-js/react';
+import { Playground as BklPlayground } from '@divriots/dockit-react/playground';
+import { DemoFrame } from '~/demo-frame';
+import { MdxLayout } from '~/layout';
+export default MdxLayout;
+
+# Paper
+
+<p className="description">
+  In Material Design, the physical properties of paper are translated to the
+  screen.{' '}
+</p>
+
+The background of an application resembles the flat, opaque texture of a sheet of paper, and an application's behavior mimics paper's ability to be re-sized, shuffled, and bound together in multiple sheets.
+
+## Basic paper
+
+<SimplePaper />
+```tsx
+<Paper elevation={0} />
+<Paper />
+<Paper elevation={3} />
+```
+
+## Variants
+
+If you need an outlined surface, use the `variant` prop.
+
+<Variants />
+```tsx
+<Paper variant="outlined" />
+<Paper variant="outlined" square />
+```
+
+## Elevation
+
+The elevation can be used to establish a hierachy between other content. In practical terms, the elevation controls the size of the shadow applied to the surface. In dark mode, raising the elevation also makes the surface lighter.
+
+<Elevation />
+```tsx
+<Elevation />
+```

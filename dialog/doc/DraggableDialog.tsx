@@ -1,13 +1,12 @@
 import * as React from 'react';
 import { Button } from '~/button';
-
 import { Dialog } from '~/dialog';
-
 import { DialogActions } from '@mui/material';
 import { DialogContent } from '@mui/material';
 import { DialogContentText } from '@mui/material';
 import { DialogTitle } from '@mui/material';
-import { Paper, PaperProps } from '@mui/material';
+import { Paper } from '~/paper';
+import { PaperProps } from '@mui/material';
 import Draggable from 'react-draggable';
 
 function PaperComponent(props: PaperProps) {
