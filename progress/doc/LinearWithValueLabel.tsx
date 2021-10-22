@@ -2,7 +2,7 @@ import * as React from 'react';
 import { LinearProgress } from '~/progress';
 import { LinearProgressProps } from '@mui/material';
 import { Typography } from '~/typography';
-import { Box } from '@mui/material';
+import { Box } from '~/box';
 
 function LinearProgressWithLabel(
   props: LinearProgressProps & { value: number }

@@ -1,0 +1,338 @@
+import { Grid } from '~/grid';
+import BasicGrid from './BasicGrid';
+import FullWidthGrid from './FullWidthGrid';
+import SpacingGrid from './SpacingGrid';
+import RowAndColumnSpacing from './RowAndColumnSpacing';
+import ResponsiveGrid from './ResponsiveGrid';
+import InteractiveGrid from './InteractiveGrid';
+import AutoGrid from './AutoGrid';
+import VariableWidthGrid from './VariableWidthGrid';
+import ComplexGrid from './ComplexGrid';
+import NestedGrid from './NestedGrid';
+import ColumnsGrid from './ColumnsGrid';
+import AutoGridNoWrap from './AutoGridNoWrap';
+import CSSGrid from './CSSGrid';
+import { mdx } from '@mdx-js/react';
+import { Playground as BklPlayground } from '@divriots/dockit-react/playground';
+import { DemoFrame } from '~/demo-frame';
+import { MdxLayout } from '~/layout';
+export default MdxLayout;
+
+# Grid
+
+<p className="description">
+  The Material Design responsive layout grid adapts to screen size and
+  orientation, ensuring consistency across layouts.
+</p>
+
+The grid creates visual consistency between layouts while allowing flexibility across a wide variety of designs.
+Material Design's responsive UI is based on a 12-column grid layout.
+
+> ⚠️ The `Grid` component shouldn't be confused with a data grid; it is closer to a layout grid. For a data grid head to the `DataGrid` component.
+
+## How it works
+
+The grid system is implemented with the `Grid` component:
+
+- It uses CSS's Flexible Box module for high flexibility.
+- There are two types of layout: _containers_ and _items_.
+- Item widths are set in percentages, so they're always fluid and sized relative to their parent element.
+- Items have padding to create the spacing between individual items.
+- There are five grid breakpoints: xs, sm, md, lg, and xl.
+- Integer values can be given to each breakpoint, indicating how many of the 12 available columns are occupied by the component when the viewport width satisfies the breakpoint contraints.
+
+If you are **new to or unfamiliar with flexbox**, we encourage you to read this CSS-Tricks flexbox guide.
+
+## Fluid grids
+
+Fluid grids use columns that scale and resize content. A fluid grid's layout can use breakpoints to determine if the layout needs to change dramatically.
+
+### Basic grid
+
+Column widths are integer values between 1 and 12; they apply at any breakpoint and indicate how many columns are occupied by the component.
+
+A value given to a breakpoint applies to all the other breakpoints wider than it (unless overridden, as you can read later in this page). For example, `xs={12}` sizes a component to occupy the whole viewport width regardless of its size.
+
+<BasicGrid />
+```tsx
+<Grid container spacing={2}>
+  <Grid item xs={8}>
+    <Item>xs=8</Item>
+  </Grid>
+  <Grid item xs={4}>
+    <Item>xs=4</Item>
+  </Grid>
+  <Grid item xs={4}>
+    <Item>xs=4</Item>
+  </Grid>
+  <Grid item xs={8}>
+    <Item>xs=8</Item>
+  </Grid>
+</Grid>
+```
+
+### Grid with multiple breakpoints
+
+Components may have multiple widths defined, causing the layout to change at the defined breakpoint. Width values given to larger breakpoints override those given to smaller breakpoints.
+
+For example, `xs={12} sm={6}` sizes a component to occupy half of the viewport width (6 columns) when viewport width is 600 or more pixels. For smaller viewports, the component fills all 12 available columns.
+
+<FullWidthGrid />
+```tsx
+<Grid container spacing={2}>
+  <Grid item xs={6} md={8}>
+    <Item>xs=6 md=8</Item>
+  </Grid>
+  <Grid item xs={6} md={4}>
+    <Item>xs=6 md=4</Item>
+  </Grid>
+  <Grid item xs={6} md={4}>
+    <Item>xs=6 md=4</Item>
+  </Grid>
+  <Grid item xs={6} md={8}>
+    <Item>xs=6 md=8</Item>
+  </Grid>
+</Grid>
+```
+
+## Spacing
+
+To control space between children, use the `spacing` prop.
+The spacing value can be any positive number, including decimals and any string.
+The prop is converted into a CSS property using the `theme.spacing()` helper.
+
+<SpacingGrid />
+```tsx
+<SpacingGrid />
+```
+
+### Row & column spacing
+
+The `rowSpacing` and `columnSpacing` props allow for specifying the row and column gaps independently.
+It's similar to the `row-gap` and `column-gap` properties of CSS Grid.
+
+<RowAndColumnSpacing />
+```tsx
+<Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
+  <Grid item xs={6}>
+    <Item>1</Item>
+  </Grid>
+  <Grid item xs={6}>
+    <Item>2</Item>
+  </Grid>
+  <Grid item xs={6}>
+    <Item>3</Item>
+  </Grid>
+  <Grid item xs={6}>
+    <Item>4</Item>
+  </Grid>
+</Grid>
+```
+
+## Responsive values
+
+You can switch the props' value based on the active breakpoint.
+For instance, we can implement the "recommended" responsive layout grid of Material Design.
+
+<ResponsiveGrid />
+```tsx
+<Grid container spacing={{ xs: 2, md: 3 }} columns={{ xs: 4, sm: 8, md: 12 }}>
+  {Array.from(Array(6)).map((_, index) => (
+    <Grid item xs={2} sm={4} md={4} key={index}>
+      <Item>xs=2</Item>
+    </Grid>
+  ))}
+</Grid>
+```
+
+Responsive values is supported by:
+
+- `columns`
+- `columnSpacing`
+- `direction`
+- `rowSpacing`
+- `spacing`
+- all the other props of the system
+
+> ⚠️ When using a responsive `columns` prop, each grid item needs its corresponding breakpoint.
+> For instance, this is not working. The grid item misses the value for `md`:
+>
+> ```jsx
+> <Grid container columns={{ xs: 4, md: 12 }}>
+>   <Grid item xs={2} />
+> </Grid>
+> ```
+
+## Interactive
+
+Below is an interactive demo that lets you explore the visual results of the different settings:
+
+<InteractiveGrid />
+```tsx
+<InteractiveGrid />
+```
+
+## Auto-layout
+
+The Auto-layout makes the _items_ equitably share the available space.
+That also means you can set the width of one _item_ and the others will automatically resize around it.
+
+<AutoGrid />
+```tsx
+<Grid container spacing={3}>
+  <Grid item xs>
+    <Item>xs</Item>
+  </Grid>
+  <Grid item xs={6}>
+    <Item>xs=6</Item>
+  </Grid>
+  <Grid item xs>
+    <Item>xs</Item>
+  </Grid>
+</Grid>
+```
+
+### Variable width content
+
+Set one of the size breakpoint props to `"auto"` instead of `true` / a `number` to size
+a column based on the natural width of its content.
+
+<VariableWidthGrid />
+```tsx
+<Grid container spacing={3}>
+  <Grid item xs="auto">
+    <Item>variable width content</Item>
+  </Grid>
+  <Grid item xs={6}>
+    <Item>xs=6</Item>
+  </Grid>
+  <Grid item xs>
+    <Item>xs</Item>
+  </Grid>
+</Grid>
+```
+
+## Complex Grid
+
+The following demo doesn't follow the Material Design guidelines, but illustrates how the grid can be used to build complex layouts.
+
+<ComplexGrid />
+```tsx
+<ComplexGrid />
+```
+
+## Nested Grid
+
+The `container` and `item` props are two independent booleans; they can be combined to allow a Grid component to be both a flex container and child.
+
+> A flex **container** is the box generated by an element with a computed display of `flex` or `inline-flex`. In-flow children of a flex container are called flex **items** and are laid out using the flex layout model.
+
+https://www.w3.org/TR/css-flexbox-1/#box-model
+
+<NestedGrid />
+```tsx
+<Grid container spacing={1}>
+  <Grid container item spacing={3}>
+    <FormRow />
+  </Grid>
+  <Grid container item spacing={3}>
+    <FormRow />
+  </Grid>
+  <Grid container item spacing={3}>
+    <FormRow />
+  </Grid>
+</Grid>
+```
+
+⚠️ Defining an explicit width to a Grid element that is flex container, flex item, and has spacing at the same time lead to unexpected behavior, avoid doing it:
+
+```jsx
+<Grid spacing={1} container item xs={12}>
+```
+
+If you need to do such, remove one of the props.
+
+## Columns
+
+You can change the default number of columns (12) with the `columns` prop.
+
+<ColumnsGrid />
+```tsx
+<Grid container spacing={2} columns={16}>
+  <Grid item xs={8}>
+    <Item>xs=8</Item>
+  </Grid>
+  <Grid item xs={8}>
+    <Item>xs=8</Item>
+  </Grid>
+</Grid>
+```
+
+## Limitations
+
+### Negative margin
+
+The spacing between items is implemented with a negative margin. This might lead to unexpected behaviors. For instance, to apply a background color, you need to apply `display: flex;` to the parent.
+
+### white-space: nowrap;
+
+The initial setting on flex items is `min-width: auto`.
+It's causing a positioning conflict when the children is using `white-space: nowrap;`.
+You can experience the issue with:
+
+```jsx
+<Grid item xs>
+  <Typography noWrap>
+```
+
+In order for the item to stay within the container you need to set `min-width: 0`.
+In practice, you can set the `zeroMinWidth` prop:
+
+```jsx
+<Grid item xs zeroMinWidth>
+  <Typography noWrap>
+```
+
+<AutoGridNoWrap />
+```tsx
+<AutoGridNoWrap />
+```
+
+### direction: column | column-reverse
+
+The `xs`, `sm`, `md`, `lg`, and `xl` props are **not supported** within `direction="column"` and `direction="column-reverse"` containers.
+
+They define the number of grids the component will use for a given breakpoint. They are intended to control **width** using `flex-basis` in `row` containers but they will impact height in `column` containers.
+If used, these props may have undesirable effects on the height of the `Grid` item elements.
+
+## CSS Grid Layout
+
+The `Grid` component is using CSS flexbox internally.
+But as seen below, you can easily use the system and CSS Grid to layout your pages.
+
+<CSSGrid />
+```tsx
+<Box display="grid" gridTemplateColumns="repeat(12, 1fr)" gap={2}>
+  <Box gridColumn="span 8">
+    <Item>xs=8</Item>
+  </Box>
+  <Box gridColumn="span 4">
+    <Item>xs=4</Item>
+  </Box>
+  <Box gridColumn="span 4">
+    <Item>xs=4</Item>
+  </Box>
+  <Box gridColumn="span 8">
+    <Item>xs=8</Item>
+  </Box>
+</Box>
+```
+
+## System props
+
+As a CSS utility component, the `Grid` supports all `system` properties. You can use them as props directly on the component.
+For instance, a padding:
+
+```jsx
+<Grid item p={2}>
+```

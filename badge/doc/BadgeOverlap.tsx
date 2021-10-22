@@ -1,6 +1,6 @@
 import * as React from 'react';
-import { Box } from '@mui/material';
-import { Stack } from '@mui/material';
+import { Box } from '~/box';
+import { Stack } from '~/stack';
 import { Badge } from '~/badge';
 
 const shapeStyles = { bgcolor: 'primary.main', width: 40, height: 40 };

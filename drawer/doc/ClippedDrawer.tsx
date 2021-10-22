@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Box } from '@mui/material';
+import { Box } from '~/box';
 import { Drawer } from '~/drawer';
 import { AppBar } from '~/app-bar';
 import { CssBaseline } from '@mui/material';
@@ -17,7 +17,7 @@ const drawerWidth = 240;
 
 export default function ClippedDrawer() {
   return (
-    <Box sx={{ display: 'flex', position: 'relative' }}>
+    <Box sx={{ display: 'flex' }}>
       <CssBaseline />
       <AppBar
         position="fixed"

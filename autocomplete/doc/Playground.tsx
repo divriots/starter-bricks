@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { TextField } from '~/text-field';
 import { Autocomplete } from '~/autocomplete';
-import { Stack } from '@mui/material';
+import { Stack } from '~/stack';
 
 export default function Playground() {
   const defaultProps = {

@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Box } from '@mui/material';
+import { Box } from '~/box';
 import { ListItem } from '@mui/material';
 import { ListItemButton } from '@mui/material';
 import { ListItemText } from '@mui/material';

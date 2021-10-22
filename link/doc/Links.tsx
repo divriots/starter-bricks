@@ -1,6 +1,6 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import * as React from 'react';
-import { Box } from '@mui/material';
+import { Box } from '~/box';
 import { Link } from '~/link';
 
 const preventDefault = (event: React.SyntheticEvent) => event.preventDefault();

@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Box } from '@mui/material';
+import { Box } from '~/box';
 import { Avatar } from '~/avatar';
 import { Menu } from '~/menu';
 import { MenuItem } from '~/menu';

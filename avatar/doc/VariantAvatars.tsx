@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { Avatar } from '~/avatar';
-import { Stack } from '@mui/material';
+import { Stack } from '~/stack';
 import { deepOrange, green } from '@mui/material/colors';
 import { Assignment as AssignmentIcon } from '@mui/icons-material';
 

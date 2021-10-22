@@ -1,9 +1,9 @@
 import * as React from 'react';
-import { Box } from '@mui/material';
+import { Box } from '~/box';
 import { Chip } from '~/chip';
 import { Button } from '~/button';
-import { Grid } from '@mui/material';
-import { Stack } from '@mui/material';
+import { Grid } from '~/grid';
+import { Stack } from '~/stack';
 import { Divider } from '~/divider';
 import { Typography } from '~/typography';
 

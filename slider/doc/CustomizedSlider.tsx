@@ -4,7 +4,7 @@ import { SliderThumb } from '@mui/material';
 import { styled } from '@mui/material';
 import { Typography } from '~/typography';
 import { Tooltip } from '~/tooltip';
-import { Box } from '@mui/material';
+import { Box } from '~/box';
 
 interface Props {
   children: React.ReactElement;

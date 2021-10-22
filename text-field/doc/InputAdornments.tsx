@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Box } from '@mui/material';
+import { Box } from '~/box';
 import { IconButton } from '@mui/material';
 import { Input } from '@mui/material';
 import { FilledInput } from '@mui/material';

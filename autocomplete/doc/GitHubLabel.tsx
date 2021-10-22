@@ -9,7 +9,7 @@ import { Autocomplete } from '~/autocomplete';
 import { AutocompleteCloseReason, autocompleteClasses } from '@mui/material';
 import { ButtonBase } from '@mui/material';
 import { InputBase } from '@mui/material';
-import { Box } from '@mui/material';
+import { Box } from '~/box';
 
 interface PopperComponentProps {
   anchorEl?: any;

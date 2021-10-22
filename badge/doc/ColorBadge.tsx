@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { Badge } from '~/badge';
-import { Stack } from '@mui/material';
+import { Stack } from '~/stack';
 import { Mail as MailIcon } from '@mui/icons-material';
 
 export default function ColorBadge() {

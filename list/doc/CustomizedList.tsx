@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Box } from '@mui/material';
+import { Box } from '~/box';
 import { styled, ThemeProvider, createTheme } from '@mui/material';
 import { Divider } from '~/divider';
 import { List } from '~/list';
@@ -43,7 +43,7 @@ const FireNav = styled(List)<{ component?: React.ElementType }>({
 export default function CustomizedList() {
   const [open, setOpen] = React.useState(true);
   return (
-    <Box sx={{ display: 'flex', position: 'relative' }}>
+    <Box sx={{ display: 'flex' }}>
       <ThemeProvider
         theme={createTheme({
           components: {

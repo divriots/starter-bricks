@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { Skeleton } from '~/skeleton';
-import { Box } from '@mui/material';
+import { Box } from '~/box';
 
 export default function SkeletonColor() {
   return (

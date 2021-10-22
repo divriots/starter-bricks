@@ -4,7 +4,7 @@ import { styled } from '@mui/material';
 import { CssBaseline } from '@mui/material';
 import { grey } from '@mui/material/colors';
 import { Button } from '~/button';
-import { Box } from '@mui/material';
+import { Box } from '~/box';
 import { Skeleton } from '~/skeleton';
 import { Typography } from '~/typography';
 import { SwipeableDrawer } from '@mui/material';

@@ -1,7 +1,7 @@
 import * as React from 'react';
-import { Grid } from '@mui/material';
+import { Grid } from '~/grid';
 import { Paper } from '~/paper';
-import { Box } from '@mui/material';
+import { Box } from '~/box';
 import { createTheme, ThemeProvider, styled } from '@mui/material';
 
 const Item = styled(Paper)(({ theme }) => ({

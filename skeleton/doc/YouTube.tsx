@@ -1,6 +1,6 @@
 import * as React from 'react';
-import { Grid } from '@mui/material';
-import { Box } from '@mui/material';
+import { Grid } from '~/grid';
+import { Box } from '~/box';
 import { Typography } from '~/typography';
 import { Skeleton } from '~/skeleton';
 

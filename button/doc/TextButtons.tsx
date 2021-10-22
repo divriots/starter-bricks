@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { Button } from '~/button';
-import { Stack } from '@mui/material';
+import { Stack } from '~/stack';
 
 export default function TextButtons() {
   return (

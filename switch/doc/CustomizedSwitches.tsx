@@ -4,7 +4,7 @@ import { FormGroup } from '@mui/material';
 import { FormControlLabel } from '@mui/material';
 import { Switch } from '~/switch';
 import { SwitchProps } from '@mui/material';
-import { Stack } from '@mui/material';
+import { Stack } from '~/stack';
 import { Typography } from '~/typography';
 
 const MaterialUISwitch = styled(Switch)(({ theme }) => ({

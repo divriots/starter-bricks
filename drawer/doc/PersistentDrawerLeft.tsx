@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { styled, useTheme } from '@mui/material';
-import { Box } from '@mui/material';
+import { Box } from '~/box';
 import { Drawer } from '~/drawer';
 import { CssBaseline } from '@mui/material';
 import { AppBar as MuiAppBar } from '~/app-bar';
@@ -83,7 +83,7 @@ export default function PersistentDrawerLeft() {
   };
 
   return (
-    <Box sx={{ display: 'flex', position: 'relative' }}>
+    <Box sx={{ display: 'flex' }}>
       <CssBaseline />
       <AppBar position="fixed" open={open}>
         <Toolbar>

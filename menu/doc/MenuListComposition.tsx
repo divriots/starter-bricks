@@ -6,7 +6,7 @@ import { Paper } from '~/paper';
 import { Popper } from '@mui/material';
 import { MenuItem } from '~/menu';
 import { MenuList } from '~/menu';
-import { Stack } from '@mui/material';
+import { Stack } from '~/stack';
 
 export default function MenuListComposition() {
   const [open, setOpen] = React.useState(false);

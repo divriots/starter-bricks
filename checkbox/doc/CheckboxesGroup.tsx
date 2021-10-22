@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Box } from '@mui/material';
+import { Box } from '~/box';
 import { FormLabel } from '@mui/material';
 import { FormControl } from '@mui/material';
 import { FormGroup } from '@mui/material';
@@ -25,7 +25,7 @@ export default function CheckboxesGroup() {
   const error = [gilad, jason, antoine].filter((v) => v).length !== 2;
 
   return (
-    <Box sx={{ display: 'flex', position: 'relative' }}>
+    <Box sx={{ display: 'flex' }}>
       <FormControl sx={{ m: 3 }} component="fieldset" variant="standard">
         <FormLabel component="legend">Assign responsibility</FormLabel>
         <FormGroup>

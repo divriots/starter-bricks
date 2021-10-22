@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Box } from '@mui/material';
+import { Box } from '~/box';
 import { FilledInput } from '@mui/material';
 import { FormControl } from '@mui/material';
 import { FormHelperText } from '@mui/material';

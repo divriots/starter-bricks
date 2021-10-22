@@ -5,7 +5,7 @@ import { FormControlLabel } from '@mui/material';
 import { FormLabel } from '@mui/material';
 import { Radio } from '~/radio-button';
 import { RadioGroup } from '@mui/material';
-import { Box } from '@mui/material';
+import { Box } from '~/box';
 import { Mail as MailIcon } from '@mui/icons-material';
 
 export default function BadgeAlignment() {

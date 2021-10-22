@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { AppBar } from '~/app-bar';
-import { Box } from '@mui/material';
+import { Box } from '~/box';
 import { CssBaseline } from '@mui/material';
 import { Divider } from '~/divider';
 import { Drawer } from '~/drawer';
@@ -65,7 +65,7 @@ export default function ResponsiveDrawer(props: Props) {
     window !== undefined ? () => window().document.body : undefined;
 
   return (
-    <Box sx={{ display: 'flex', position: 'relative' }}>
+    <Box sx={{ display: 'flex' }}>
       <CssBaseline />
       <AppBar
         position="fixed"

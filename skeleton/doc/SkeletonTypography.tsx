@@ -2,7 +2,7 @@ import * as React from 'react';
 import { Typography } from '~/typography';
 import { TypographyProps } from '@mui/material';
 import { Skeleton } from '~/skeleton';
-import { Grid } from '@mui/material';
+import { Grid } from '~/grid';
 
 const variants = [
   'h1',

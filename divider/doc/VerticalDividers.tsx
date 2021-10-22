@@ -4,7 +4,7 @@ import { FormatAlignCenter as FormatAlignCenterIcon } from '@mui/icons-material'
 import { FormatAlignRight as FormatAlignRightIcon } from '@mui/icons-material';
 import { FormatBold as FormatBoldIcon } from '@mui/icons-material';
 import { FormatItalic as FormatItalicIcon } from '@mui/icons-material';
-import { Box } from '@mui/material';
+import { Box } from '~/box';
 import { Divider } from '~/divider';
 
 export default function VerticalDividers() {

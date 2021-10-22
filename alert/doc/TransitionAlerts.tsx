@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Box } from '@mui/material';
+import { Box } from '~/box';
 import { Alert } from '~/alert';
 import { IconButton } from '@mui/material';
 import { Collapse } from '@mui/material';

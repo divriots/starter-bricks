@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { Avatar } from '~/avatar';
-import { Stack } from '@mui/material';
+import { Stack } from '~/stack';
 import { deepOrange } from '@mui/material/colors';
 
 export default function FallbackAvatars() {

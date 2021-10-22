@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Stack } from '@mui/material';
+import { Stack } from '~/stack';
 import { Badge } from '~/badge';
 import { Mail as MailIcon } from '@mui/icons-material';
 

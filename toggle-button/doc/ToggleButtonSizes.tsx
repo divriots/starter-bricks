@@ -3,7 +3,7 @@ import { FormatAlignLeft as FormatAlignLeftIcon } from '@mui/icons-material';
 import { FormatAlignCenter as FormatAlignCenterIcon } from '@mui/icons-material';
 import { FormatAlignRight as FormatAlignRightIcon } from '@mui/icons-material';
 import { FormatAlignJustify as FormatAlignJustifyIcon } from '@mui/icons-material';
-import { Box } from '@mui/material';
+import { Box } from '~/box';
 import { ToggleButton } from '~/toggle-button';
 import { ToggleButtonGroup } from '@mui/material';
 

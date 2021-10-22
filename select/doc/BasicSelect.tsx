@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Box } from '@mui/material';
+import { Box } from '~/box';
 import { InputLabel } from '@mui/material';
 import { MenuItem } from '~/menu';
 import { FormControl } from '@mui/material';

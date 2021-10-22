@@ -5,7 +5,7 @@ import { FormatAlignRight as FormatAlignRightIcon } from '@mui/icons-material';
 import { Laptop as LaptopIcon } from '@mui/icons-material';
 import { Tv as TvIcon } from '@mui/icons-material';
 import { PhoneAndroid as PhoneAndroidIcon } from '@mui/icons-material';
-import { Stack } from '@mui/material';
+import { Stack } from '~/stack';
 import { ToggleButton } from '~/toggle-button';
 import { ToggleButtonGroup } from '@mui/material';
 

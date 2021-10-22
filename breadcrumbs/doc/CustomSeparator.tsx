@@ -2,7 +2,7 @@ import * as React from 'react';
 import { Breadcrumbs } from '~/breadcrumbs';
 import { Typography } from '~/typography';
 import { Link } from '~/link';
-import { Stack } from '@mui/material';
+import { Stack } from '~/stack';
 import { NavigateNext as NavigateNextIcon } from '@mui/icons-material';
 
 function handleClick(event: React.MouseEvent<HTMLAnchorElement, MouseEvent>) {

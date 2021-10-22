@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { Chip } from '~/chip';
-import { Stack } from '@mui/material';
+import { Stack } from '~/stack';
 
 export default function ColorChips() {
   return (

@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Box } from '@mui/material';
+import { Box } from '~/box';
 import { Fab } from '~/floating-action-button';
 import { Add as AddIcon } from '@mui/icons-material';
 

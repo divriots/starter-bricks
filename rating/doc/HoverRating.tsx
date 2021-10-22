@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { Rating } from '~/rating';
-import { Box } from '@mui/material';
+import { Box } from '~/box';
 import { Star as StarIcon } from '@mui/icons-material';
 
 const labels: { [index: string]: string } = {

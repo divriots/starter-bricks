@@ -1,9 +1,9 @@
 import * as React from 'react';
 import { styled } from '@mui/material';
-import { Box } from '@mui/material';
+import { Box } from '~/box';
 import { Typography } from '~/typography';
 import { Avatar } from '~/avatar';
-import { Grid } from '@mui/material';
+import { Grid } from '~/grid';
 import { Skeleton } from '~/skeleton';
 
 const Image = styled('img')({

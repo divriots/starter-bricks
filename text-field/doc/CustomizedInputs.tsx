@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { alpha, styled } from '@mui/material';
 import { InputBase } from '@mui/material';
-import { Box } from '@mui/material';
+import { Box } from '~/box';
 import { InputLabel } from '@mui/material';
 import { TextField } from '~/text-field';
 import { TextFieldProps } from '@mui/material';

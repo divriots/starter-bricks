@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Box } from '@mui/material';
+import { Box } from '~/box';
 import { Drawer } from '~/drawer';
 import { CssBaseline } from '@mui/material';
 import { AppBar } from '~/app-bar';
@@ -17,7 +17,7 @@ const drawerWidth = 240;
 
 export default function PermanentDrawerRight() {
   return (
-    <Box sx={{ display: 'flex', position: 'relative' }}>
+    <Box sx={{ display: 'flex' }}>
       <CssBaseline />
       <AppBar
         position="fixed"

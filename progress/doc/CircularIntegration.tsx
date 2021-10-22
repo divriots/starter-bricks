@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Box } from '@mui/material';
+import { Box } from '~/box';
 import { CircularProgress } from '~/progress';
 import { green } from '@mui/material/colors';
 import { Button } from '~/button';

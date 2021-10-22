@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { IconButton } from '@mui/material';
-import { Stack } from '@mui/material';
+import { Stack } from '~/stack';
 import { Delete as DeleteIcon } from '@mui/icons-material';
 import { Alarm as AlarmIcon } from '@mui/icons-material';
 import { AddShoppingCart as AddShoppingCartIcon } from '@mui/icons-material';

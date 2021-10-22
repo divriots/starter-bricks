@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Box } from '@mui/material';
+import { Box } from '~/box';
 import { Button } from '~/button';
 import { Dialog } from '~/dialog';
 import { DialogProps } from '@mui/material';

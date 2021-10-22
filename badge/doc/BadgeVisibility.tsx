@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Box } from '@mui/material';
+import { Box } from '~/box';
 import { Badge } from '~/badge';
 import { ButtonGroup } from '~/button-group';
 import { Button } from '~/button';

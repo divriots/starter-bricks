@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { Button } from '~/button';
 import { ButtonGroup } from '~/button-group';
-import { Box } from '@mui/material';
+import { Box } from '~/box';
 
 export default function VariantButtonGroup() {
   return (

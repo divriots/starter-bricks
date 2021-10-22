@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { FormControl, useFormControl } from '@mui/material';
 import { OutlinedInput } from '@mui/material';
-import { Box } from '@mui/material';
+import { Box } from '~/box';
 import { FormHelperText } from '@mui/material';
 
 function MyFormHelperText() {

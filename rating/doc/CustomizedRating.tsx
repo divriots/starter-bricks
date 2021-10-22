@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { styled } from '@mui/material';
-import { Box } from '@mui/material';
+import { Box } from '~/box';
 import { Rating } from '~/rating';
 import { Favorite as FavoriteIcon } from '@mui/icons-material';
 import { FavoriteBorder as FavoriteBorderIcon } from '@mui/icons-material';

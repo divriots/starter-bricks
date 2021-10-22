@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { IMaskInput } from 'react-imask';
 import NumberFormat from 'react-number-format';
-import { Box } from '@mui/material';
+import { Box } from '~/box';
 import { Input } from '@mui/material';
 import { InputLabel } from '@mui/material';
 import { TextField } from '~/text-field';

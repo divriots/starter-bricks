@@ -4,8 +4,8 @@ import { Toolbar } from '@mui/material';
 import { Typography } from '~/typography';
 import { CssBaseline } from '@mui/material';
 import { useScrollTrigger } from '@mui/material';
-import { Box } from '@mui/material';
-import { Container } from '@mui/material';
+import { Box } from '~/box';
+import { Container } from '~/container';
 import { Slide } from '@mui/material';
 
 interface Props {

@@ -2,7 +2,7 @@ import * as React from 'react';
 import SwipeableViews from 'react-swipeable-views';
 import { useTheme } from '@mui/material';
 import { AppBar } from '~/app-bar';
-import { Tabs } from '@mui/material';
+import { Tabs } from '~/tabs';
 import { Tab } from '@mui/material';
 import { Typography } from '~/typography';
 import { Zoom } from '@mui/material';
@@ -11,7 +11,7 @@ import { Add as AddIcon } from '@mui/icons-material';
 import { Edit as EditIcon } from '@mui/icons-material';
 import { KeyboardArrowUp as UpIcon } from '@mui/icons-material';
 import { green } from '@mui/material/colors';
-import { Box } from '@mui/material';
+import { Box } from '~/box';
 import { SxProps } from '@mui/system';
 
 interface TabPanelProps {

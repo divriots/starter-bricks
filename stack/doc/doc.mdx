@@ -1,0 +1,99 @@
+import { Stack } from '~/stack';
+import BasicStack from './BasicStack';
+import DirectionStack from './DirectionStack';
+import DividerStack from './DividerStack';
+import ResponsiveStack from './ResponsiveStack';
+import InteractiveStack from './InteractiveStack';
+import { mdx } from '@mdx-js/react';
+import { Playground as BklPlayground } from '@divriots/dockit-react/playground';
+import { DemoFrame } from '~/demo-frame';
+import { MdxLayout } from '~/layout';
+export default MdxLayout;
+
+# Stack
+
+<p className="description">
+  The Stack component manages layout of immediate children along the vertical or
+  horizontal axis with optional spacing and/or dividers between each child.
+</p>
+
+## Usage
+
+`Stack` is concerned with one-dimensional layouts, while Grid that handles two-dimensional layouts. The default direction is `column` which stacks children vertically.
+
+<BasicStack />
+```tsx
+<Stack spacing={2}>
+  <Item>Item 1</Item>
+  <Item>Item 2</Item>
+  <Item>Item 3</Item>
+</Stack>
+```
+
+To control space between children, use the `spacing` prop.
+The spacing value can be any number, including decimals and any string.
+The prop is converted into a CSS property using the `theme.spacing()` helper.
+
+## Direction
+
+By default, `Stack` arranges items vertically in a `column`. However, the `direction` prop can be used to position items horizontally in a `row` as well.
+
+<DirectionStack />
+```tsx
+<Stack direction="row" spacing={2}>
+  <Item>Item 1</Item>
+  <Item>Item 2</Item>
+  <Item>Item 3</Item>
+</Stack>
+```
+
+## Dividers
+
+Use the `divider` prop to insert an element between each child. This works particularly well with the Divider component.
+
+<DividerStack />
+```tsx
+<Stack
+  direction="row"
+  divider={<Divider orientation="vertical" flexItem />}
+  spacing={2}
+>
+  <Item>Item 1</Item>
+  <Item>Item 2</Item>
+  <Item>Item 3</Item>
+</Stack>
+```
+
+## Responsive values
+
+You can switch the `direction` or `spacing` values based on the active breakpoint.
+
+<ResponsiveStack />
+```tsx
+<Stack
+  direction={{ xs: 'column', sm: 'row' }}
+  spacing={{ xs: 1, sm: 2, md: 4 }}
+>
+  <Item>Item 1</Item>
+  <Item>Item 2</Item>
+  <Item>Item 3</Item>
+</Stack>
+```
+
+## Interactive
+
+Below is an interactive demo that lets you explore the visual results of the different settings:
+
+<InteractiveStack />
+```tsx
+<InteractiveStack />
+```
+
+## System props
+
+As a CSS utility component, the `Stack` supports all `system` properties. You can use them as props directly on the component.
+For instance, a margin-top:
+
+```jsx
+<Stack mt={2}>
+```

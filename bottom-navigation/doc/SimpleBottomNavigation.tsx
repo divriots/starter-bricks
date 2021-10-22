@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Box } from '@mui/material';
+import { Box } from '~/box';
 import { BottomNavigation } from '~/bottom-navigation';
 import { BottomNavigationAction } from '@mui/material';
 import { Restore as RestoreIcon } from '@mui/icons-material';

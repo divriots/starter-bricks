@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import { Grid } from '@mui/material';
+import { Grid } from '~/grid';
 import { FormControl } from '@mui/material';
 import { FormLabel } from '@mui/material';
 import { FormControlLabel } from '@mui/material';

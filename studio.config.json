@@ -40,7 +40,21 @@
       ["surfaces", ["accordion", "app-bar", "card", "paper"]],
       [
         "navigation",
-        ["bottom-navigation", "breadcrumbs", "drawer", "link", "menu"]
+        [
+          "bottom-navigation",
+          "breadcrumbs",
+          "drawer",
+          "link",
+          "menu",
+          "pagination",
+          "speed-dial",
+          "stepper",
+          "tabs"
+        ]
+      ],
+      [
+        "layout",
+        ["box", "container", "container", "grid", "stack", "image-list"]
       ],
       ["dockit", ["layout", "showcase", "demo-frame"]]
     ]

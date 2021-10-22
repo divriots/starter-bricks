@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { styled, useTheme, Theme, CSSObject } from '@mui/material';
-import { Box } from '@mui/material';
+import { Box } from '~/box';
 import { Drawer as MuiDrawer } from '~/drawer';
 import { AppBar as MuiAppBar } from '~/app-bar';
 import { AppBarProps as MuiAppBarProps } from '@mui/material';
@@ -103,7 +103,7 @@ export default function MiniDrawer() {
   };
 
   return (
-    <Box sx={{ display: 'flex', position: 'relative' }}>
+    <Box sx={{ display: 'flex' }}>
       <CssBaseline />
       <AppBar position="fixed" open={open}>
         <Toolbar>

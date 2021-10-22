@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Stack } from '@mui/material';
+import { Stack } from '~/stack';
 import { LinearProgress } from '~/progress';
 
 export default function LinearColor() {

@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { styled } from '@mui/material';
 import { AppBar } from '~/app-bar';
-import { Box } from '@mui/material';
+import { Box } from '~/box';
 import { Toolbar } from '@mui/material';
 import { IconButton } from '@mui/material';
 import { Typography } from '~/typography';
