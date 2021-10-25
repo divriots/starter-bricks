@@ -3,7 +3,7 @@
     "dir": "",
     "menu": [
       "introduction",
-      ["tokens", ["colors", "fonts", "theme"]],
+      ["tokens", ["colors", "fonts", "spacing", "theme"]],
       [
         "inputs",
         [
