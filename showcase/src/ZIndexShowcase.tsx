@@ -34,6 +34,7 @@ export const ZIndexShowcase = () => {
         flexDirection: 'column',
         alignItems: 'center',
         paddingTop: '6rem',
+        paddingBottom: '6rem',
       }}
     >
       {Object.entries(theme.zIndex).map(([name, zIndex], i) => (
