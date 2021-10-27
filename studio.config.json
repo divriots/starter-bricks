@@ -59,6 +59,7 @@
         "layout",
         ["box", "container", "container", "grid", "stack", "image-list"]
       ],
+      ["date / time", ["date-picker", "date-time-picker", "time-picker"]],
       ["dockit", ["layout", "showcase", "demo-frame"]]
     ]
   }

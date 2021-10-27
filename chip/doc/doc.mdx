@@ -1,9 +1,9 @@
 import { Chip } from '~/chip';
 import BasicChips from './BasicChips';
-import ClickeableChips from './ClickeableChips';
-import DeleteableChips from './DeleteableChips';
-import ClickeableAndDeleteableChips from './ClickeableAndDeleteableChips';
-import ClickeableLinkChips from './ClickeableLinkChips';
+import ClickableChips from './ClickableChips';
+import DeletableChips from './DeletableChips';
+import ClickableAndDeletableChips from './ClickableAndDeletableChips';
+import ClickableLinkChips from './ClickableLinkChips';
 import CustomDeleteIconChips from './CustomDeleteIconChips';
 import AvatarChips from './AvatarChips';
 import IconChips from './IconChips';
@@ -48,7 +48,7 @@ You can use the following actions.
 
 ### Clickable
 
-<ClickeableChips />
+<ClickableChips />
 ```tsx
 <Chip label="Clickable" onClick={handleClick} />
 <Chip label="Clickable" variant="outlined" onClick={handleClick} />
@@ -56,7 +56,7 @@ You can use the following actions.
 
 ### Deletable
 
-<DeleteableChips />
+<DeletableChips />
 ```tsx
 <Chip label="Deletable" onDelete={handleDelete} />
 <Chip label="Deletable" variant="outlined" onDelete={handleDelete} />
@@ -64,7 +64,7 @@ You can use the following actions.
 
 ### Clickable and deletable
 
-<ClickeableAndDeleteableChips />
+<ClickableAndDeletableChips />
 ```tsx
 <Chip
   label="Clickable Deletable"
@@ -81,7 +81,7 @@ You can use the following actions.
 
 ### Clickable link
 
-<ClickeableLinkChips />
+<ClickableLinkChips />
 ```tsx
 <Chip label="Clickable Link" component="a" href="#basic-chip" clickable />
 <Chip

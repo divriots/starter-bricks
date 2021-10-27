@@ -1,5 +1,5 @@
 import * as React from 'react';
-import LoadingButton from '@mui/lab/LoadingButton';
+import { LoadingButton } from '@mui/lab';
 import { Save as SaveIcon } from '@mui/icons-material';
 import { Stack } from '~/stack';
 

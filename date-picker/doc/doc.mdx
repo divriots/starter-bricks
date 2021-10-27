@@ -1,0 +1,248 @@
+import { DatePicker } from '~/date-picker';
+import BasicDatePicker from './BasicDatePicker';
+import StaticDatePickerDemo from './StaticDatePickerDemo';
+import ResponsiveDatePickers from './ResponsiveDatePickers';
+import FormPropsDatePickers from './FormPropsDatePickers';
+import LocalizedDatePicker from './LocalizedDatePicker';
+import JalaliDatePicker from './JalaliDatePicker';
+import ViewsDatePicker from './ViewsDatePicker';
+import StaticDatePickerLandscape from './StaticDatePickerLandscape';
+import SubComponentsPickers from './SubComponentsPickers';
+import CustomInput from './CustomInput';
+import CustomDay from './CustomDay';
+import ServerRequestDatePicker from './ServerRequestDatePicker';
+import HelperText from './HelperText';
+import { mdx } from '@mdx-js/react';
+import { Playground as BklPlayground } from '@divriots/dockit-react/playground';
+import { DemoFrame } from '~/demo-frame';
+import { MdxLayout } from '~/layout';
+export default MdxLayout;
+
+# Date Picker
+
+<p className="description">Date pickers let the user select a date.</p>
+
+Date pickers let the user select a date. Date pickers are displayed with:
+
+- Dialogs on mobile
+- Text field dropdowns on desktop
+
+## Requirements
+
+This component relies on the date management library of your choice. It supports date-fns, luxon, dayjs, moment and any other library via a public `dateAdapter` interface.
+
+Please install any of these libraries and set up the right date engine by wrapping your root (or the highest level you wish the pickers to be available) with `LocalizationProvider`:
+
+```jsx
+// or @mui/lab/Adapter{Dayjs,Luxon,Moment} or any valid date-io adapter
+import AdapterDateFns from '@mui/lab/AdapterDateFns';
+import LocalizationProvider from '@mui/lab/LocalizationProvider';
+
+function App() {
+  return (
+    <LocalizationProvider dateAdapter={AdapterDateFns}>
+      ...
+    </LocalizationProvider>
+  );
+}
+```
+
+## Basic usage
+
+The date picker is rendered as a modal dialog on mobile, and a textbox with a popup on desktop.
+
+<BasicDatePicker />
+```tsx
+<LocalizationProvider dateAdapter={AdapterDateFns}>
+  <DatePicker
+    label="Basic example"
+    value={value}
+    onChange={(newValue) => {
+      setValue(newValue);
+    }}
+    renderInput={(params) => <TextField {...params} />}
+  />
+</LocalizationProvider>
+```
+
+## Static mode
+
+It's possible to render any date picker without the modal/popover and text field. This can be helpful when building custom popover/modal containers.
+
+<StaticDatePickerDemo />
+```tsx
+<LocalizationProvider dateAdapter={AdapterDateFns}>
+  <StaticDatePicker
+    displayStaticWrapperAs="desktop"
+    openTo="year"
+    value={value}
+    onChange={(newValue) => {
+      setValue(newValue);
+    }}
+    renderInput={(params) => <TextField {...params} />}
+  />
+</LocalizationProvider>
+```
+
+## Responsiveness
+
+The date picker component is designed and optimized for the device it runs on.
+
+- The `MobileDatePicker` component works best for touch devices and small screens.
+- The `DesktopDatePicker` component works best for mouse devices and large screens.
+
+By default, the `DatePicker` component renders the desktop version if the media query `@media (pointer: fine)` matches.
+This can be customized with the `desktopModeMediaQuery` prop.
+
+<ResponsiveDatePickers />
+```tsx
+<ResponsiveDatePickers />
+```
+
+## Form props
+
+The date picker component can be disabled or read-only.
+
+<FormPropsDatePickers />
+```tsx
+<FormPropsDatePickers />
+```
+
+## Localization
+
+Use `LocalizationProvider` to change the date-engine locale that is used to render the date picker. Here is an example of changing the locale for the `date-fns` adapter:
+
+<LocalizedDatePicker />
+```tsx
+<LocalizedDatePicker />
+```
+
+## Jalali calendar system
+
+Install `date-fns-jalali` and use `@date-io/date-fns-jalali` adapter to support Jalali calendar.
+
+<JalaliDatePicker />
+```tsx
+<LocalizationProvider dateAdapter={AdapterJalali}>
+  <DatePicker
+    mask="____/__/__"
+    value={value}
+    onChange={(newValue) => setValue(newValue)}
+    renderInput={(params) => <TextField {...params} />}
+  />
+</LocalizationProvider>
+```
+
+## Views playground
+
+It's possible to combine `year`, `month`, and `date` selection views. Views will appear in the order they're included in the `views` array.
+
+<ViewsDatePicker />
+```tsx
+<ViewsDatePicker />
+```
+
+## Landscape orientation
+
+For ease of use, the date picker will automatically change the layout between portrait and landscape by subscription to the `window.orientation` change. You can force a specific layout using the `orientation` prop.
+
+<StaticDatePickerLandscape />
+    
+```tsx
+<LocalizationProvider dateAdapter={AdapterDateFns}>
+  <StaticDatePicker<Date>
+    orientation="landscape"
+    openTo="day"
+    value={value}
+    shouldDisableDate={isWeekend}
+    onChange={(newValue) => {
+      setValue(newValue);
+    }}
+    renderInput={(params) => <TextField {...params} />}
+  />
+</LocalizationProvider>
+```
+
+
+## Sub-components
+
+Some lower-level sub-components (`CalendarPicker`, `MonthPicker`, and `YearPicker`) are also exported. These are rendered without a wrapper or outer logic (masked input, date values parsing and validation, etc.).
+
+<SubComponentsPickers />
+```tsx
+<SubComponentsPickers />
+```
+
+## Custom input component
+
+You can customize the rendering of the input with the `renderInput` prop. Make sure to spread `ref` and `inputProps` correctly to the custom input component.
+
+<CustomInput />
+```tsx
+<LocalizationProvider dateAdapter={AdapterDateFns}>
+  <DesktopDatePicker
+    label="Custom input"
+    value={value}
+    onChange={(newValue) => {
+      setValue(newValue);
+    }}
+    renderInput={({ inputRef, inputProps, InputProps }) => (
+      <Box sx={{ display: 'flex', alignItems: 'center' }}>
+        <input ref={inputRef} {...inputProps} />
+        {InputProps?.endAdornment}
+      </Box>
+    )}
+  />
+</LocalizationProvider>
+```
+
+## Customized day rendering
+
+The displayed days are customizable with the `renderDay` function prop.
+You can take advantage of the PickersDay component.
+
+<CustomDay />
+```tsx
+<LocalizationProvider dateAdapter={AdapterDateFns}>
+  <StaticDatePicker
+    displayStaticWrapperAs="desktop"
+    label="Week picker"
+    value={value}
+    onChange={(newValue) => {
+      setValue(newValue);
+    }}
+    renderDay={renderWeekPickerDay}
+    renderInput={(params) => <TextField {...params} />}
+    inputFormat="'Week of' MMM d"
+  />
+</LocalizationProvider>
+```
+
+## Dynamic data
+
+Sometimes it may be necessary to display additional info right in the calendar. Here's an example of prefetching and displaying server-side data using the `onMonthChange`, `loading`, and `renderDay` props.
+
+<ServerRequestDatePicker />
+```tsx
+<ServerRequestDatePicker />
+```
+
+## Helper text
+
+You can show a helper text with the date format accepted.
+
+<HelperText />
+```tsx
+<LocalizationProvider dateAdapter={AdapterDateFns}>
+  <DatePicker
+    label="Helper text example"
+    value={value}
+    onChange={(newValue) => {
+      setValue(newValue);
+    }}
+    renderInput={(params) => (
+      <TextField {...params} helperText={params?.inputProps?.placeholder} />
+    )}
+  />
+</LocalizationProvider>
+```

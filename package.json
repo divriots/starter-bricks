@@ -9,6 +9,7 @@
     "serve": "npx backlight@latest serve k0DvZztNuwmS6XnXoohE --open"
   },
   "dependencies": {
+    "@date-io/date-fns-jalali": "^2.11.0",
     "@emotion/cache": "^11.5.0",
     "@emotion/react": "^11.5.0",
     "@mui/core": "^5.0.0-alpha.50",
@@ -21,6 +22,7 @@
     "@mui/x-data-grid": "^4.0.1",
     "autosuggest-highlight": "^3.1.1",
     "clsx": "^1.1.1",
+    "date-fns": "^2.25.0",
     "jss": "^10.8.1",
     "jss-rtl": "^0.3.0",
     "lodash": "^4.17.21",

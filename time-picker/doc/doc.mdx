@@ -1,0 +1,159 @@
+import { TimePicker } from '~/time-picker';
+import BasicTimePicker from './BasicTimePicker';
+import StaticTimePickerDemo from './StaticTimePickerDemo';
+import ResponsiveTimePickers from './ResponsiveTimePickers';
+import FormPropsTimePickers from './FormPropsTimePickers';
+import LocalizedTimePicker from './LocalizedTimePicker';
+import TimeValidationTimePicker from './TimeValidationTimePicker';
+import StaticTimePickerLandscape from './StaticTimePickerLandscape';
+import SubComponentsTimePickers from './SubComponentsTimePickers';
+import SecondsTimePicker from './SecondsTimePicker';
+import { mdx } from '@mdx-js/react';
+import { Playground as BklPlayground } from '@divriots/dockit-react/playground';
+import { DemoFrame } from '~/demo-frame';
+import { MdxLayout } from '~/layout';
+export default MdxLayout;
+
+# Time Picker
+
+<p className="description">
+  Time pickers allow the user to select a single time.
+</p>
+
+Time pickers allow the user to select a single time (in the hours:minutes format).
+The selected time is indicated by the filled circle at the end of the clock hand.
+
+## Requirements
+
+This component relies on the date management library of your choice. It supports date-fns, luxon, dayjs, moment and any other library via a public `dateAdapter` interface.
+
+Please install any of these libraries and set up the right date engine by wrapping your root (or the highest level you wish the pickers to be available) with `LocalizationProvider`:
+
+```jsx
+// or @mui/lab/Adapter{DayJS,Luxon,Moment} or any valid date-io adapter
+import AdapterDateFns from '@mui/lab/AdapterDateFns';
+import LocalizationProvider from '@mui/lab/LocalizationProvider';
+
+function App() {
+  return (
+    <LocalizationProvider dateAdapter={AdapterDateFns}>
+      ...
+    </LocalizationProvider>
+  );
+}
+```
+
+## Basic usage
+
+The date picker is rendered as a modal dialog on mobile, and a textbox with a popup on desktop.
+
+<BasicTimePicker />
+```tsx
+<LocalizationProvider dateAdapter={AdapterDateFns}>
+  <TimePicker
+    label="Basic example"
+    value={value}
+    onChange={(newValue) => {
+      setValue(newValue);
+    }}
+    renderInput={(params) => <TextField {...params} />}
+  />
+</LocalizationProvider>
+```
+
+## Static mode
+
+It's possible to render any time picker inline. This will enable building custom popover/modal containers.
+
+<StaticTimePickerDemo />
+```tsx
+<LocalizationProvider dateAdapter={AdapterDateFns}>
+  <StaticTimePicker
+    displayStaticWrapperAs="mobile"
+    value={value}
+    onChange={(newValue) => {
+      setValue(newValue);
+    }}
+    renderInput={(params) => <TextField {...params} />}
+  />
+</LocalizationProvider>
+```
+
+## Responsiveness
+
+The time picker component is designed and optimized for the device it runs on.
+
+- The `MobileTimePicker` component works best for touch devices and small screens.
+- The `DesktopTimePicker` component works best for mouse devices and large screens.
+
+By default, the `TimePicker` component renders the desktop version if the media query `@media (pointer: fine)` matches.
+This can be customized with the `desktopModeMediaQuery` prop.
+
+<ResponsiveTimePickers />
+```tsx
+<ResponsiveTimePickers />
+```
+
+## Form props
+
+The time picker component can be disabled or read-only.
+
+<FormPropsTimePickers />
+```tsx
+<FormPropsTimePickers />
+```
+
+## Localization
+
+Use `LocalizationProvider` to change the date-engine locale that is used to render the time picker.
+The time picker will automatically adjust to the locale's time setting, i.e. the 12-hour or 24-hour format. This can be controlled with `ampm` prop.
+
+<LocalizedTimePicker />
+```tsx
+<LocalizedTimePicker />
+```
+
+## Time validation
+
+<TimeValidationTimePicker />
+```tsx
+<TimeValidationTimePicker />
+```
+
+## Landscape
+
+<StaticTimePickerLandscape />
+```tsx
+<LocalizationProvider dateAdapter={AdapterDateFns}>
+  <StaticTimePicker
+    ampm
+    orientation="landscape"
+    openTo="minutes"
+    value={value}
+    onChange={(newValue) => {
+      setValue(newValue);
+    }}
+    renderInput={(params) => <TextField {...params} />}
+  />
+</LocalizationProvider>
+```
+
+## Sub-components
+
+Some lower-level sub-components (`ClockPicker`) are also exported. These are rendered without a wrapper or outer logic (masked input, date values parsing and validation, etc.).
+
+<SubComponentsTimePickers />
+```tsx
+<LocalizationProvider dateAdapter={AdapterDateFns}>
+  <ClockPicker date={date} onChange={(newDate) => setDate(newDate)} />
+</LocalizationProvider>
+```
+
+## Seconds
+
+The seconds input can be used for selection of a precise time point.
+
+<SecondsTimePicker />
+```tsx
+<SecondsTimePicker />
+```

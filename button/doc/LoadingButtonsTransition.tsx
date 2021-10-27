@@ -1,5 +1,5 @@
 import * as React from 'react';
-import LoadingButton from '@mui/lab/LoadingButton';
+import { LoadingButton } from '@mui/lab';
 import { Box } from '~/box';
 import { FormControlLabel } from '@mui/material';
 import { Switch } from '~/switch';

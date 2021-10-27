@@ -7,6 +7,7 @@ import { Playground } from '@divriots/dockit-react/playground';
 import { createTheme } from '~/theme';
 import { ThemeProvider, PaletteMode } from '@mui/material';
 import { Logo } from './Logo';
+import './layout.css';
 
 export const MdxLayout = (props) => {
   const [mode, setMode] = React.useState<PaletteMode>(
