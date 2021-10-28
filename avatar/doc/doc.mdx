@@ -1,0 +1,166 @@
+import { Avatar } from '~/avatar';
+import ImageAvatars from './ImageAvatars';
+import LetterAvatars from './LetterAvatars';
+import BackgroundLetterAvatars from './BackgroundLetterAvatars';
+import SizeAvatars from './SizeAvatars';
+import IconAvatars from './IconAvatars';
+import VariantAvatars from './VariantAvatars';
+import FallbackAvatars from './FallbackAvatars';
+import GroupAvatars from './GroupAvatars';
+import BadgeAvatars from './BadgeAvatars';
+import { mdx } from '@mdx-js/react';
+import { Playground as BklPlayground } from '@divriots/dockit-react/playground';
+import { DemoFrame } from '~/demo-frame';
+import { MdxLayout } from '~/layout';
+export default MdxLayout;
+
+# Avatar
+
+<p className="description">
+  Avatars are found throughout material design with uses in everything from
+  tables to dialog menus.
+</p>
+
+## Image avatars
+
+Image avatars can be created by passing standard `img` props `src` or `srcSet` to the component.
+
+<ImageAvatars />
+```tsx
+<Avatar alt="Remy Sharp" src="/static/images/avatar/1.jpg" />
+<Avatar alt="Travis Howard" src="/static/images/avatar/2.jpg" />
+<Avatar alt="Cindy Baker" src="/static/images/avatar/3.jpg" />
+```
+
+## Letter avatars
+
+Avatars containing simple characters can be created by passing a string as `children`.
+
+<LetterAvatars />
+```tsx
+<Avatar>H</Avatar>
+<Avatar sx={{ bgcolor: deepOrange[500] }}>N</Avatar>
+<Avatar sx={{ bgcolor: deepPurple[500] }}>OP</Avatar>
+```
+
+You can use different background colors for the avatar.
+The following demo generates the color based on the name of the person.
+
+<BackgroundLetterAvatars />
+```tsx
+<Avatar {...stringAvatar('Kent Dodds')} />
+<Avatar {...stringAvatar('Jed Watson')} />
+<Avatar {...stringAvatar('Tim Neutkens')} />
+```
+
+## Sizes
+
+You can change the size of the avatar with the `height` and `width` CSS properties.
+
+<SizeAvatars />
+```tsx
+<Avatar
+  alt="Remy Sharp"
+  src="/static/images/avatar/1.jpg"
+  sx={{ width: 24, height: 24 }}
+/>
+<Avatar alt="Remy Sharp" src="/static/images/avatar/1.jpg" />
+<Avatar
+  alt="Remy Sharp"
+  src="/static/images/avatar/1.jpg"
+  sx={{ width: 56, height: 56 }}
+/>
+```
+
+## Icon avatars
+
+Icon avatars are created by passing an icon as `children`.
+
+<IconAvatars />
+```tsx
+<Avatar>
+  <FolderIcon />
+</Avatar>
+<Avatar sx={{ bgcolor: pink[500] }}>
+  <PageviewIcon />
+</Avatar>
+<Avatar sx={{ bgcolor: green[500] }}>
+  <AssignmentIcon />
+</Avatar>
+```
+
+## Variants
+
+If you need square or rounded avatars, use the `variant` prop.
+
+<VariantAvatars />
+```tsx
+<Avatar sx={{ bgcolor: deepOrange[500] }} variant="square">
+  N
+</Avatar>
+<Avatar sx={{ bgcolor: green[500] }} variant="rounded">
+  <AssignmentIcon />
+</Avatar>
+```
+
+## Fallbacks
+
+If there is an error loading the avatar image, the component falls back to an alternative in the following order:
+
+- the provided children
+- the first letter of the `alt` text
+- a generic avatar icon
+
+<FallbackAvatars />
+```tsx
+<Avatar
+  sx={{ bgcolor: deepOrange[500] }}
+  alt="Remy Sharp"
+  src="/broken-image.jpg"
+>
+  B
+</Avatar>
+<Avatar
+  sx={{ bgcolor: deepOrange[500] }}
+  alt="Remy Sharp"
+  src="/broken-image.jpg"
+/>
+<Avatar src="/broken-image.jpg" />
+```
+
+## Grouped
+
+`AvatarGroup` renders its children as a stack.
+
+<GroupAvatars />
+```tsx
+<AvatarGroup max={4}>
+  <Avatar alt="Remy Sharp" src="/static/images/avatar/1.jpg" />
+  <Avatar alt="Travis Howard" src="/static/images/avatar/2.jpg" />
+  <Avatar alt="Cindy Baker" src="/static/images/avatar/3.jpg" />
+  <Avatar alt="Agnes Walker" src="/static/images/avatar/4.jpg" />
+  <Avatar alt="Trevor Henderson" src="/static/images/avatar/5.jpg" />
+</AvatarGroup>
+```
+
+## With badge
+
+<BadgeAvatars />
+```tsx
+<StyledBadge
+  overlap="circular"
+  anchorOrigin={{ vertical: 'bottom', horizontal: 'right' }}
+  variant="dot"
+>
+  <Avatar alt="Remy Sharp" src="/static/images/avatar/1.jpg" />
+</StyledBadge>
+<Badge
+  overlap="circular"
+  anchorOrigin={{ vertical: 'bottom', horizontal: 'right' }}
+  badgeContent={
+    <SmallAvatar alt="Remy Sharp" src="/static/images/avatar/1.jpg" />
+  }
+>
+  <Avatar alt="Travis Howard" src="/static/images/avatar/2.jpg" />
+</Badge>
+```

@@ -1,0 +1,237 @@
+import { Select } from '~/select';
+import BasicSelect from './BasicSelect';
+import SelectVariants from './SelectVariants';
+import SelectLabels from './SelectLabels';
+import SelectAutoWidth from './SelectAutoWidth';
+import SelectOtherProps from './SelectOtherProps';
+import NativeSelect from './NativeSelect';
+import CustomizedSelects from './CustomizedSelects';
+import MultipleSelect from './MultipleSelect';
+import MultipleSelectCheckmarks from './MultipleSelectCheckmarks';
+import MultipleSelectChip from './MultipleSelectChip';
+import MultipleSelectPlaceholder from './MultipleSelectPlaceholder';
+import MultipleSelectNative from './MultipleSelectNative';
+import ControlledOpenSelect from './ControlledOpenSelect';
+import DialogSelect from './DialogSelect';
+import GroupedSelect from './GroupedSelect';
+import { mdx } from '@mdx-js/react';
+import { Playground as BklPlayground } from '@divriots/dockit-react/playground';
+import { DemoFrame } from '~/demo-frame';
+import { MdxLayout } from '~/layout';
+export default MdxLayout;
+
+# Select
+
+<p className="description">
+  Select components are used for collecting user provided information from a
+  list of options.
+</p>
+
+## Basic select
+
+Menus are positioned under their emitting elements, unless they are close to the bottom of the viewport.
+
+<BasicSelect />
+```tsx
+<FormControl fullWidth>
+  <InputLabel id="demo-simple-select-label">Age</InputLabel>
+  <Select
+    labelId="demo-simple-select-label"
+    id="demo-simple-select"
+    value={age}
+    label="Age"
+    onChange={handleChange}
+  >
+    <MenuItem value={10}>Ten</MenuItem>
+    <MenuItem value={20}>Twenty</MenuItem>
+    <MenuItem value={30}>Thirty</MenuItem>
+  </Select>
+</FormControl>
+```
+
+## Advanced features
+
+The Select component is meant to be interchangeable with a native `<select>` element.
+
+If you are looking for more advanced features, like combobox, multiselect, autocomplete, async or creatable support, head to the `Autocomplete` component.
+It's meant to be an improved version of the "react-select" and "downshift" packages.
+
+## Props
+
+The Select component is implemented as a custom `<input>` element of the InputBase.
+It extends the text field components sub-components, either the OutlinedInput, Input, or FilledInput, depending on the variant selected.
+It shares the same styles and many of the same props. Refer to the respective component's API page for details.
+
+### Filled and standard variants
+
+<SelectVariants />
+```tsx
+<SelectVariants />
+```
+
+### Labels and helper text
+
+<SelectLabels />
+```tsx
+<SelectLabels />
+```
+
+### Auto width
+
+<SelectAutoWidth />
+```tsx
+<SelectAutoWidth />
+```
+
+### Other props
+
+<SelectOtherProps />
+```tsx
+<SelectOtherProps />
+```
+
+## Native select
+
+As the user experience can be improved on mobile using the native select of the platform,
+we allow such pattern.
+
+<NativeSelect />
+```tsx
+<FormControl fullWidth>
+  <InputLabel variant="standard" htmlFor="uncontrolled-native">
+    Age
+  </InputLabel>
+  <NativeSelect
+    defaultValue={30}
+    inputProps={{
+      name: 'age',
+      id: 'uncontrolled-native',
+    }}
+  >
+    <option value={10}>Ten</option>
+    <option value={20}>Twenty</option>
+    <option value={30}>Thirty</option>
+  </NativeSelect>
+</FormControl>
+```
+
+## TextField
+
+The `TextField` wrapper component is a complete form control including a label, input and help text.
+You can find an example with the select mode in this section.
+
+## Customization
+
+Here are some examples of customizing the component.
+You can learn more about this in the overrides documentation page.
+
+The first step is to style the `InputBase` component.
+Once it's styled, you can either use it directly as a text field or provide it to the select `input` prop to have a `select` field.
+Notice that the `"standard"` variant is easier to customize, since it does not wrap the contents in a `fieldset`/`legend` markup.
+
+<CustomizedSelects />
+```tsx
+<CustomizedSelects />
+```
+
+🎨 If you are looking for inspiration, you can check MUI Treasury's customization examples.
+
+## Multiple select
+
+The `Select` component can handle multiple selections.
+It's enabled with the `multiple` prop.
+
+Like with the single selection, you can pull out the new value by accessing `event.target.value` in the `onChange` callback. It's always an array.
+
+### Default
+
+<MultipleSelect />
+```tsx
+<MultipleSelect />
+```
+
+### Checkmarks
+
+<MultipleSelectCheckmarks />
+```tsx
+<MultipleSelectCheckmarks />
+```
+
+### Chip
+
+<MultipleSelectChip />
+```tsx
+<MultipleSelectChip />
+```
+
+### Placeholder
+
+<MultipleSelectPlaceholder />
+```tsx
+<MultipleSelectPlaceholder />
+```
+
+### Native
+
+<MultipleSelectNative />
+```tsx
+<MultipleSelectNative />
+```
+
+## Controlled open select
+
+<ControlledOpenSelect />
+```tsx
+<ControlledOpenSelect />
+```
+
+## With a dialog
+
+While it's discouraged by the Material Design guidelines, you can use a select inside a dialog.
+
+<DialogSelect />
+```tsx
+<DialogSelect />
+```
+
+## Grouping
+
+Display categories with the `ListSubheader` component or the native `<optgroup>` element.
+
+<GroupedSelect />
+```tsx
+<GroupedSelect />
+```
+
+## Accessibility
+
+To properly label your `Select` input you need an extra element with an `id` that contains a label.
+That `id` needs to match the `labelId` of the `Select` e.g.
+
+```jsx
+<InputLabel id="label">Age</InputLabel>
+<Select labelId="label" id="select" value="20">
+  <MenuItem value="10">Ten</MenuItem>
+  <MenuItem value="20">Twenty</MenuItem>
+</Select>
+```
+
+Alternatively a `TextField` with an `id` and `label` creates the proper markup and
+ids for you:
+
+```jsx
+<TextField id="select" label="Age" value="20" select>
+  <MenuItem value="10">Ten</MenuItem>
+  <MenuItem value="20">Twenty</MenuItem>
+</TextField>
+```
+
+For a native select, you should mention a label by giving the value of the `id` attribute of the select element to the `InputLabel`'s `htmlFor` attribute:
+
+```jsx
+<InputLabel htmlFor="select">Age</InputLabel>
+<NativeSelect id="select">
+  <option value="10">Ten</option>
+  <option value="20">Twenty</option>
+</NativeSelect>
+```

@@ -1,0 +1,214 @@
+import { CircularProgress, LinearProgress } from '~/progress';
+import CircularIndeterminate from './CircularIndeterminate';
+import CircularColor from './CircularColor';
+import CircularDeterminate from './CircularDeterminate';
+import CircularIntegration from './CircularIntegration';
+import CircularWithValueLabel from './CircularWithValueLabel';
+import LinearIndeterminate from './LinearIndeterminate';
+import LinearColor from './LinearColor';
+import LinearDeterminate from './LinearDeterminate';
+import LinearBuffer from './LinearBuffer';
+import LinearWithValueLabel from './LinearWithValueLabel';
+import CustomizedProgressBars from './CustomizedProgressBars';
+import DelayingAppearance from './DelayingAppearance';
+import CircularUnderLoad from './CircularUnderLoad';
+import { mdx } from '@mdx-js/react';
+import { Playground as BklPlayground } from '@divriots/dockit-react/playground';
+import { DemoFrame } from '~/demo-frame';
+import { MdxLayout } from '~/layout';
+export default MdxLayout;
+
+# Progress
+
+<p className="description">
+  Progress indicators commonly known as spinners, express an unspecified wait
+  time or display the length of a process.
+</p>
+
+Progress indicators inform users about the status of ongoing processes, such as loading an app, submitting a form, or saving updates.
+
+- **Determinate** indicators display how long an operation will take.
+- **Indeterminate** indicators visualize an unspecified wait time.
+
+The animations of the components rely on CSS as much as possible to work even before the JavaScript is loaded.
+
+## Circular
+
+### Circular indeterminate
+
+<CircularIndeterminate />
+```tsx
+<CircularProgress />
+```
+
+### Circular color
+
+<CircularColor />
+```tsx
+<CircularProgress color="secondary" />
+<CircularProgress color="success" />
+<CircularProgress color="inherit" />
+```
+
+### Circular determinate
+
+<CircularDeterminate />
+```tsx
+<CircularProgress variant="determinate" value={25} />
+<CircularProgress variant="determinate" value={50} />
+<CircularProgress variant="determinate" value={75} />
+<CircularProgress variant="determinate" value={100} />
+<CircularProgress variant="determinate" value={progress} />
+```
+
+### Interactive integration
+
+<CircularIntegration />
+```tsx
+<CircularIntegration />
+```
+
+### Circular with label
+
+<CircularWithValueLabel />
+```tsx
+<CircularProgressWithLabel value={progress} />
+```
+
+## Linear
+
+### Linear indeterminate
+
+<LinearIndeterminate />
+```tsx
+<LinearProgress />
+```
+
+### Linear color
+
+<LinearColor />
+```tsx
+<LinearProgress color="secondary" />
+<LinearProgress color="success" />
+<LinearProgress color="inherit" />
+```
+
+### Linear determinate
+
+<LinearDeterminate />
+```tsx
+<LinearProgress variant="determinate" value={progress} />
+```
+
+### Linear buffer
+
+<LinearBuffer />
+```tsx
+<LinearProgress variant="buffer" value={progress} valueBuffer={buffer} />
+```
+
+### Linear with label
+
+<LinearWithValueLabel />
+```tsx
+<LinearProgressWithLabel value={progress} />
+```
+
+## Non-standard ranges
+
+The progress components accept a value in the range 0 - 100. This simplifies things for screen-reader users, where these are the default min / max values. Sometimes, however, you might be working with a data source where the values fall outside this range. Here's how you can easily transform a value in any range to a scale of 0 - 100:
+
+```jsx
+// MIN = Minimum expected value
+// MAX = Maximium expected value
+// Function to normalise the values (MIN / MAX could be integrated)
+const normalise = (value) => ((value - MIN) * 100) / (MAX - MIN);
+
+// Example component that utilizes the `normalise` function at the point of render.
+function Progress(props) {
+  return (
+    <React.Fragment>
+      <CircularProgress variant="determinate" value={normalise(props.value)} />
+      <LinearProgress variant="determinate" value={normalise(props.value)} />
+    </React.Fragment>
+  );
+}
+```
+
+## Customization
+
+Here are some examples of customizing the component.
+You can learn more about this in the overrides documentation page.
+
+<CustomizedProgressBars />
+```tsx
+<FacebookCircularProgress />
+<br />
+<BorderLinearProgress variant="determinate" value={50} />
+```
+
+## Delaying appearance
+
+There are 3 important limits to know around response time.
+The ripple effect of the `ButtonBase` component ensures that the user feels that the system is reacting instantaneously.
+Normally, no special feedback is necessary during delays of more than 0.1 but less than 1.0 second.
+After 1.0 second, you can display a loader to keep user's flow of thought uninterrupted.
+
+<DelayingAppearance />
+```tsx
+<DelayingAppearance />
+```
+
+## Limitations
+
+### High CPU load
+
+Under heavy load, you might lose the stroke dash animation or see random `CircularProgress` ring widths.
+You should run processor intensive operations in a web worker or by batch in order not to block the main rendering thread.
+
+!heavy load
+
+When it's not possible, you can leverage the `disableShrink` prop to mitigate the issue.
+See this issue.
+
+<CircularUnderLoad />
+```tsx
+<CircularProgress disableShrink />
+```
+
+### High frequency updates
+
+The `LinearProgress` uses a transition on the CSS transform property to provide a smooth update between different values.
+The default transition duration is 200ms.
+In the event a parent component updates the `value` prop too quickly, you will at least experience a 200ms delay between the re-render and the progress bar fully updated.
+
+If you need to perform 30 re-renders per second or more, we recommend disabling the transition:
+
+```css
+.MuiLinearProgress-bar {
+  transition: none;
+}
+```
+
+### IE 11
+
+The circular progress component animation on IE 11 is degraded.
+The stroke dash animation is not working (equivalent to `disableShrink`) and the circular animation wobbles.
+You can solve the latter with:
+
+```css
+.MuiCircularProgress-indeterminate {
+  animation: circular-rotate 1.4s linear infinite;
+}
+
+@keyframes circular-rotate {
+  0% {
+    transform: rotate(0deg);
+    /* Fix IE11 wobbly */
+    transform-origin: 50% 50%;
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+```

@@ -1,0 +1,173 @@
+import { Badge } from '~/badge';
+import SimpleBadge from './SimpleBadge';
+import ColorBadge from './ColorBadge';
+import CustomizedBadges from './CustomizedBadges';
+import BadgeVisibility from './BadgeVisibility';
+import ShowZeroBadge from './ShowZeroBadge';
+import BadgeMax from './BadgeMax';
+import DotBadge from './DotBadge';
+import BadgeOverlap from './BadgeOverlap';
+import BadgeAlignment from './BadgeAlignment';
+import UnstyledBadge from './UnstyledBadge';
+import AccessibleBadges from './AccessibleBadges';
+import { mdx } from '@mdx-js/react';
+import { Playground as BklPlayground } from '@divriots/dockit-react/playground';
+import { DemoFrame } from '~/demo-frame';
+import { MdxLayout } from '~/layout';
+export default MdxLayout;
+
+# Badge
+
+<p className="description">
+  Badge generates a small badge to the top-right of its child(ren).
+</p>
+
+## Basic badge
+
+Examples of badges containing text, using primary and secondary colors. The badge is applied to its children.
+
+<SimpleBadge />
+```tsx
+<Badge badgeContent={4} color="primary">
+  <MailIcon color="action" />
+</Badge>
+```
+
+## Color
+
+Use `color` prop to apply theme palette to component.
+
+<ColorBadge />
+```tsx
+<Badge badgeContent={4} color="secondary">
+  <MailIcon color="action" />
+</Badge>
+<Badge badgeContent={4} color="success">
+  <MailIcon color="action" />
+</Badge>
+```
+
+## Customization
+
+Here is an example of customizing the component.
+You can learn more about this in the overrides documentation page.
+
+<CustomizedBadges />
+```tsx
+<IconButton aria-label="cart">
+  <StyledBadge badgeContent={4} color="secondary">
+    <ShoppingCartIcon />
+  </StyledBadge>
+</IconButton>
+```
+
+## Badge visibility
+
+The visibility of badges can be controlled using the `invisible` prop.
+
+<BadgeVisibility />
+```tsx
+<BadgeVisibility />
+```
+
+The badge auto hides with badgeContent is zero. You can override this with the `showZero` prop.
+
+<ShowZeroBadge />
+```tsx
+<Badge color="secondary" badgeContent={0}>
+  <MailIcon />
+</Badge>
+<Badge color="secondary" badgeContent={0} showZero>
+  <MailIcon />
+</Badge>
+```
+
+## Maximum value
+
+You can use the `max` prop to cap the value of the badge content.
+
+<BadgeMax />
+```tsx
+<Badge color="secondary" badgeContent={99}>
+  <MailIcon />
+</Badge>
+<Badge color="secondary" badgeContent={100}>
+  <MailIcon />
+</Badge>
+<Badge color="secondary" badgeContent={1000} max={999}>
+  <MailIcon />
+</Badge>
+```
+
+## Dot badge
+
+The `dot` prop changes a badge into a small dot. This can be used as a notification that something has changed without giving a count.
+
+<DotBadge />
+```tsx
+<Badge color="secondary" variant="dot">
+  <MailIcon />
+</Badge>
+```
+
+## Badge overlap
+
+You can use the `overlap` prop to place the badge relative to the corner of the wrapped element.
+
+<BadgeOverlap />
+```tsx
+<Badge color="secondary" badgeContent=" ">
+  {rectangle}
+</Badge>
+<Badge color="secondary" badgeContent=" " variant="dot">
+  {rectangle}
+</Badge>
+<Badge color="secondary" overlap="circular" badgeContent=" ">
+  {circle}
+</Badge>
+<Badge color="secondary" overlap="circular" badgeContent=" " variant="dot">
+  {circle}
+</Badge>
+```
+
+## Badge alignment
+
+You can use the `anchorOrigin` prop to move the badge to any corner of the wrapped element.
+
+<BadgeAlignment />
+```tsx
+<BadgeAlignment />
+```
+
+## Unstyled
+
+The badge also comes with an unstyled version.
+It's ideal for doing heavy customizations and minimizing bundle size.
+
+```js
+import BadgeUnstyled from '@mui/core/BadgeUnstyled';
+```
+
+<UnstyledBadge />
+```tsx
+<StyledBadge badgeContent={5} overlap="circular">
+  <BadgeContent />
+</StyledBadge>
+<StyledBadge badgeContent={5} variant="dot" overlap="circular">
+  <BadgeContent />
+</StyledBadge>
+```
+
+## Accessibility
+
+You can't rely on the content of the badge to be announced correctly.
+You should provide a full description, for instance, with `aria-label`:
+
+<AccessibleBadges />
+```tsx
+<IconButton aria-label={notificationsLabel(100)}>
+  <Badge badgeContent={100} color="secondary">
+    <MailIcon />
+  </Badge>
+</IconButton>
+```

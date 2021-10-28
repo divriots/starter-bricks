@@ -1,1 +1,1 @@
-export { default as Button } from '@mui/material/Button';
+export { Button } from '@mui/material';

@@ -1,0 +1,133 @@
+import { Divider } from '~/divider';
+import ListDividers from './ListDividers';
+import InsetDividers from './InsetDividers';
+import SubheaderDividers from './SubheaderDividers';
+import MiddleDividers from './MiddleDividers';
+import DividerText from './DividerText';
+import VerticalDividers from './VerticalDividers';
+import VerticalDividerMiddle from './VerticalDividerMiddle';
+import VerticalDividerText from './VerticalDividerText';
+import { mdx } from '@mdx-js/react';
+import { Playground as BklPlayground } from '@divriots/dockit-react/playground';
+import { DemoFrame } from '~/demo-frame';
+import { MdxLayout } from '~/layout';
+export default MdxLayout;
+
+# Divider
+
+<p className="description">
+  A divider is a thin line that groups content in lists and layouts.
+</p>
+
+Dividers separate content into clear groups.
+
+## List dividers
+
+The divider renders as an `<hr>` by default.
+You can save rendering this DOM element by using the `divider` prop on the `ListItem` component.
+
+<ListDividers />
+```tsx
+<List sx={style} component="nav" aria-label="mailbox folders">
+  <ListItem button>
+    <ListItemText primary="Inbox" />
+  </ListItem>
+  <Divider />
+  <ListItem button divider>
+    <ListItemText primary="Drafts" />
+  </ListItem>
+  <ListItem button>
+    <ListItemText primary="Trash" />
+  </ListItem>
+  <Divider light />
+  <ListItem button>
+    <ListItemText primary="Spam" />
+  </ListItem>
+</List>
+```
+
+## HTML5 specification
+
+In a list, you should ensure the `Divider` is rendered as an `<li>` to match the HTML5 specification.
+The examples below show two ways of achieving this.
+
+## Inset dividers
+
+<InsetDividers />
+```tsx
+<InsetDividers />
+```
+
+## Subheader dividers
+
+<SubheaderDividers />
+```tsx
+<SubheaderDividers />
+```
+
+## Middle divider
+
+<MiddleDividers />
+```tsx
+<MiddleDividers />
+```
+
+## Dividers with text
+
+You can also render a divider with content.
+
+<DividerText />
+```tsx
+<Root>
+  {content}
+  <Divider>CENTER</Divider>
+  {content}
+  <Divider textAlign="left">LEFT</Divider>
+  {content}
+  <Divider textAlign="right">RIGHT</Divider>
+  {content}
+  <Divider>
+    <Chip label="CHIP" />
+  </Divider>
+  {content}
+</Root>
+```
+
+## Vertical divider
+
+You can also render a divider vertically using the `orientation` prop.
+
+<VerticalDividers />
+```tsx
+<VerticalDividers />
+```
+
+> Note the use of the `flexItem` prop to accommodate for the flex container.
+
+### Vertical with variant middle
+
+You can also render a vertical divider with `variant="middle"`.
+
+<VerticalDividerMiddle />
+```tsx
+<VerticalDividerMiddle />
+```
+
+### Vertical with text
+
+You can also render a vertical divider with content.
+
+<VerticalDividerText />
+```tsx
+<Grid container>
+  <Grid item xs>
+    {content}
+  </Grid>
+  <Divider orientation="vertical" flexItem>
+    VERTICAL
+  </Divider>
+  <Grid item xs>
+    {content}
+  </Grid>
+</Grid>
+```

@@ -1,0 +1,188 @@
+import { Chip } from '~/chip';
+import BasicChips from './BasicChips';
+import ClickableChips from './ClickableChips';
+import DeletableChips from './DeletableChips';
+import ClickableAndDeletableChips from './ClickableAndDeletableChips';
+import ClickableLinkChips from './ClickableLinkChips';
+import CustomDeleteIconChips from './CustomDeleteIconChips';
+import AvatarChips from './AvatarChips';
+import IconChips from './IconChips';
+import ColorChips from './ColorChips';
+import SizesChips from './SizesChips';
+import ChipsArray from './ChipsArray';
+import ChipsPlayground from './ChipsPlayground';
+import { mdx } from '@mdx-js/react';
+import { Playground as BklPlayground } from '@divriots/dockit-react/playground';
+import { DemoFrame } from '~/demo-frame';
+import { MdxLayout } from '~/layout';
+export default MdxLayout;
+
+# Chip
+
+<p className="description">
+  Chips are compact elements that represent an input, attribute, or action.
+</p>
+
+Chips allow users to enter information, make selections, filter content, or trigger actions.
+
+While included here as a standalone component, the most common use will
+be in some form of input, so some of the behavior demonstrated here is
+not shown in context.
+
+## Basic chip
+
+The `Chip` component supports outlined and filled styling.
+
+<BasicChips />
+```tsx
+<Chip label="Chip Filled" />
+<Chip label="Chip Outlined" variant="outlined" />
+```
+
+## Chip actions
+
+You can use the following actions.
+
+- Chips with the `onClick` prop defined change appearance on focus, hover, and click.
+- Chips with the `onDelete` prop defined will display a delete icon which changes appearance on hover.
+
+### Clickable
+
+<ClickableChips />
+```tsx
+<Chip label="Clickable" onClick={handleClick} />
+<Chip label="Clickable" variant="outlined" onClick={handleClick} />
+```
+
+### Deletable
+
+<DeletableChips />
+```tsx
+<Chip label="Deletable" onDelete={handleDelete} />
+<Chip label="Deletable" variant="outlined" onDelete={handleDelete} />
+```
+
+### Clickable and deletable
+
+<ClickableAndDeletableChips />
+```tsx
+<Chip
+  label="Clickable Deletable"
+  onClick={handleClick}
+  onDelete={handleDelete}
+/>
+<Chip
+  label="Clickable Deletable"
+  variant="outlined"
+  onClick={handleClick}
+  onDelete={handleDelete}
+/>
+```
+
+### Clickable link
+
+<ClickableLinkChips />
+```tsx
+<Chip label="Clickable Link" component="a" href="#basic-chip" clickable />
+<Chip
+  label="Clickable Link"
+  component="a"
+  href="#basic-chip"
+  variant="outlined"
+  clickable
+/>
+```
+
+### Custom delete icon
+
+<CustomDeleteIconChips />
+```tsx
+<Chip
+  label="Custom delete icon"
+  onClick={handleClick}
+  onDelete={handleDelete}
+  deleteIcon={<DoneIcon />}
+/>
+<Chip
+  label="Custom delete icon"
+  onClick={handleClick}
+  onDelete={handleDelete}
+  deleteIcon={<DeleteIcon />}
+  variant="outlined"
+/>
+```
+
+## Chip adornments
+
+You can add ornaments to the beginning of the component.
+
+Use the `avatar` prop to added a avatar or use the `icon` prop to added a icon.
+
+### Avatar chip
+
+<AvatarChips />
+```tsx
+<Chip avatar={<Avatar>M</Avatar>} label="Avatar" />
+<Chip
+  avatar={<Avatar alt="Natacha" src="/static/images/avatar/1.jpg" />}
+  label="Avatar"
+  variant="outlined"
+/>
+```
+
+### Icon chip
+
+<IconChips />
+```tsx
+<Chip icon={<FaceIcon />} label="With Icon" />
+<Chip icon={<FaceIcon />} label="With Icon" variant="outlined" />
+```
+
+## Color chip
+
+You can use the `color` prop to define a color from theme palette.
+
+<ColorChips />
+```tsx
+<Stack direction="row" spacing={1}>
+  <Chip label="primary" color="primary" />
+  <Chip label="success" color="success" />
+</Stack>
+<Stack direction="row" spacing={1}>
+  <Chip label="primary" color="primary" variant="outlined" />
+  <Chip label="success" color="success" variant="outlined" />
+</Stack>
+```
+
+## Sizes chip
+
+You can use the `size` prop to define a small Chip.
+
+<SizesChips />
+```tsx
+<Chip label="Small" size="small" />
+<Chip label="Small" size="small" variant="outlined" />
+```
+
+## Chip array
+
+An example of rendering multiple chips from an array of values.
+Deleting a chip removes it from the array. Note that since no
+`onClick` prop is defined, the `Chip` can be focused, but does not
+gain depth while clicked or touched.
+
+<ChipsArray />
+```tsx
+<ChipsArray />
+```
+
+## Chip playground
+
+<ChipsPlayground />
+```tsx
+<ChipsPlayground />
+```
+
+## Accessibility
+
+If the Chip is deletable or clickable then it is a button in tab order. When the Chip is focused (e.g. when tabbing) releasing (`keyup` event) `Backspace` or `Delete` will call the `onDelete` handler while releasing `Escape` will blur the Chip.

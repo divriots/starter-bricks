@@ -1,0 +1,179 @@
+import { Menu, MenuItem, MenuList } from '~/menu';
+import BasicMenu from './BasicMenu';
+import IconMenu from './IconMenu';
+import DenseMenu from './DenseMenu';
+import SimpleListMenu from './SimpleListMenu';
+import PositionedMenu from './PositionedMenu';
+import MenuListComposition from './MenuListComposition';
+import AccountMenu from './AccountMenu';
+import CustomizedMenus from './CustomizedMenus';
+import LongMenu from './LongMenu';
+import TypographyMenu from './TypographyMenu';
+import FadeMenu from './FadeMenu';
+import ContextMenu from './ContextMenu';
+import MenuPopupState from './MenuPopupState';
+import { mdx } from '@mdx-js/react';
+import { Playground as BklPlayground } from '@divriots/dockit-react/playground';
+import { DemoFrame } from '~/demo-frame';
+import { MdxLayout } from '~/layout';
+export default MdxLayout;
+
+# Menu
+
+<p className="description">
+  Menus display a list of choices on temporary surfaces.
+</p>
+
+A menu displays a list of choices on a temporary surface. It appears when the user interacts with a button, or other control.
+
+## Basic menu
+
+A basic menu opens over the anchor element by default (this option can be changed via props). When close to a screen edge, a basic menu vertically realigns to make sure that all menu items are completely visible.
+
+Choosing an option should immediately ideally commit the option and close the menu.
+
+**Disambiguation**: In contrast to simple menus, simple dialogs can present additional detail related to the options available for a list item or provide navigational or orthogonal actions related to the primary task. Although they can display the same content, simple menus are preferred over simple dialogs because simple menus are less disruptive to the user's current context.
+
+<BasicMenu />
+```tsx
+<BasicMenu />
+```
+
+## Icon menu
+
+In desktop viewport, padding is increased to give more space to the menu.
+
+<IconMenu />
+```tsx
+<IconMenu />
+```
+
+## Dense menu
+
+For the menu that has long list and long text, you can use the `dense` prop to reduce the padding and text size.
+
+<DenseMenu />
+```tsx
+<DenseMenu />
+```
+
+## Selected menu
+
+If used for item selection, when opened, simple menus places the initial focus on the selected menu item.
+The currently selected menu item is set using the `selected` prop (from ListItem).
+To use a selected menu item without impacting the initial focus, set the `variant` prop to "menu".
+
+<SimpleListMenu />
+```tsx
+<SimpleListMenu />
+```
+
+## Positioned menu
+
+Because the `Menu` component uses the `Popover` component to position itself, you can use the same positioning props to position it.
+For instance, you can display the menu on top of the anchor:
+
+<PositionedMenu />
+```tsx
+<PositionedMenu />
+```
+
+## MenuList composition
+
+The `Menu` component uses the `Popover` component internally.
+However, you might want to use a different positioning strategy, or not blocking the scroll.
+For answering those needs, we expose a `MenuList` component that you can compose, with `Popper` in this example.
+
+The primary responsibility of the `MenuList` component is to handle the focus.
+
+<MenuListComposition />
+```tsx
+<MenuListComposition />
+```
+
+## Account menu
+
+`Menu` content can be mixed with other components like `Avatar`.
+
+<AccountMenu />
+```tsx
+<AccountMenu />
+```
+
+## Customization
+
+Here is an example of customizing the component.
+You can learn more about this in the overrides documentation page.
+
+<CustomizedMenus />
+```tsx
+<CustomizedMenus />
+```
+
+The `MenuItem` is a wrapper around `ListItem` with some additional styles.
+You can use the same list composition features with the `MenuItem` component:
+
+🎨 If you are looking for inspiration, you can check MUI Treasury's customization examples.
+
+## Max height menu
+
+If the height of a menu prevents all menu items from being displayed, the menu can scroll internally.
+
+<LongMenu />
+```tsx
+<LongMenu />
+```
+
+## Limitations
+
+There is a flexbox bug that prevents `text-overflow: ellipsis` from working in a flexbox layout.
+You can use the `Typography` component with `noWrap` to workaround this issue:
+
+<TypographyMenu />
+```tsx
+<TypographyMenu />
+```
+
+## Change transition
+
+Use a different transition.
+
+<FadeMenu />
+```tsx
+<FadeMenu />
+```
+
+## Context menu
+
+Here is an example of a context menu. (Right click to open.)
+
+<ContextMenu />
+```tsx
+<ContextMenu />
+```
+
+## Complementary projects
+
+For more advanced use cases you might be able to take advantage of:
+
+### PopupState helper
+
+There is a 3rd party package `material-ui-popup-state` that takes care of menu state for you in most cases.
+
+<MenuPopupState />
+```tsx
+<PopupState variant="popover" popupId="demo-popup-menu">
+  {(popupState) => (
+    <React.Fragment>
+      <Button variant="contained" {...bindTrigger(popupState)}>
+        Dashboard
+      </Button>
+      <Menu {...bindMenu(popupState)}>
+        <MenuItem onClick={popupState.close}>Profile</MenuItem>
+        <MenuItem onClick={popupState.close}>My account</MenuItem>
+        <MenuItem onClick={popupState.close}>Logout</MenuItem>
+      </Menu>
+    </React.Fragment>
+  )}
+</PopupState>
+```

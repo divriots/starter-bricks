@@ -1,0 +1,158 @@
+import { ToggleButton } from '~/toggle-button';
+import ToggleButtons from './ToggleButtons';
+import ToggleButtonsMultiple from './ToggleButtonsMultiple';
+import ToggleButtonSizes from './ToggleButtonSizes';
+import ColorToggleButton from './ColorToggleButton';
+import VerticalToggleButtons from './VerticalToggleButtons';
+import ToggleButtonNotEmpty from './ToggleButtonNotEmpty';
+import StandaloneToggleButton from './StandaloneToggleButton';
+import CustomizedDividers from './CustomizedDividers';
+import { mdx } from '@mdx-js/react';
+import { Playground as BklPlayground } from '@divriots/dockit-react/playground';
+import { DemoFrame } from '~/demo-frame';
+import { MdxLayout } from '~/layout';
+export default MdxLayout;
+
+# Toggle Buttons
+
+<p className="description">
+  Toggle buttons can be used to group related options.
+</p>
+
+To emphasize groups of related Toggle buttons,
+a group should share a common container.
+The `ToggleButtonGroup` controls the selected state of its child buttons when given its own `value` prop.
+
+## Exclusive selection
+
+With exclusive selection, selecting one option deselects any other.
+
+In this example, text justification toggle buttons present options for left, center, right, and fully justified text (disabled), with only one item available for selection at a time.
+
+<ToggleButtons />
+```tsx
+<ToggleButtons />
+```
+
+## Multiple selection
+
+Multiple selection allows for logically-grouped options, like bold, italic, and underline, to have multiple options selected.
+
+<ToggleButtonsMultiple />
+```tsx
+<ToggleButtonsMultiple />
+```
+
+## Size
+
+For larger or smaller buttons, use the `size` prop.
+
+<ToggleButtonSizes />
+```tsx
+<ToggleButtonGroup size="small" {...control}>
+  {children}
+</ToggleButtonGroup>
+<ToggleButtonGroup {...control}>{children}</ToggleButtonGroup>
+<ToggleButtonGroup size="large" {...control}>
+  {children}
+</ToggleButtonGroup>
+```
+
+## Color
+
+<ColorToggleButton />
+```tsx
+<ToggleButtonGroup
+  color="primary"
+  value={alignment}
+  exclusive
+  onChange={handleChange}
+>
+  <ToggleButton value="web">Web</ToggleButton>
+  <ToggleButton value="android">Android</ToggleButton>
+  <ToggleButton value="ios">iOS</ToggleButton>
+</ToggleButtonGroup>
+```
+
+## Vertical buttons
+
+The buttons can be stacked vertically with the `orientation` prop set to "vertical".
+
+<VerticalToggleButtons />
+```tsx
+<ToggleButtonGroup
+  orientation="vertical"
+  value={view}
+  exclusive
+  onChange={handleChange}
+>
+  <ToggleButton value="list" aria-label="list">
+    <ViewListIcon />
+  </ToggleButton>
+  <ToggleButton value="module" aria-label="module">
+    <ViewModuleIcon />
+  </ToggleButton>
+  <ToggleButton value="quilt" aria-label="quilt">
+    <ViewQuiltIcon />
+  </ToggleButton>
+</ToggleButtonGroup>
+```
+
+## Enforce value set
+
+If you want to enforce that at least one button must be active, you can adapt your handleChange function.
+
+```jsx
+const handleAlignment = (event, newAlignment) => {
+  if (newAlignment !== null) {
+    setAlignment(newAlignment);
+  }
+};
+
+const handleDevices = (event, newDevices) => {
+  if (newDevices.length) {
+    setDevices(newDevices);
+  }
+};
+```
+
+<ToggleButtonNotEmpty />
+```tsx
+<ToggleButtonNotEmpty />
+```
+
+## Standalone toggle button
+
+<StandaloneToggleButton />
+```tsx
+<ToggleButton
+  value="check"
+  selected={selected}
+  onChange={() => {
+    setSelected(!selected);
+  }}
+>
+  <CheckIcon />
+</ToggleButton>
+```
+
+## Customization
+
+Here is an example of customizing the component.
+You can learn more about this in the overrides documentation page.
+
+<CustomizedDividers />
+```tsx
+<CustomizedDividers />
+```
+
+## Accessibility
+
+### ARIA
+
+- ToggleButtonGroup has `role="group"`. You should provide an accessible label with `aria-label="label"`, `aria-labelledby="id"` or `<label>`.
+- ToggleButton sets `aria-pressed="<bool>"` according to the button state. You should label each button with `aria-label`.
+
+### Keyboard
+
+At present, toggle buttons are in DOM order. Navigate between them with the tab key. The button behavior follows standard keyboard semantics.

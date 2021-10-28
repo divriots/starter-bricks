@@ -1,0 +1,40 @@
+import { Backdrop } from '~/backdrop';
+import SimpleBackdrop from './SimpleBackdrop';
+import { mdx } from '@mdx-js/react';
+import { Playground as BklPlayground } from '@divriots/dockit-react/playground';
+import { DemoFrame } from '~/demo-frame';
+import { MdxLayout } from '~/layout';
+export default MdxLayout;
+
+# Backdrop
+
+<p className="description">
+  The backdrop component is used to provide emphasis on a particular element or
+  parts of it.
+</p>
+
+The backdrop signals to the user of a state change within the application and can be used for creating loaders, dialogs, and more.
+In its simplest form, the backdrop component will add a dimmed layer over your application.
+
+## Example
+
+<SimpleBackdrop />
+```tsx
+<Button onClick={handleToggle}>Show backdrop</Button>
+<Backdrop
+  sx={{ color: '#fff', zIndex: (theme) => theme.zIndex.drawer + 1 }}
+  open={open}
+  onClick={handleClose}
+>
+  <CircularProgress color="inherit" />
+</Backdrop>
+```
+
+## Unstyled
+
+The backdrop also comes with the unstyled package.
+It's ideal for doing heavy customizations and minimizing bundle size.
+
+```js
+import Backdrop from '@mui/core/Backdrop';
+```

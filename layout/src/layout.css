@@ -1,0 +1,4 @@
+/* fix for static date picker demo showcase in docs, which are broken by the dockit water css */
+.PrivatePickersYear-root button {
+  padding: 1px 6px;
+}

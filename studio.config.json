@@ -3,9 +3,64 @@
     "dir": "",
     "menu": [
       "introduction",
-      ["tokens", ["colors", "typography", "theme"]],
-      ["components", ["autocomplete", "button"]],
-      ["dockit", ["layout", "showcase"]]
+      [
+        "tokens",
+        ["colors", "fonts", "spacing", "breakpoints", "z-index", "theme"]
+      ],
+      [
+        "inputs",
+        [
+          "autocomplete",
+          "button",
+          "button-group",
+          "checkbox",
+          "floating-action-button",
+          "radio-button",
+          "rating",
+          "rating",
+          "select",
+          "slider",
+          "switch",
+          "text-field",
+          "text-field",
+          "toggle-button"
+        ]
+      ],
+      [
+        "data-display",
+        [
+          "avatar",
+          "badge",
+          "chip",
+          "divider",
+          "list",
+          "table",
+          "tooltip",
+          "typography"
+        ]
+      ],
+      ["feedback", ["alert", "backdrop", "dialog", "progress", "skeleton"]],
+      ["surfaces", ["accordion", "app-bar", "card", "paper"]],
+      [
+        "navigation",
+        [
+          "bottom-navigation",
+          "breadcrumbs",
+          "drawer",
+          "link",
+          "menu",
+          "pagination",
+          "speed-dial",
+          "stepper",
+          "tabs"
+        ]
+      ],
+      [
+        "layout",
+        ["box", "container", "container", "grid", "stack", "image-list"]
+      ],
+      ["date / time", ["date-picker", "date-time-picker", "time-picker"]],
+      ["dockit", ["layout", "showcase", "demo-frame"]]
     ]
   }
 }

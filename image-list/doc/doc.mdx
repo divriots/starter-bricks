@@ -1,0 +1,154 @@
+import { ImageList, ImageListItem, ImageListItemBar } from '~/image-list';
+import StandardImageList from './StandardImageList';
+import QuiltedImageList from './QuiltedImageList';
+import WovenImageList from './WovenImageList';
+import MasonryImageList from './MasonryImageList';
+import TitlebarImageList from './TitlebarImageList';
+import TitlebarBelowImageList from './TitlebarBelowImageList';
+import TitlebarBelowMasonryImageList from './TitlebarBelowMasonryImageList';
+import CustomImageList from './CustomImageList';
+import { mdx } from '@mdx-js/react';
+import { Playground as BklPlayground } from '@divriots/dockit-react/playground';
+import { DemoFrame } from '~/demo-frame';
+import { MdxLayout } from '~/layout';
+export default MdxLayout;
+
+# Image list
+
+<p className="description">
+  Image lists display a collection of images in an organized grid.
+</p>
+
+Image lists represent a collection of items in a repeated pattern. They help improve the visual comprehension of the content they hold.
+
+## Standard image list
+
+Standard image lists are best for items of equal importance. They have a uniform container size, ratio, and spacing.
+
+<StandardImageList />
+```tsx
+<ImageList sx={{ width: 500, height: 450 }} cols={3} rowHeight={164}>
+  {itemData.map((item) => (
+    <ImageListItem key={item.img}>
+      <img
+        src={`${item.img}?w=164&h=164&fit=crop&auto=format`}
+        srcSet={`${item.img}?w=164&h=164&fit=crop&auto=format&dpr=2 2x`}
+        alt={item.title}
+        loading="lazy"
+      />
+    </ImageListItem>
+  ))}
+</ImageList>
+```
+
+## Quilted image list
+
+Quilted image lists emphasize certain items over others in a collection. They create hierarchy using varied container sizes and ratios.
+
+<QuiltedImageList />
+```tsx
+<ImageList
+  sx={{ width: 500, height: 450 }}
+  variant="quilted"
+  cols={4}
+  rowHeight={121}
+>
+  {itemData.map((item) => (
+    <ImageListItem key={item.img} cols={item.cols || 1} rows={item.rows || 1}>
+      <img
+        {...srcset(item.img, 121, item.rows, item.cols)}
+        alt={item.title}
+        loading="lazy"
+      />
+    </ImageListItem>
+  ))}
+</ImageList>
+```
+
+## Woven image list
+
+Woven image lists use alternating container ratios to create a rhythmic layout. A woven image list is best for browsing peer content.
+
+<WovenImageList />
+```tsx
+<ImageList sx={{ width: 500, height: 450 }} variant="woven" cols={3} gap={8}>
+  {itemData.map((item) => (
+    <ImageListItem key={item.img}>
+      <img
+        src={`${item.img}?w=161&fit=crop&auto=format`}
+        srcSet={`${item.img}?w=161&fit=crop&auto=format&dpr=2 2x`}
+        alt={item.title}
+        loading="lazy"
+      />
+    </ImageListItem>
+  ))}
+</ImageList>
+```
+
+## Masonry image list
+
+Masonry image lists use dynamically sized container heights that reflect the aspect ratio of each image. This image list is best used for browsing uncropped peer content.
+
+<MasonryImageList />
+```tsx
+<ImageList variant="masonry" cols={3} gap={8}>
+  {itemData.map((item) => (
+    <ImageListItem key={item.img}>
+      <img
+        src={`${item.img}?w=248&fit=crop&auto=format`}
+        srcSet={`${item.img}?w=248&fit=crop&auto=format&dpr=2 2x`}
+        alt={item.title}
+        loading="lazy"
+      />
+    </ImageListItem>
+  ))}
+</ImageList>
+```
+
+## Image list with title bars
+
+This example demonstrates the use of the `ImageListItemBar` to add an overlay to each item.
+The overlay can accommodate a `title`, `subtitle` and secondary action - in this example an `IconButton`.
+
+<TitlebarImageList />
+```tsx
+<TitlebarImageList />
+```
+
+### Title bar below image (standard)
+
+The title bar can be placed below the image.
+
+<TitlebarBelowImageList />
+```tsx
+<TitlebarBelowImageList />
+```
+
+### Title bar below image (masonry)
+
+<TitlebarBelowMasonryImageList />
+```tsx
+<ImageList variant="masonry" cols={3} gap={8}>
+  {itemData.map((item) => (
+    <ImageListItem key={item.img}>
+      <img
+        src={`${item.img}?w=248&fit=crop&auto=format`}
+        srcSet={`${item.img}?w=248&fit=crop&auto=format&dpr=2 2x`}
+        alt={item.title}
+        loading="lazy"
+      />
+      <ImageListItemBar position="below" title={item.author} />
+    </ImageListItem>
+  ))}
+</ImageList>
+```
+
+## Custom image list
+
+In this example the items have a customized titlebar, positioned at the top and with a custom gradient `titleBackground`.
+The secondary action `IconButton` is positioned on the left. The `gap` prop is used to adjust the gap between items.
+
+<CustomImageList />
+```tsx
+<CustomImageList />
+```

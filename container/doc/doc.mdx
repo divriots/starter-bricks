@@ -1,0 +1,58 @@
+import { Container } from '~/container';
+import SimpleContainer from './SimpleContainer';
+import FixedContainer from './FixedContainer';
+import { mdx } from '@mdx-js/react';
+import { Playground as BklPlayground } from '@divriots/dockit-react/playground';
+import { DemoFrame } from '~/demo-frame';
+import { MdxLayout } from '~/layout';
+export default MdxLayout;
+
+# Container
+
+<p className="description">
+  The container centers your content horizontally. It's the most basic layout
+  element.
+</p>
+
+While containers can be nested, most layouts do not require a nested container.
+
+## Fluid
+
+A fluid container width is bounded by the `maxWidth` prop value.
+
+<DemoFrame>
+  <SimpleContainer />
+</DemoFrame>
+```tsx
+<React.Fragment>
+  <CssBaseline />
+  <Container maxWidth="sm">
+    <Box sx={{ bgcolor: '#cfe8fc', height: '100vh' }} />
+  </Container>
+</React.Fragment>
+```
+
+```jsx
+<Container maxWidth="sm">
+```
+
+## Fixed
+
+If you prefer to design for a fixed set of sizes instead of trying to accommodate a fully fluid viewport, you can set the `fixed` prop.
+The max-width matches the min-width of the current breakpoint.
+
+<DemoFrame>
+  <FixedContainer />
+</DemoFrame>
+```tsx
+<React.Fragment>
+  <CssBaseline />
+  <Container fixed>
+    <Box sx={{ bgcolor: '#cfe8fc', height: '100vh' }} />
+  </Container>
+</React.Fragment>
+```
+
+```jsx
+<Container fixed>
+```

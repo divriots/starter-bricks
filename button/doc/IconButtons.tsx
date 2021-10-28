@@ -1,9 +1,9 @@
 import * as React from 'react';
-import IconButton from '@mui/material/IconButton';
-import Stack from '@mui/material/Stack';
-import DeleteIcon from '@mui/icons-material/Delete';
-import AlarmIcon from '@mui/icons-material/Alarm';
-import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
+import { IconButton } from '@mui/material';
+import { Stack } from '~/stack';
+import { Delete as DeleteIcon } from '@mui/icons-material';
+import { Alarm as AlarmIcon } from '@mui/icons-material';
+import { AddShoppingCart as AddShoppingCartIcon } from '@mui/icons-material';
 
 export default function IconButtons() {
   return (

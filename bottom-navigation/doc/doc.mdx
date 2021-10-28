@@ -1,0 +1,62 @@
+import { BottomNavigation } from '~/bottom-navigation';
+import SimpleBottomNavigation from './SimpleBottomNavigation';
+import LabelBottomNavigation from './LabelBottomNavigation';
+import FixedBottomNavigation from './FixedBottomNavigation';
+import { mdx } from '@mdx-js/react';
+import { Playground as BklPlayground } from '@divriots/dockit-react/playground';
+import { DemoFrame } from '~/demo-frame';
+import { MdxLayout } from '~/layout';
+export default MdxLayout;
+
+# Bottom Navigation
+
+<p className="description">
+  Bottom navigation bars allow movement between primary destinations in an app.
+</p>
+
+Bottom navigation bars display three to five destinations at the bottom of a screen. Each destination is represented by an icon and an optional text label. When a bottom navigation icon is tapped, the user is taken to the top-level navigation destination associated with that icon.
+
+## Bottom Navigation
+
+When there are only **three** actions, display both icons and text labels at all times.
+
+<SimpleBottomNavigation />
+```tsx
+<BottomNavigation
+  showLabels
+  value={value}
+  onChange={(event, newValue) => {
+    setValue(newValue);
+  }}
+>
+  <BottomNavigationAction label="Recents" icon={<RestoreIcon />} />
+  <BottomNavigationAction label="Favorites" icon={<FavoriteIcon />} />
+  <BottomNavigationAction label="Nearby" icon={<LocationOnIcon />} />
+</BottomNavigation>
+```
+
+## Bottom Navigation with no label
+
+If there are **four** or **five** actions, display inactive views as icons only.
+
+<LabelBottomNavigation />
+```tsx
+<LabelBottomNavigation />
+```
+
+## Fixed positioning
+
+This demo keeps bottom navigation fixed to the bottom, no matter the amount of content on-screen.
+
+<DemoFrame>
+  <FixedBottomNavigation />
+</DemoFrame>
+```tsx
+<FixedBottomNavigation />
+```
+
+## Third-party routing library
+
+One frequent use case is to perform navigation on the client only, without an HTTP round-trip to the server.
+The `BottomNavigationAction` component provides the `component` prop to handle this use case.
+Here is a more detailed guide.

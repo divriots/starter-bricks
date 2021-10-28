@@ -1,6 +1,6 @@
 import * as React from 'react';
-import Button from '@mui/material/Button';
-import Stack from '@mui/material/Stack';
+import { Button } from '~/button';
+import { Stack } from '~/stack';
 
 export default function ContainedButtons() {
   return (

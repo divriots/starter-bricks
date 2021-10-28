@@ -1,0 +1,91 @@
+import { Fab } from '~/floating-action-button';
+import FloatingActionButtons from './FloatingActionButtons';
+import FloatingActionButtonSize from './FloatingActionButtonSize';
+import FloatingActionButtonExtendedSize from './FloatingActionButtonExtendedSize';
+import FloatingActionButtonZoom from './FloatingActionButtonZoom';
+import { mdx } from '@mdx-js/react';
+import { Playground as BklPlayground } from '@divriots/dockit-react/playground';
+import { DemoFrame } from '~/demo-frame';
+import { MdxLayout } from '~/layout';
+export default MdxLayout;
+
+# Floating action button
+
+<p className="description">
+  A floating action button (FAB) performs the primary, or most common, action on
+  a screen.
+</p>
+
+A floating action button appears in front of all screen content, typically as a circular shape with an icon in its center.
+FABs come in two types: regular, and extended.
+
+Only use a FAB if it is the most suitable way to present a screen's primary action.
+Only one component is recommended per screen to represent the most common action.
+
+## Basic FAB
+
+<FloatingActionButtons />
+```tsx
+<Fab color="primary" aria-label="add">
+  <AddIcon />
+</Fab>
+<Fab color="secondary" aria-label="edit">
+  <EditIcon />
+</Fab>
+<Fab variant="extended">
+  <NavigationIcon sx={{ mr: 1 }} />
+  Navigate
+</Fab>
+<Fab disabled aria-label="like">
+  <FavoriteIcon />
+</Fab>
+```
+
+## Size
+
+By default, the size is `large`. Use the `size` prop for smaller floating action buttons.
+
+<FloatingActionButtonSize />
+```tsx
+<Fab size="small" color="secondary" aria-label="add">
+  <AddIcon />
+</Fab>
+<Fab size="medium" color="secondary" aria-label="add">
+  <AddIcon />
+</Fab>
+<Fab color="secondary" aria-label="add">
+  <AddIcon />
+</Fab>
+```
+
+<FloatingActionButtonExtendedSize />
+```tsx
+<Fab variant="extended" size="small" color="primary" aria-label="add">
+  <NavigationIcon sx={{ mr: 1 }} />
+  Extended
+</Fab>
+<Fab variant="extended" size="medium" color="primary" aria-label="add">
+  <NavigationIcon sx={{ mr: 1 }} />
+  Extended
+</Fab>
+<Fab variant="extended" color="primary" aria-label="add">
+  <NavigationIcon sx={{ mr: 1 }} />
+  Extended
+</Fab>
+```
+
+## Animation
+
+The floating action button animates onto the screen as an expanding piece of material, by default.
+
+A floating action button that spans multiple lateral screens (such as tabbed screens) should briefly disappear,
+then reappear if its action changes.
+
+The Zoom transition can be used to achieve this. Note that since both the exiting and entering
+animations are triggered at the same time, we use `enterDelay` to allow the outgoing Floating Action Button's
+animation to finish before the new one enters.
+
+<FloatingActionButtonZoom />
+```tsx
+<FloatingActionButtonZoom />
+```

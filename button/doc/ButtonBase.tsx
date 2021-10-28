@@ -1,8 +1,8 @@
 import * as React from 'react';
-import { styled } from '@mui/material/styles';
-import Box from '@mui/material/Box';
-import ButtonBase from '@mui/material/ButtonBase';
-import Typography from '@mui/material/Typography';
+import { styled } from '@mui/material';
+import { Box } from '~/box';
+import { ButtonBase } from '@mui/material';
+import { Typography } from '~/typography';
 
 const images = [
   {

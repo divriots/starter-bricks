@@ -1,0 +1,97 @@
+import { ButtonGroup } from '~/button-group';
+import BasicButtonGroup from './BasicButtonGroup';
+import VariantButtonGroup from './VariantButtonGroup';
+import GroupSizesColors from './GroupSizesColors';
+import GroupOrientation from './GroupOrientation';
+import SplitButton from './SplitButton';
+import DisableElevation from './DisableElevation';
+import { mdx } from '@mdx-js/react';
+import { Playground as BklPlayground } from '@divriots/dockit-react/playground';
+import { DemoFrame } from '~/demo-frame';
+import { MdxLayout } from '~/layout';
+export default MdxLayout;
+
+# Button group
+
+<p className="description">
+  The ButtonGroup component can be used to group related buttons.
+</p>
+
+## Basic button group
+
+The buttons can be grouped by wrapping them with the `ButtonGroup` component.
+They need to be immediate children.
+
+<BasicButtonGroup />
+```tsx
+<ButtonGroup variant="contained" aria-label="outlined primary button group">
+  <Button>One</Button>
+  <Button>Two</Button>
+  <Button>Three</Button>
+</ButtonGroup>
+```
+
+## Button variants
+
+All the standard button variants are supported.
+
+<VariantButtonGroup />
+```tsx
+<ButtonGroup variant="outlined" aria-label="outlined button group">
+  <Button>One</Button>
+  <Button>Two</Button>
+  <Button>Three</Button>
+</ButtonGroup>
+<ButtonGroup variant="text" aria-label="text button group">
+  <Button>One</Button>
+  <Button>Two</Button>
+  <Button>Three</Button>
+</ButtonGroup>
+```
+
+## Sizes and colors
+
+The `size` and `color` props can be used to control the appearance of the button group.
+
+<GroupSizesColors />
+```tsx
+<ButtonGroup size="small" aria-label="small button group">
+  {buttons}
+</ButtonGroup>
+<ButtonGroup color="secondary" aria-label="medium secondary button group">
+  {buttons}
+</ButtonGroup>
+<ButtonGroup size="large" aria-label="large button group">
+  {buttons}
+</ButtonGroup>
+```
+
+## Vertical group
+
+The button group can be displayed vertically using the `orientation` prop.
+
+<GroupOrientation />
+```tsx
+<GroupOrientation />
+```
+
+## Split button
+
+`ButtonGroup` can also be used to create a split button. The dropdown can change the button action (as in this example) or be used to immediately trigger a related action.
+
+<SplitButton />
+```tsx
+<SplitButton />
+```
+
+## Disabled elevation
+
+You can remove the elevation with the `disableElevation` prop.
+
+<DisableElevation />
+```tsx
+<ButtonGroup disableElevation variant="contained">
+  <Button>One</Button>
+  <Button>Two</Button>
+</ButtonGroup>
+```
