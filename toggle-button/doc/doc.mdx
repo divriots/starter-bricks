@@ -1,12 +1,12 @@
 import { ToggleButton } from '~/toggle-button';
-import ToggleButtons from './ToggleButtons';
-import ToggleButtonsMultiple from './ToggleButtonsMultiple';
-import ToggleButtonSizes from './ToggleButtonSizes';
-import ColorToggleButton from './ColorToggleButton';
-import VerticalToggleButtons from './VerticalToggleButtons';
-import ToggleButtonNotEmpty from './ToggleButtonNotEmpty';
-import StandaloneToggleButton from './StandaloneToggleButton';
-import CustomizedDividers from './CustomizedDividers';
+import { ToggleButtons as ToggleButtons } from '../stories/ToggleButtons.stories';
+import { ToggleButtonsMultiple as ToggleButtonsMultiple } from '../stories/ToggleButtonsMultiple.stories';
+import { ToggleButtonSizes as ToggleButtonSizes } from '../stories/ToggleButtonSizes.stories';
+import { ColorToggleButton as ColorToggleButton } from '../stories/ColorToggleButton.stories';
+import { VerticalToggleButtons as VerticalToggleButtons } from '../stories/VerticalToggleButtons.stories';
+import { ToggleButtonNotEmpty as ToggleButtonNotEmpty } from '../stories/ToggleButtonNotEmpty.stories';
+import { StandaloneToggleButton as StandaloneToggleButton } from '../stories/StandaloneToggleButton.stories';
+import { CustomizedDividers as CustomizedDividers } from '../stories/CustomizedDividers.stories';
 import { mdx } from '@mdx-js/react';
 import { Playground as BklPlayground } from '@divriots/dockit-react/playground';
 import { DemoFrame } from '~/demo-frame';
@@ -28,6 +28,8 @@ The `ToggleButtonGroup` controls the selected state of its child buttons when gi
 With exclusive selection, selecting one option deselects any other.
 
 In this example, text justification toggle buttons present options for left, center, right, and fully justified text (disabled), with only one item available for selection at a time.
+
+**Note**: Exclusive selection does not enforce that a button must be active. For that effect see enforce value set.
 
 <ToggleButtons />
 ```tsx

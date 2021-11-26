@@ -12,6 +12,7 @@
     "@date-io/date-fns-jalali": "^2.11.0",
     "@emotion/cache": "^11.5.0",
     "@emotion/react": "^11.5.0",
+    "@mui/base": "^5.0.0-alpha.57",
     "@mui/core": "^5.0.0-alpha.50",
     "@mui/icons-material": "^5.0.4",
     "@mui/lab": "^5.0.0-alpha.50",

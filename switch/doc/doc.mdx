@@ -1,15 +1,15 @@
 import { Switch } from '~/switch';
-import BasicSwitches from './BasicSwitches';
-import SwitchLabels from './SwitchLabels';
-import SwitchesSize from './SwitchesSize';
-import ColorSwitches from './ColorSwitches';
-import ControlledSwitches from './ControlledSwitches';
-import SwitchesGroup from './SwitchesGroup';
-import CustomizedSwitches from './CustomizedSwitches';
-import UnstyledSwitches from './UnstyledSwitches';
-import UseSwitchesBasic from './UseSwitchesBasic';
-import UseSwitchesCustom from './UseSwitchesCustom';
-import FormControlLabelPosition from './FormControlLabelPosition';
+import { BasicSwitches as BasicSwitches } from '../stories/BasicSwitches.stories';
+import { SwitchLabels as SwitchLabels } from '../stories/SwitchLabels.stories';
+import { SwitchesSize as SwitchesSize } from '../stories/SwitchesSize.stories';
+import { ColorSwitches as ColorSwitches } from '../stories/ColorSwitches.stories';
+import { ControlledSwitches as ControlledSwitches } from '../stories/ControlledSwitches.stories';
+import { SwitchesGroup as SwitchesGroup } from '../stories/SwitchesGroup.stories';
+import { CustomizedSwitches as CustomizedSwitches } from '../stories/CustomizedSwitches.stories';
+import { UnstyledSwitches as UnstyledSwitches } from '../stories/UnstyledSwitches.stories';
+import { UseSwitchesBasic as UseSwitchesBasic } from '../stories/UseSwitchesBasic.stories';
+import { UseSwitchesCustom as UseSwitchesCustom } from '../stories/UseSwitchesCustom.stories';
+import { FormControlLabelPosition as FormControlLabelPosition } from '../stories/FormControlLabelPosition.stories';
 import { mdx } from '@mdx-js/react';
 import { Playground as BklPlayground } from '@divriots/dockit-react/playground';
 import { DemoFrame } from '~/demo-frame';
@@ -109,7 +109,7 @@ You can learn more about this in the overrides documentation page.
 The switch also comes with an unstyled version. It's ideal for doing heavy customizations and minimizing bundle size.
 
 ```jsx
-import SwitchUnstyled from '@mui/core/SwitchUnstyled';
+import SwitchUnstyled from '@mui/base/SwitchUnstyled';
 ```
 
 The `SwitchUnstyled` component provides default components and assigns CSS classes you can style entirely on your own.
@@ -132,7 +132,7 @@ For the ultimate customizability, a `useSwitch` hook is available.
 It accepts almost the same options as the SwitchUnstyled component minus the `component`, `components`, and `componentsProps` props.
 
 ```jsx
-import { useSwitch } from '@mui/core/SwitchUnstyled';
+import { useSwitch } from '@mui/base/SwitchUnstyled';
 ```
 
 #### Basic example

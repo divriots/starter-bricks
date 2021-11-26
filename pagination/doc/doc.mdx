@@ -1,14 +1,15 @@
 import { Pagination, PaginationItem } from '~/pagination';
-import BasicPagination from './BasicPagination';
-import PaginationOutlined from './PaginationOutlined';
-import PaginationRounded from './PaginationRounded';
-import PaginationSize from './PaginationSize';
-import PaginationButtons from './PaginationButtons';
-import PaginationRanges from './PaginationRanges';
-import PaginationControlled from './PaginationControlled';
-import PaginationLink from './PaginationLink';
-import UsePagination from './UsePagination';
-import TablePagination from './TablePagination';
+import { BasicPagination as BasicPagination } from '../stories/BasicPagination.stories';
+import { PaginationOutlined as PaginationOutlined } from '../stories/PaginationOutlined.stories';
+import { PaginationRounded as PaginationRounded } from '../stories/PaginationRounded.stories';
+import { PaginationSize as PaginationSize } from '../stories/PaginationSize.stories';
+import { PaginationButtons as PaginationButtons } from '../stories/PaginationButtons.stories';
+import { CustomIcons as CustomIcons } from '../stories/CustomIcons.stories';
+import { PaginationRanges as PaginationRanges } from '../stories/PaginationRanges.stories';
+import { PaginationControlled as PaginationControlled } from '../stories/PaginationControlled.stories';
+import { PaginationLink as PaginationLink } from '../stories/PaginationLink.stories';
+import { UsePagination as UsePagination } from '../stories/UsePagination.stories';
+import { TablePaginationDemo as TablePagination } from '../stories/TablePagination.stories';
 import { mdx } from '@mdx-js/react';
 import { Playground as BklPlayground } from '@divriots/dockit-react/playground';
 import { DemoFrame } from '~/demo-frame';
@@ -67,6 +68,23 @@ You can optionally enable first-page and last-page buttons, or disable the previ
 ```tsx
 <Pagination count={10} showFirstButton showLastButton />
 <Pagination count={10} hidePrevButton hideNextButton />
+```
+
+## Custom icons
+
+It's possible to customize the control icons.
+
+<CustomIcons />
+```tsx
+<Pagination
+  count={10}
+  renderItem={(item) => (
+    <PaginationItem
+      components={{ previous: ArrowBackIcon, next: ArrowForwardIcon }}
+      {...item}
+    />
+  )}
+/>
 ```
 
 ## Pagination ranges

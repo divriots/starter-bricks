@@ -1,18 +1,18 @@
 import { Tooltip } from '~/tooltip';
-import BasicTooltip from './BasicTooltip';
-import PositionedTooltips from './PositionedTooltips';
-import CustomizedTooltips from './CustomizedTooltips';
-import ArrowTooltips from './ArrowTooltips';
-import TriggersTooltips from './TriggersTooltips';
-import ControlledTooltips from './ControlledTooltips';
-import VariableWidth from './VariableWidth';
-import NonInteractiveTooltips from './NonInteractiveTooltips';
-import DisabledTooltips from './DisabledTooltips';
-import TransitionsTooltips from './TransitionsTooltips';
-import FollowCursorTooltips from './FollowCursorTooltips';
-import AnchorElTooltips from './AnchorElTooltips';
-import DelayTooltips from './DelayTooltips';
-import AccessibilityTooltips from './AccessibilityTooltips';
+import { BasicTooltip as BasicTooltip } from '../stories/BasicTooltip.stories';
+import { PositionedTooltips as PositionedTooltips } from '../stories/PositionedTooltips.stories';
+import { CustomizedTooltips as CustomizedTooltips } from '../stories/CustomizedTooltips.stories';
+import { ArrowTooltips as ArrowTooltips } from '../stories/ArrowTooltips.stories';
+import { TriggersTooltips as TriggersTooltips } from '../stories/TriggersTooltips.stories';
+import { ControlledTooltips as ControlledTooltips } from '../stories/ControlledTooltips.stories';
+import { VariableWidth as VariableWidth } from '../stories/VariableWidth.stories';
+import { NotInteractiveTooltips as NonInteractiveTooltips } from '../stories/NonInteractiveTooltips.stories';
+import { DisabledTooltips as DisabledTooltips } from '../stories/DisabledTooltips.stories';
+import { TransitionsTooltips as TransitionsTooltips } from '../stories/TransitionsTooltips.stories';
+import { FollowCursorTooltips as FollowCursorTooltips } from '../stories/FollowCursorTooltips.stories';
+import { AnchorElTooltips as AnchorElTooltips } from '../stories/AnchorElTooltips.stories';
+import { DelayTooltips as DelayTooltips } from '../stories/DelayTooltips.stories';
+import { AccessibilityTooltips as AccessibilityTooltips } from '../stories/AccessibilityTooltips.stories';
 import { mdx } from '@mdx-js/react';
 import { Playground as BklPlayground } from '@divriots/dockit-react/playground';
 import { DemoFrame } from '~/demo-frame';
@@ -93,6 +93,8 @@ You can find a similar concept in the wrapping components guide.
 ## Triggers
 
 You can define the types of events that cause a tooltip to show.
+
+The touch action requires a long press due to the `enterTouchDelay` prop being set to `700`ms by default.
 
 <TriggersTooltips />
 ```tsx
