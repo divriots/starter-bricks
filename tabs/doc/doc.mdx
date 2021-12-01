@@ -1,23 +1,25 @@
 import { Tabs } from '~/tabs';
-import BasicTabs from './BasicTabs';
-import LabTabs from './LabTabs';
-import TabsWrappedLabel from './TabsWrappedLabel';
-import ColorTabs from './ColorTabs';
-import DisabledTabs from './DisabledTabs';
-import FullWidthTabs from './FullWidthTabs';
-import CenteredTabs from './CenteredTabs';
-import ScrollableTabsButtonAuto from './ScrollableTabsButtonAuto';
-import ScrollableTabsButtonForce from './ScrollableTabsButtonForce';
-import ScrollableTabsButtonVisible from './ScrollableTabsButtonVisible';
-import ScrollableTabsButtonPrevent from './ScrollableTabsButtonPrevent';
-import CustomizedTabs from './CustomizedTabs';
-import VerticalTabs from './VerticalTabs';
-import NavTabs from './NavTabs';
-import IconTabs from './IconTabs';
-import IconLabelTabs from './IconLabelTabs';
-import IconPositionTabs from './IconPositionTabs';
-import AccessibleTabs1 from './AccessibleTabs1';
-import AccessibleTabs2 from './AccessibleTabs2';
+import { BasicTabs as BasicTabs } from '../stories/BasicTabs.stories';
+import { LabTabs as LabTabs } from '../stories/LabTabs.stories';
+import { TabsWrappedLabel as TabsWrappedLabel } from '../stories/TabsWrappedLabel.stories';
+import { ColorTabs as ColorTabs } from '../stories/ColorTabs.stories';
+import { DisabledTabs as DisabledTabs } from '../stories/DisabledTabs.stories';
+import { FullWidthTabs as FullWidthTabs } from '../stories/FullWidthTabs.stories';
+import { CenteredTabs as CenteredTabs } from '../stories/CenteredTabs.stories';
+import { ScrollableTabsButtonAuto as ScrollableTabsButtonAuto } from '../stories/ScrollableTabsButtonAuto.stories';
+import { ScrollableTabsButtonForce as ScrollableTabsButtonForce } from '../stories/ScrollableTabsButtonForce.stories';
+import { ScrollableTabsButtonVisible as ScrollableTabsButtonVisible } from '../stories/ScrollableTabsButtonVisible.stories';
+import { ScrollableTabsButtonPrevent as ScrollableTabsButtonPrevent } from '../stories/ScrollableTabsButtonPrevent.stories';
+import { CustomizedTabs as CustomizedTabs } from '../stories/CustomizedTabs.stories';
+import { VerticalTabs as VerticalTabs } from '../stories/VerticalTabs.stories';
+import { NavTabs as NavTabs } from '../stories/NavTabs.stories';
+import { IconTabs as IconTabs } from '../stories/IconTabs.stories';
+import { IconLabelTabs as IconLabelTabs } from '../stories/IconLabelTabs.stories';
+import { IconTabs as IconPositionTabs } from '../stories/IconPositionTabs.stories';
+import { AccessibleTabs1 as AccessibleTabs1 } from '../stories/AccessibleTabs1.stories';
+import { AccessibleTabs2 as AccessibleTabs2 } from '../stories/AccessibleTabs2.stories';
+import { UnstyledTabsBasic as UnstyledTabsBasic } from '../stories/UnstyledTabsBasic.stories';
+import { UnstyledTabsCustomized as UnstyledTabsCustomized } from '../stories/UnstyledTabsCustomized.stories';
 import { mdx } from '@mdx-js/react';
 import { Playground as BklPlayground } from '@divriots/dockit-react/playground';
 import { DemoFrame } from '~/demo-frame';
@@ -386,4 +388,54 @@ Focus a tab and navigate with arrow keys to notice the difference, e.g. <kbd cla
   <Tab label="Item Two" />
   <Tab label="Item Three" />
 </Tabs>
+```
+
+## Unstyled
+
+The Tabs also come with an unstyled version. It's ideal for doing heavy customizations and minimizing bundle size.
+
+### Unstyled component
+
+```js
+import TabsUnstyled from '@mui/base/TabsUnstyled';
+import TabsListUnstyled from '@mui/base/TabUnstyled';
+import TabUnstyled from '@mui/base/TabUnstyled';
+import TabPanelUnstyled from '@mui/base/TabPanelUnstyled';
+```
+
+<UnstyledTabsBasic />
+```tsx
+<TabsUnstyled defaultValue={0}>
+  <TabsListUnstyled>
+    <TabUnstyled>One</TabUnstyled>
+    <TabUnstyled>Two</TabUnstyled>
+    <TabUnstyled>Three</TabUnstyled>
+  </TabsListUnstyled>
+  <TabPanelUnstyled value={0}>First content</TabPanelUnstyled>
+  <TabPanelUnstyled value={1}>Second content</TabPanelUnstyled>
+  <TabPanelUnstyled value={2}>Third content</TabPanelUnstyled>
+</TabsUnstyled>
+```
+
+#### Customizing the root element
+
+By default, the `TabUnstyled` renders a native `button` element.
+You are free to override this by setting the `component` or `components.Root` prop.
+If a non-interactive element (such as a span) is provided this way, the `TabUnstyled` will take care of adding accessibility attributes.
+
+The `TabPanelUnstyled` on the other hand renders a native `div` element by default.
+You are free to override this as well by setting the `component` or `components.Root` prop on the `TabPanelUnstyled`.
+
+<UnstyledTabsCustomized />
+```tsx
+<TabsUnstyled defaultValue={0}>
+  <TabsList>
+    <Tab>One</Tab>
+    <Tab>Two</Tab>
+    <Tab>Three</Tab>
+  </TabsList>
+  <TabPanel value={0}>First content</TabPanel>
+  <TabPanel value={1}>Second content</TabPanel>
+  <TabPanel value={2}>Third content</TabPanel>
+</TabsUnstyled>
 ```

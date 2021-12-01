@@ -1,14 +1,16 @@
 import { AppBar } from '~/app-bar';
-import ButtonAppBar from './ButtonAppBar';
-import PrimarySearchAppBar from './PrimarySearchAppBar';
-import MenuAppBar from './MenuAppBar';
-import SearchAppBar from './SearchAppBar';
-import DenseAppBar from './DenseAppBar';
-import ProminentAppBar from './ProminentAppBar';
-import BottomAppBar from './BottomAppBar';
-import HideAppBar from './HideAppBar';
-import ElevateAppBar from './ElevateAppBar';
-import BackToTop from './BackToTop';
+import { ButtonAppBar as ButtonAppBar } from '../stories/ButtonAppBar.stories';
+import { MenuAppBar as MenuAppBar } from '../stories/MenuAppBar.stories';
+import { ResponsiveAppBar as ResponsiveAppBar } from '../stories/ResponsiveAppBar.stories';
+import { SearchAppBar as SearchAppBar } from '../stories/SearchAppBar.stories';
+import { PrimarySearchAppBar as PrimarySearchAppBar } from '../stories/PrimarySearchAppBar.stories';
+import { DenseAppBar as DenseAppBar } from '../stories/DenseAppBar.stories';
+import { ProminentAppBar as ProminentAppBar } from '../stories/ProminentAppBar.stories';
+import { BottomAppBar as BottomAppBar } from '../stories/BottomAppBar.stories';
+import { HideAppBar as HideAppBar } from '../stories/HideAppBar.stories';
+import { ElevateAppBar as ElevateAppBar } from '../stories/ElevateAppBar.stories';
+import { BackToTop as BackToTop } from '../stories/BackToTop.stories';
+import { EnableColorOnDarkAppBar as EnableColorOnDarkAppBar } from '../stories/EnableColorOnDarkAppBar.stories';
 import { mdx } from '@mdx-js/react';
 import { Playground as BklPlayground } from '@divriots/dockit-react/playground';
 import { DemoFrame } from '~/demo-frame';
@@ -32,20 +34,18 @@ It can transform into a contextual action bar or be used as a navbar.
 <ButtonAppBar />
 ```
 
-## App Bar with a primary search field
-
-A primary searchbar.
-
-<PrimarySearchAppBar />
-```tsx
-<PrimarySearchAppBar />
-```
-
 ## App Bar with menu
 
 <MenuAppBar />
 ```tsx
 <MenuAppBar />
+```
+
+## App Bar with responsive menu
+
+<ResponsiveAppBar />
+```tsx
+<ResponsiveAppBar />
 ```
 
 ## App Bar with search field
@@ -55,6 +55,15 @@ A side searchbar.
 <SearchAppBar />
 ```tsx
 <SearchAppBar />
+```
+
+## App Bar with a primary search field
+
+A primary searchbar.
+
+<PrimarySearchAppBar />
+```tsx
+<PrimarySearchAppBar />
 ```
 
 ## Dense (desktop only)
@@ -194,27 +203,19 @@ function HideOnScroll(props) {
 }
 ```
 
-## Enable Color on Dark
+## Enable color on dark
 
-Following the Material Design guidelines, the `color` prop has no effect on the appearance of the AppBar in dark mode.
+Following the Material Design guidelines, the `color` prop has no effect on the appearance of the app bar in dark mode.
 You can override this behavior by setting the `enableColorOnDark` prop to `true`.
 
-```jsx
-// Specific element via prop
-<AppBar enableColorOnDark />
-
-// Affect all AppBars via theme
-<ThemeProvider
-  theme={createTheme({
-    components: {
-      MuiAppBar: {
-        defaultProps: {
-          enableColorOnDark: true,
-        },
-      },
-    },
-  })}
->
-  <AppBar />
+<EnableColorOnDarkAppBar />
+```tsx
+<ThemeProvider theme={darkTheme}>
+  <AppBar position="static" color="primary" enableColorOnDark>
+    {appBarLabel('enableColorOnDark')}
+  </AppBar>
+  <AppBar position="static" color="primary">
+    {appBarLabel('default')}
+  </AppBar>
 </ThemeProvider>
 ```

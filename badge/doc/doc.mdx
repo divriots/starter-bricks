@@ -1,15 +1,15 @@
 import { Badge } from '~/badge';
-import SimpleBadge from './SimpleBadge';
-import ColorBadge from './ColorBadge';
-import CustomizedBadges from './CustomizedBadges';
-import BadgeVisibility from './BadgeVisibility';
-import ShowZeroBadge from './ShowZeroBadge';
-import BadgeMax from './BadgeMax';
-import DotBadge from './DotBadge';
-import BadgeOverlap from './BadgeOverlap';
-import BadgeAlignment from './BadgeAlignment';
-import UnstyledBadge from './UnstyledBadge';
-import AccessibleBadges from './AccessibleBadges';
+import { SimpleBadge as SimpleBadge } from '../stories/SimpleBadge.stories';
+import { ColorBadge as ColorBadge } from '../stories/ColorBadge.stories';
+import { CustomizedBadges as CustomizedBadges } from '../stories/CustomizedBadges.stories';
+import { BadgeVisibility as BadgeVisibility } from '../stories/BadgeVisibility.stories';
+import { ShowZeroBadge as ShowZeroBadge } from '../stories/ShowZeroBadge.stories';
+import { BadgeMax as BadgeMax } from '../stories/BadgeMax.stories';
+import { DotBadge as DotBadge } from '../stories/DotBadge.stories';
+import { BadgeOverlap as BadgeOverlap } from '../stories/BadgeOverlap.stories';
+import { BadgeAlignment as BadgeAlignment } from '../stories/BadgeAlignment.stories';
+import { UnstyledBadge as UnstyledBadge } from '../stories/UnstyledBadge.stories';
+import { AccessibleBadges as AccessibleBadges } from '../stories/AccessibleBadges.stories';
 import { mdx } from '@mdx-js/react';
 import { Playground as BklPlayground } from '@divriots/dockit-react/playground';
 import { DemoFrame } from '~/demo-frame';
@@ -145,7 +145,7 @@ The badge also comes with an unstyled version.
 It's ideal for doing heavy customizations and minimizing bundle size.
 
 ```js
-import BadgeUnstyled from '@mui/core/BadgeUnstyled';
+import BadgeUnstyled from '@mui/base/BadgeUnstyled';
 ```
 
 <UnstyledBadge />
