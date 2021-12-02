@@ -13,6 +13,9 @@ const Root = styled('div')(({ theme }) => ({
   [theme.breakpoints.up('lg')]: {
     backgroundColor: theme.palette.info.main,
   },
+  [theme.breakpoints.up('xl')]: {
+    backgroundColor: theme.palette.warning.main,
+  },
 }));
 
 const Text = styled('p')(({ theme }) => ({
@@ -25,12 +28,16 @@ const Text = styled('p')(({ theme }) => ({
   [theme.breakpoints.up('lg')]: {
     color: theme.palette.info.contrastText,
   },
+  [theme.breakpoints.up('xl')]: {
+    color: theme.palette.warning.contrastText,
+  },
 }));
 
 export const BreakpointsShowcase = () => (
   <Root>
-    <Text>{'down(sm): palette.secondary'}</Text>
-    <Text>{'up(md): palette.primary'}</Text>
-    <Text>{'up(lg): pallete.info'}</Text>
+    <Text>{'sm: background is palette.secondary'}</Text>
+    <Text>{'md: background is palette.primary'}</Text>
+    <Text>{'lg: background is pallete.info'}</Text>
+    <Text>{'xl: background is pallete.warning'}</Text>
   </Root>
 );
