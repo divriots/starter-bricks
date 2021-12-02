@@ -29,8 +29,8 @@ const Text = styled('p')(({ theme }) => ({
 
 export const BreakpointsShowcase = () => (
   <Root>
-    <Text>{'down(sm): palette.secondary'}</Text>
-    <Text>{'up(md): palette.primary'}</Text>
-    <Text>{'up(lg): pallete.info'}</Text>
+    <Text>{'down(md): background is palette.secondary'}</Text>
+    <Text>{'up(md): background is palette.primary'}</Text>
+    <Text>{'up(lg): background is pallete.info'}</Text>
   </Root>
 );
