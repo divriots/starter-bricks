@@ -6,6 +6,7 @@ import {
 import { Playground } from '@divriots/dockit-react/playground';
 import { createTheme } from '~/theme';
 import { ThemeProvider, PaletteMode } from '@mui/material';
+import { Box } from '~/box';
 import { Logo } from './Logo';
 import './layout.css';
 
@@ -23,9 +24,15 @@ export const MdxLayout = (props) => {
         components={{ Playground }}
         onSwitch={setMode}
         logo={
-          <div style={{ width: '50px', height: '50px' }}>
+          <Box
+            sx={{
+              width: 120,
+              color: ({ palette }) =>
+                `primary.${mode === 'dark' ? 'light' : 'dark'}`,
+            }}
+          >
             <Logo />
-          </div>
+          </Box>
         }
         {...props}
       />
