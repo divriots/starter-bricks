@@ -1,5 +1,5 @@
 [![backlight.dev](https://img.shields.io/badge/Open%20in-Backlight.dev%20editor-%23f8c307)](https://backlight.dev/review/k0DvZztNuwmS6XnXoohE)
-[![Github Repo](https://img.shields.io/github/last-commit/divriots/starter-mui)](https://github.com/divriots/starter-mui)
+[![Github Repo](https://img.shields.io/github/last-commit/divriots/starter-bricks)](https://github.com/divriots/starter-bricks)
 
 ![BRICKS Logo](./introduction/doc/bricks.svg)
 
@@ -58,7 +58,7 @@ the **BRICKS** card. It will create a project based on this starter kit for you.
 ### Duplicate in Backlight
 
 Make sure you have a Backlight Workspace, then go to
-[`starter-mui` on backlight](https://backlight.dev/edit/k0DvZztNuwmS6XnXoohE/)
+[`starter-bricks` on backlight](https://backlight.dev/edit/k0DvZztNuwmS6XnXoohE/)
 and click the **Duplicate** button in the top bar to fork it.
 
 ## Documentation
