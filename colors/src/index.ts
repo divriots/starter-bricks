@@ -26,13 +26,13 @@ export const light = {
   },
   primary: {
     contrastText: '#fff',
-    main: '#007FFF',
+    main: '#ffcc00',
   },
   secondary: {
     contrastText: '#fff',
-    dark: '#7b1fa2',
-    light: '#ba68c8',
-    main: '#9c27b0',
+    dark: '#a26e1f',
+    light: '#c89668',
+    main: '#9bb027',
   },
   success: {
     contrastText: '#fff',
