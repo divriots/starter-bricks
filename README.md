@@ -1,4 +1,4 @@
-[![backlight.dev](https://img.shields.io/badge/Open%20in-Backlight.dev%20editor-%23f8c307)](https://backlight.dev/review/k0DvZztNuwmS6XnXoohE)
+[![backlight.dev](https://img.shields.io/badge/Open%20in-Backlight.dev%20editor-%23f8c307)](https://backlight.dev/review/UeLTBsnTjeTHdJoWERBQ)
 [![Github Repo](https://img.shields.io/github/last-commit/divriots/starter-bricks)](https://github.com/divriots/starter-bricks)
 
 ![BRICKS Logo](./introduction/doc/bricks.svg)
@@ -28,11 +28,11 @@ where needed, and lays a foundation for your future documentation.
 BRICKS takes the Design Tokens as in [MUI Theme Configuration Variables](https://mui.com/customization/theming/#theme-configuration-variables)
 as well as advanced ones:
 
-- [Colors](https://backlight.dev/doc/k0DvZztNuwmS6XnXoohE/colors/doc/colors)
-- [Fonts](https://backlight.dev/doc/k0DvZztNuwmS6XnXoohE/fonts/doc/fonts)
-- [Spacing](https://backlight.dev/doc/k0DvZztNuwmS6XnXoohE/spacing/doc/spacing)
-- [Breakpoints](https://backlight.dev/doc/k0DvZztNuwmS6XnXoohE/breakpoints/doc/breakpoints)
-- [Z-Indexes](https://backlight.dev/doc/k0DvZztNuwmS6XnXoohE/z-index/doc/z-index)
+- [Colors](https://backlight.dev/doc/UeLTBsnTjeTHdJoWERBQ/colors/doc/colors)
+- [Fonts](https://backlight.dev/doc/UeLTBsnTjeTHdJoWERBQ/fonts/doc/fonts)
+- [Spacing](https://backlight.dev/doc/UeLTBsnTjeTHdJoWERBQ/spacing/doc/spacing)
+- [Breakpoints](https://backlight.dev/doc/UeLTBsnTjeTHdJoWERBQ/breakpoints/doc/breakpoints)
+- [Z-Indexes](https://backlight.dev/doc/UeLTBsnTjeTHdJoWERBQ/z-index/doc/z-index)
 
 and make them automatically documented and visually discoverable.
 
@@ -58,7 +58,7 @@ the **BRICKS** card. It will create a project based on this starter kit for you.
 ### Duplicate in Backlight
 
 Make sure you have a Backlight Workspace, then go to
-[`starter-bricks` on backlight](https://backlight.dev/edit/k0DvZztNuwmS6XnXoohE/)
+[`starter-bricks` on backlight](https://backlight.dev/edit/UeLTBsnTjeTHdJoWERBQ/)
 and click the **Duplicate** button in the top bar to fork it.
 
 ## Documentation
@@ -66,7 +66,7 @@ and click the **Duplicate** button in the top bar to fork it.
 ### Design System Documentation
 
 _BRICKS_ is shipped with a good documentation basis which starts in this
-[introduction](https://backlight.dev/doc/k0DvZztNuwmS6XnXoohE/introduction/doc/index.mdx)
+[introduction](https://backlight.dev/doc/UeLTBsnTjeTHdJoWERBQ/introduction/doc/index.mdx)
 and then walks you through the usage of tokens and components.
 Just open it and start exploring!
 
