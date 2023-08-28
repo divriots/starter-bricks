@@ -44,8 +44,8 @@
   },
   "devDependencies": {
     "@divriots/dockit-react": "^0.0.84",
-    "@tailwindcss/typography": "^0.4.1",
     "@mdx-js/react": "^1.6.22",
+    "@tailwindcss/typography": "^0.4.1",
     "deepmerge": "^4.2.2",
     "prettier": "^2.4.1"
   }
